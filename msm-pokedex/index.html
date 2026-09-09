@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>MSM Pokédex</title>
+<meta name="theme-color" content="#121212" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="assets/icons/app/icon-192.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-header__top">
+    <h1 class="app-header__title">MSM Pokédex</h1>
+    <nav class="view-switch" aria-label="Primary view">
+      <button class="view-switch__btn is-active" data-view="monsters" type="button">Monsters</button>
+      <button class="view-switch__btn" data-view="islands" type="button">Islands</button>
+    </nav>
+  </div>
+  <div class="search-bar">
+    <input type="search" id="search-input" placeholder="Search monsters…" aria-label="Search monsters" />
+    <button id="filter-btn" class="filter-btn" type="button" aria-haspopup="dialog" aria-controls="filter-drawer">
+      Filters<span id="filter-count" class="filter-btn__count" hidden></span>
+    </button>
+  </div>
+</header>
+
+<main id="monster-grid" class="monster-grid" aria-live="polite">
+  <p class="loading-state">Loading monsters…</p>
+</main>
+
+<main id="island-view" class="island-view" hidden aria-live="polite">
+  <div id="island-list" class="island-list"></div>
+  <div id="island-roster" class="island-roster" hidden>
+    <button id="island-roster-back" class="island-roster__back" type="button">← All Islands</button>
+    <div id="island-roster-header" class="island-roster__header"></div>
+    <div id="island-roster-grid" class="monster-grid"></div>
+  </div>
+</main>
+
+<div id="filter-backdrop" class="profile-backdrop" hidden></div>
+
+<section id="filter-drawer" class="filter-drawer" hidden aria-modal="true" role="dialog" aria-label="Filters">
+  <div class="filter-drawer__header">
+    <h2>Filters</h2>
+    <button id="filter-close" class="profile-sheet__close" type="button" aria-label="Close filters">✕</button>
+  </div>
+  <div class="filter-drawer__body">
+    <div class="filter-group">
+      <h3>Classes</h3>
+      <div id="filter-classes" class="filter-chip-row"></div>
+    </div>
+    <div class="filter-group">
+      <h3>Variants</h3>
+      <div id="filter-variants" class="filter-chip-row"></div>
+    </div>
+    <div class="filter-group">
+      <h3>Elements</h3>
+      <div id="filter-elements" class="filter-chip-row"></div>
+    </div>
+    <div class="filter-group">
+      <h3>Islands</h3>
+      <div id="filter-islands" class="filter-chip-row"></div>
+    </div>
+  </div>
+  <div class="filter-drawer__footer">
+    <button id="filter-clear" class="filter-btn filter-btn--ghost" type="button">Clear All</button>
+    <button id="filter-apply" class="filter-btn filter-btn--primary" type="button">Show results</button>
+  </div>
+</section>
+
+<div id="profile-backdrop" class="profile-backdrop" hidden></div>
+
+<section id="profile-sheet" class="profile-sheet" hidden aria-modal="true" role="dialog" aria-labelledby="profile-name">
+  <button id="profile-close" class="profile-sheet__close" type="button" aria-label="Close profile">✕</button>
+
+  <div class="profile-sheet__header">
+    <h2 id="profile-name" class="profile-sheet__name"></h2>
+    <div id="profile-class" class="profile-sheet__class"></div>
+  </div>
+
+  <div class="profile-sheet__media">
+    <img id="profile-image" class="profile-sheet__image" alt="" />
+  </div>
+
+  <div id="variant-tiles" class="variant-tiles"></div>
+
+  <div class="profile-sheet__body">
+    <section class="profile-section" id="section-subclass" hidden>
+      <h3>Subclass</h3>
+      <p id="profile-subclass"></p>
+    </section>
+
+    <section class="profile-section" id="section-elements" hidden>
+      <h3>Elements</h3>
+      <div id="profile-elements" class="chip-row"></div>
+    </section>
+
+    <section class="profile-section" id="section-islands" hidden>
+      <h3>Islands</h3>
+      <div id="profile-islands" class="chip-row"></div>
+    </section>
+
+    <section class="profile-section" id="section-breeding" hidden>
+      <h3>Breeding</h3>
+      <div id="profile-breeding"></div>
+    </section>
+
+    <section class="profile-section" id="section-eggs" hidden>
+      <h3>Egg Requirements</h3>
+      <ul id="profile-eggs" class="egg-list"></ul>
+    </section>
+
+    <section class="profile-section" id="section-acquisition" hidden>
+      <h3>Alternative Acquisition</h3>
+      <ul id="profile-acquisition"></ul>
+    </section>
+
+    <section class="profile-section" id="section-notes" hidden>
+      <h3>Notes</h3>
+      <ul id="profile-notes"></ul>
+    </section>
+
+    <section class="profile-section" id="section-fact" hidden>
+      <h3>Interesting Fact</h3>
+      <p id="profile-fact"></p>
+    </section>
+  </div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
