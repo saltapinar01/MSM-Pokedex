@@ -1,0 +1,506 @@
+[
+  {
+    "id": "air-island",
+    "name": "Air Island",
+    "order": 1,
+    "description": "",
+    "image": "assets/islands/air-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/air-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#6FA96B",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "amber-island",
+    "name": "Amber Island",
+    "order": 2,
+    "description": "",
+    "image": "assets/islands/amber-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/amber-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#7FBFE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "bone-island",
+    "name": "Bone Island",
+    "order": 3,
+    "description": "",
+    "image": "assets/islands/bone-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/bone-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E2B24C",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "cold-island",
+    "name": "Cold Island",
+    "order": 4,
+    "description": "",
+    "image": "assets/islands/cold-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/cold-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#B98FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "earth-island",
+    "name": "Earth Island",
+    "order": 5,
+    "description": "",
+    "image": "assets/islands/earth-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/earth-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E2632F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "faerie-island",
+    "name": "Faerie Island",
+    "order": 6,
+    "description": "",
+    "image": "assets/islands/faerie-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/faerie-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#C97BD1",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "fire-haven",
+    "name": "Fire Haven",
+    "order": 7,
+    "description": "",
+    "image": "assets/islands/fire-haven.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/fire-haven-vertical.png"
+    },
+    "theme": {
+      "accent": "#5FD1C1",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "fire-oasis",
+    "name": "Fire Oasis",
+    "order": 8,
+    "description": "",
+    "image": "assets/islands/fire-oasis.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/fire-oasis-vertical.png"
+    },
+    "theme": {
+      "accent": "#D1A15F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "gold-island",
+    "name": "Gold Island",
+    "order": 9,
+    "description": "",
+    "image": "assets/islands/gold-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/gold-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#8FB2E0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "light-island",
+    "name": "Light Island",
+    "order": 10,
+    "description": "",
+    "image": "assets/islands/light-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/light-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E08F8F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-air-island",
+    "name": "Mirror Air Island",
+    "order": 11,
+    "description": "",
+    "image": "assets/islands/mirror-air-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-air-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#8FE0B2",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-cold-island",
+    "name": "Mirror Cold Island",
+    "order": 12,
+    "description": "",
+    "image": "assets/islands/mirror-cold-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-cold-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#D1C15F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-earth-island",
+    "name": "Mirror Earth Island",
+    "order": 13,
+    "description": "",
+    "image": "assets/islands/mirror-earth-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-earth-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#A15FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-plant-island",
+    "name": "Mirror Plant Island",
+    "order": 14,
+    "description": "",
+    "image": "assets/islands/mirror-plant-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-plant-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#5FA1E0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-water-island",
+    "name": "Mirror Water Island",
+    "order": 15,
+    "description": "",
+    "image": "assets/islands/mirror-water-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-water-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E05FA1",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mythical-island",
+    "name": "Mythical Island",
+    "order": 16,
+    "description": "",
+    "image": "assets/islands/mythical-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mythical-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#5FE0D1",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "plant-island",
+    "name": "Plant Island",
+    "order": 17,
+    "description": "",
+    "image": "assets/islands/plant-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/plant-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E0C75F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "psychic-island",
+    "name": "Psychic Island",
+    "order": 18,
+    "description": "",
+    "image": "assets/islands/psychic-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/psychic-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#7BE05F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "shugabush-island",
+    "name": "Shugabush Island",
+    "order": 19,
+    "description": "",
+    "image": "assets/islands/shugabush-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/shugabush-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E05F5F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "the-colossingum",
+    "name": "The Colossingum",
+    "order": 20,
+    "description": "",
+    "image": "assets/islands/the-colossingum.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/the-colossingum-vertical.png"
+    },
+    "theme": {
+      "accent": "#5F7BE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "water-island",
+    "name": "Water Island",
+    "order": 21,
+    "description": "",
+    "image": "assets/islands/water-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/water-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#B2E05F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "celestial-island",
+    "name": "Celestial Island",
+    "order": 3,
+    "description": "",
+    "image": "assets/islands/celestial-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/celestial-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E8C766",
+      "background": "#22200F"
+    }
+  },
+  {
+    "id": "paironormal-carnival",
+    "name": "Paironormal Carnival",
+    "order": 23,
+    "description": "",
+    "image": "assets/islands/paironormal-carnival.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/paironormal-carnival-vertical.png"
+    },
+    "theme": {
+      "accent": "#C15FD1",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "ethereal-island",
+    "name": "Ethereal Island",
+    "order": 24,
+    "description": "",
+    "image": "assets/islands/ethereal-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/ethereal-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#8FE0B2",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "ethereal-workshop",
+    "name": "Ethereal Workshop",
+    "order": 25,
+    "description": "",
+    "image": "assets/islands/ethereal-workshop.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/ethereal-workshop-vertical.png"
+    },
+    "theme": {
+      "accent": "#8FE0B2",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "magical-sanctum",
+    "name": "Magical Sanctum",
+    "order": 26,
+    "description": "",
+    "image": "assets/islands/magical-sanctum.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/magical-sanctum-vertical.png"
+    },
+    "theme": {
+      "accent": "#B98FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "seasonal-shanty",
+    "name": "Seasonal Shanty",
+    "order": 27,
+    "description": "",
+    "image": "assets/islands/seasonal-shanty.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/seasonal-shanty-vertical.png"
+    },
+    "theme": {
+      "accent": "#D1A15F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "bblizzard-island",
+    "name": "bbli$zard Island",
+    "order": 28,
+    "description": "",
+    "image": "assets/islands/bblizzard-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/bblizzard-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#7BE05F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "magical-nexus",
+    "name": "Magical Nexus",
+    "order": 29,
+    "description": "",
+    "image": "assets/islands/magical-nexus.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/magical-nexus-vertical.png"
+    },
+    "theme": {
+      "accent": "#B98FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "tribal-island",
+    "name": "Tribal Island",
+    "order": 30,
+    "description": "",
+    "image": "assets/islands/tribal-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/tribal-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E08F8F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "composer-island",
+    "name": "Composer Island",
+    "order": 31,
+    "description": "",
+    "image": "assets/islands/composer-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/composer-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#8FE0B2",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-light-island",
+    "name": "Mirror Light Island",
+    "order": 32,
+    "description": "",
+    "image": "assets/islands/mirror-light-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-light-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#B98FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-psychic-island",
+    "name": "Mirror Psychic Island",
+    "order": 33,
+    "description": "",
+    "image": "assets/islands/mirror-psychic-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-psychic-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#B98FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-faerie-island",
+    "name": "Mirror Faerie Island",
+    "order": 34,
+    "description": "",
+    "image": "assets/islands/mirror-faerie-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-faerie-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#B98FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mirror-bone-island",
+    "name": "Mirror Bone Island",
+    "order": 35,
+    "description": "",
+    "image": "assets/islands/mirror-bone-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mirror-bone-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#B98FE0",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "wublin-island",
+    "name": "Wublin Island",
+    "order": 36,
+    "description": "",
+    "image": "assets/islands/wublin-island.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/wublin-island-vertical.png"
+    },
+    "theme": {
+      "accent": "#E0C75F",
+      "background": "#161616"
+    }
+  }
+]

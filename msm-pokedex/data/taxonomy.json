@@ -1,0 +1,377 @@
+{
+  "variantSystems": {
+    "standard_rarity": {
+      "variants": [
+        "common",
+        "rare",
+        "epic"
+      ],
+      "defaultVariant": "common"
+    },
+    "celestial_lifecycle": {
+      "variants": [
+        "young",
+        "adult"
+      ],
+      "defaultVariant": "young"
+    },
+    "paironormal_form": {
+      "variants": [
+        "major",
+        "minor"
+      ],
+      "defaultVariant": "major"
+    },
+    "ethereal_workshop": {
+      "variants": [
+        "common",
+        "rare"
+      ],
+      "defaultVariant": "common"
+    },
+    "dipster_tiers": {
+      "variants": [
+        "tonal",
+        "elemental",
+        "royal",
+        "astral"
+      ],
+      "defaultVariant": "tonal"
+    },
+    "titansoul_tier": {
+      "variants": [
+        "active"
+      ],
+      "defaultVariant": "active"
+    }
+  },
+  "classes": {
+    "natural": {
+      "name": "Natural",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#6FA96B",
+        "glow": "rgba(111, 169, 107, 0.35)",
+        "gradient": "linear-gradient(160deg, rgba(111,169,107,0.18), rgba(111,169,107,0))",
+        "border": "rgba(111, 169, 107, 0.55)"
+      }
+    },
+    "celestial": {
+      "name": "Celestial",
+      "variantSystem": "celestial_lifecycle",
+      "theme": {
+        "accent": "#E8C766",
+        "glow": "rgba(232, 199, 102, 0.35)",
+        "gradient": "linear-gradient(160deg, rgba(232,199,102,0.18), rgba(232,199,102,0))",
+        "border": "rgba(232, 199, 102, 0.55)"
+      }
+    },
+    "paironormal": {
+      "name": "Paironormal",
+      "variantSystem": "paironormal_form",
+      "theme": {
+        "accent": "#C15FD1",
+        "glow": "rgba(193, 95, 209, 0.35)",
+        "gradient": "linear-gradient(160deg, rgba(193,95,209,0.18), rgba(193,95,209,0))",
+        "border": "rgba(193, 95, 209, 0.55)"
+      }
+    },
+    "fire": {
+      "name": "Fire",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#E2632F",
+        "glow": "rgba(226,99,47,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(226,99,47,0.18), rgba(226,99,47,0))",
+        "border": "rgba(226,99,47,0.55)"
+      }
+    },
+    "magical": {
+      "name": "Magical",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#B98FE0",
+        "glow": "rgba(185,143,224,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(185,143,224,0.18), rgba(185,143,224,0))",
+        "border": "rgba(185,143,224,0.55)"
+      }
+    },
+    "mythical": {
+      "name": "Mythical",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#5FD1C1",
+        "glow": "rgba(95,209,193,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(95,209,193,0.18), rgba(95,209,193,0))",
+        "border": "rgba(95,209,193,0.55)"
+      }
+    },
+    "ethereal": {
+      "name": "Ethereal",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#8FE0B2",
+        "glow": "rgba(143,224,178,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(143,224,178,0.18), rgba(143,224,178,0))",
+        "border": "rgba(143,224,178,0.55)"
+      }
+    },
+    "seasonal": {
+      "name": "Seasonal",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#D1A15F",
+        "glow": "rgba(209,161,95,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(209,161,95,0.18), rgba(209,161,95,0))",
+        "border": "rgba(209,161,95,0.55)"
+      }
+    },
+    "supernatural": {
+      "name": "Supernatural",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#E0C75F",
+        "glow": "rgba(224,199,95,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(224,199,95,0.18), rgba(224,199,95,0))",
+        "border": "rgba(224,199,95,0.55)"
+      }
+    },
+    "dipster": {
+      "name": "Dipster",
+      "variantSystem": "dipster_tiers",
+      "theme": {
+        "accent": "#A15FE0",
+        "glow": "rgba(161,95,224,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(161,95,224,0.18), rgba(161,95,224,0))",
+        "border": "rgba(161,95,224,0.55)"
+      }
+    },
+    "titansoul": {
+      "name": "Titansoul",
+      "variantSystem": "titansoul_tier",
+      "theme": {
+        "accent": "#E05F5F",
+        "glow": "rgba(224,95,95,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(224,95,95,0.18), rgba(224,95,95,0))",
+        "border": "rgba(224,95,95,0.55)"
+      }
+    },
+    "legendary": {
+      "name": "Legendary",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#B2E05F",
+        "glow": "rgba(178,224,95,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(178,224,95,0.18), rgba(178,224,95,0))",
+        "border": "rgba(178,224,95,0.55)"
+      }
+    },
+    "primordial": {
+      "name": "Primordial",
+      "variantSystem": "standard_rarity",
+      "theme": {
+        "accent": "#5F7BE0",
+        "glow": "rgba(95,123,224,0.35)",
+        "gradient": "linear-gradient(160deg, rgba(95,123,224,0.18), rgba(95,123,224,0))",
+        "border": "rgba(95,123,224,0.55)"
+      }
+    }
+  },
+  "elements": {
+    "air": {
+      "name": "Air",
+      "sigil": "assets/icons/elements/air.png"
+    },
+    "beat-hereafter": {
+      "name": "Beat Hereafter",
+      "sigil": "assets/icons/elements/beat-hereafter.png"
+    },
+    "bone": {
+      "name": "Bone",
+      "sigil": "assets/icons/elements/bone.png"
+    },
+    "cloverspell": {
+      "name": "Cloverspell",
+      "sigil": "assets/icons/elements/cloverspell.png"
+    },
+    "cold": {
+      "name": "Cold",
+      "sigil": "assets/icons/elements/cold.png"
+    },
+    "dream": {
+      "name": "Dream",
+      "sigil": "assets/icons/elements/dream.png"
+    },
+    "earth": {
+      "name": "Earth",
+      "sigil": "assets/icons/elements/earth.png"
+    },
+    "faerie": {
+      "name": "Faerie",
+      "sigil": "assets/icons/elements/faerie.png"
+    },
+    "feast-ember": {
+      "name": "Feast-Ember",
+      "sigil": "assets/icons/elements/feast-ember.png"
+    },
+    "fire": {
+      "name": "Fire",
+      "sigil": "assets/icons/elements/fire.png"
+    },
+    "light": {
+      "name": "Light",
+      "sigil": "assets/icons/elements/light.png"
+    },
+    "mindboggle": {
+      "name": "Mindboggle",
+      "sigil": "assets/icons/elements/mindboggle.png"
+    },
+    "mythical": {
+      "name": "Mythical",
+      "sigil": "assets/icons/elements/mythical.png"
+    },
+    "plant": {
+      "name": "Plant",
+      "sigil": "assets/icons/elements/plant.png"
+    },
+    "psychic": {
+      "name": "Psychic",
+      "sigil": "assets/icons/elements/psychic.png"
+    },
+    "skypainting": {
+      "name": "SkyPainting",
+      "sigil": "assets/icons/elements/skypainting.png"
+    },
+    "water": {
+      "name": "Water",
+      "sigil": "assets/icons/elements/water.png"
+    },
+    "celestial": {
+      "name": "Celestial",
+      "sigil": "assets/icons/elements/celestial.png"
+    },
+    "hoax": {
+      "name": "Hoax",
+      "sigil": "assets/icons/elements/hoax.png"
+    },
+    "ruin": {
+      "name": "Ruin",
+      "sigil": "assets/icons/elements/ruin.png"
+    },
+    "control": {
+      "name": "Control",
+      "sigil": "assets/icons/elements/control.png"
+    },
+    "depths": {
+      "name": "Depths",
+      "sigil": "assets/icons/elements/depths.png"
+    },
+    "dipster": {
+      "name": "Dipster",
+      "sigil": "assets/icons/elements/dipster.png"
+    },
+    "legendary": {
+      "name": "Legendary",
+      "sigil": "assets/icons/elements/legendary.png"
+    },
+    "titansoul": {
+      "name": "Titansoul",
+      "sigil": "assets/icons/elements/titansoul.png"
+    },
+    "electricity": {
+      "name": "Electricity",
+      "sigil": "assets/icons/elements/electricity.png"
+    },
+    "anniversary-month": {
+      "name": "Anniversary Month",
+      "sigil": "assets/icons/elements/anniversary-month.png"
+    },
+    "eggs-travaganza": {
+      "name": "Eggs-Travaganza",
+      "sigil": "assets/icons/elements/eggs-travaganza.png"
+    },
+    "festival-of-yay": {
+      "name": "Festival of Yay",
+      "sigil": "assets/icons/elements/festival-of-yay.png"
+    },
+    "season-of-love": {
+      "name": "Season of Love",
+      "sigil": "assets/icons/elements/season-of-love.png"
+    },
+    "spooktacle": {
+      "name": "Spooktacle",
+      "sigil": "assets/icons/elements/spooktacle.png"
+    },
+    "summersong": {
+      "name": "SummerSong",
+      "sigil": "assets/icons/elements/summersong.png"
+    },
+    "crescendo-moon": {
+      "name": "Crescendo Moon",
+      "sigil": "assets/icons/elements/crescendo-moon.png"
+    },
+    "echoes-of-eco": {
+      "name": "Echoes of Eco",
+      "sigil": "assets/icons/elements/echoes-of-eco.png"
+    },
+    "life-formula": {
+      "name": "Life-Formula",
+      "sigil": "assets/icons/elements/life-formula.png"
+    },
+    "perplexplore": {
+      "name": "Perplexplore",
+      "sigil": "assets/icons/elements/perplexplore.png"
+    },
+    "crystal": {
+      "name": "Crystal",
+      "sigil": "assets/icons/elements/crystal.png"
+    },
+    "mech": {
+      "name": "Mech",
+      "sigil": "assets/icons/elements/mech.png"
+    },
+    "plasma": {
+      "name": "Plasma",
+      "sigil": "assets/icons/elements/plasma.png"
+    },
+    "poison": {
+      "name": "Poison",
+      "sigil": "assets/icons/elements/poison.png"
+    },
+    "shadow": {
+      "name": "Shadow",
+      "sigil": "assets/icons/elements/shadow.png"
+    },
+    "primordial-air": {
+      "name": "Air (Primordial)",
+      "sigil": "assets/icons/elements/primordial-air.png"
+    },
+    "primordial-cold": {
+      "name": "Cold (Primordial)",
+      "sigil": "assets/icons/elements/primordial-cold.png"
+    },
+    "primordial-earth": {
+      "name": "Earth (Primordial)",
+      "sigil": "assets/icons/elements/primordial-earth.png"
+    },
+    "primordial-plant": {
+      "name": "Plant (Primordial)",
+      "sigil": "assets/icons/elements/primordial-plant.png"
+    },
+    "primordial-water": {
+      "name": "Water (Primordial)",
+      "sigil": "assets/icons/elements/primordial-water.png"
+    }
+  },
+  "acquisitionMethods": {
+    "market": {
+      "name": "Market Purchase"
+    },
+    "breeding": {
+      "name": "Breeding"
+    },
+    "vessel": {
+      "name": "Filling/Zapping Vessel"
+    }
+  }
+}
