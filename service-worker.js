@@ -1,4 +1,4 @@
-const CACHE_VERSION = "msm-pokedex-v1";
+const CACHE_VERSION = "msm-pokedex-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -26,9 +26,11 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   const isData = url.pathname.includes("/data/") && url.pathname.endsWith(".json");
+  const isShell = APP_SHELL.some((p) => url.pathname.endsWith(p.replace("./", "")) || url.pathname === "/" );
 
-  if (isData) {
-    // Network first, cache fallback: keeps the database fresh but usable offline.
+  if (isData || isShell) {
+    // Network first, cache fallback: the app shell and database both update
+    // immediately when online, and still work offline from the last-cached copy.
     event.respondWith(
       fetch(event.request)
         .then((res) => {
@@ -41,7 +43,8 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Cache first for shell/assets, falling back to network, then caching the result.
+  // Cache first for images/icons only — these don't change once added, so no
+  // need to hit the network for them every time.
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;
