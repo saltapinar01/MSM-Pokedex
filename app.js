@@ -162,10 +162,17 @@ function updateFilterCountBadge() {
 }
 
 function renderFilterDrawer() {
-  const classOptions = Object.entries(state.taxonomy.classes).map(([id, c]) => ({ id, label: c.name }));
-  const variantOptions = getAllVariantIds().map((id) => ({ id, label: id }));
-  const elementOptions = Object.entries(state.taxonomy.elements).map(([id, e]) => ({ id, label: e.name }));
-  const islandOptions = getAllIslands().map((name) => ({ id: name, label: name }));
+  const sortByLabel = (a, b) => a.label.localeCompare(b.label);
+
+  const classOptions = Object.entries(state.taxonomy.classes).map(([id, c]) => ({ id, label: c.name })).sort(sortByLabel);
+  const variantOptions = getAllVariantIds().map((id) => ({ id, label: id })).sort(sortByLabel);
+  // Elements like "primordial-air" are redundant in this filter: Class=Primordial + Element=Air already
+  // narrows to the same result, so redundant prefixed entries are excluded here (still used for sigil display elsewhere).
+  const elementOptions = Object.entries(state.taxonomy.elements)
+    .filter(([id]) => !id.startsWith("primordial-"))
+    .map(([id, e]) => ({ id, label: e.name }))
+    .sort(sortByLabel);
+  const islandOptions = getAllIslands().map((name) => ({ id: name, label: name })).sort(sortByLabel);
 
   renderFilterGroup("filter-classes", "classes", classOptions);
   renderFilterGroup("filter-variants", "variants", variantOptions);
@@ -258,11 +265,10 @@ function renderMonsterCard(monster) {
   card.setAttribute("aria-label", `${monster.name}, ${classDef.name}`);
 
   card.innerHTML = `
+    <div class="monster-card__name">${escapeHTML(monster.name)}</div>
     <div class="monster-card__image-wrap">
       ${imageOrPlaceholderHTML(variantData?.image, monster.name)}
     </div>
-    <div class="monster-card__name">${escapeHTML(monster.name)}</div>
-    <div class="monster-card__variant">${escapeHTML(displayVariantId)}</div>
   `;
 
   card.addEventListener("click", () => openProfile(monster.id, displayVariantId));
@@ -293,9 +299,9 @@ function switchView(view) {
   state.currentView = view;
   state.selectedIslandId = null;
 
-  document.querySelectorAll(".view-switch__btn").forEach((btn) => {
-    btn.classList.toggle("is-active", btn.dataset.view === view);
-  });
+  const toggle = document.getElementById("view-toggle");
+  toggle.textContent = view === "monsters" ? "Islands" : "Monsters";
+  toggle.dataset.view = view === "monsters" ? "islands" : "monsters";
 
   document.getElementById("monster-grid").hidden = view !== "monsters";
   document.getElementById("island-view").hidden = view !== "islands";
@@ -310,33 +316,70 @@ function monstersOnIsland(islandName) {
   );
 }
 
+function majorityClassColor(islandName) {
+  const tally = {};
+  for (const m of state.monsters) {
+    const onIsland = Object.values(m.variants).some((v) => (v.islands || []).includes(islandName));
+    if (onIsland) tally[m.classId] = (tally[m.classId] || 0) + 1;
+  }
+  let bestClass = null, bestCount = -1;
+  for (const [classId, count] of Object.entries(tally)) {
+    if (count > bestCount) { bestCount = count; bestClass = classId; }
+  }
+  const theme = bestClass ? state.taxonomy.classes[bestClass]?.theme : null;
+  return theme ? theme.accent : "#3a3a3f";
+}
+
 function renderIslandList() {
   document.getElementById("island-roster").hidden = true;
   const list = document.getElementById("island-list");
   list.hidden = false;
   list.innerHTML = "";
 
-  const sorted = [...state.islands].sort((a, b) => a.order - b.order);
-
-  if (!sorted.length) {
+  if (!state.islands.length) {
     list.innerHTML = `<div class="empty-state"><h3>No islands yet.</h3></div>`;
     return;
   }
 
-  for (const island of sorted) {
+  const mainIslands = state.islands.filter((i) => !i.name.startsWith("Mirror ")).sort((a, b) => a.name.localeCompare(b.name));
+  const mirrorIslands = state.islands.filter((i) => i.name.startsWith("Mirror ")).sort((a, b) => a.name.localeCompare(b.name));
+
+  list.appendChild(buildIslandGroup("Main Timeline", mainIslands));
+  list.appendChild(buildIslandGroup("Mirror Timeline", mirrorIslands));
+}
+
+function buildIslandGroup(title, islands) {
+  const section = document.createElement("div");
+  section.className = "island-group";
+  const heading = document.createElement("h2");
+  heading.className = "island-group__title";
+  heading.textContent = title;
+  section.appendChild(heading);
+
+  for (const island of islands) {
     const count = monstersOnIsland(island.name).length;
     const wordmark = resolveIslandWordmark(island);
+    const fillColor = majorityClassColor(island.name);
+    const textColor = contrastTextColor(fillColor);
+
     const row = document.createElement("button");
     row.type = "button";
     row.className = "island-row";
+    row.style.setProperty("--island-fill", fillColor);
+    row.style.setProperty("--island-text", textColor);
     row.innerHTML = `
+      <div class="island-row__left">
+        ${wordmark
+          ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'island-row__name-fallback',textContent:'${escapeHTML(island.name)}'}))">`
+          : `<span class="island-row__name-fallback">${escapeHTML(island.name)}</span>`}
+        <span class="island-row__count">${count} Monster${count === 1 ? "" : "s"}</span>
+      </div>
       ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" onerror="this.remove()">` : ""}
-      ${wordmark ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" onerror="this.replaceWith(document.createTextNode('${escapeHTML(island.name)}'))">` : `<span>${escapeHTML(island.name)}</span>`}
-      <span class="island-row__count">${count} Monster${count === 1 ? "" : "s"}</span>
     `;
     row.addEventListener("click", () => renderIslandRoster(island.id));
-    list.appendChild(row);
+    section.appendChild(row);
   }
+  return section;
 }
 
 function renderIslandRoster(islandId) {

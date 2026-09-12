@@ -266,20 +266,6 @@
     }
   },
   {
-    "id": "the-colossingum",
-    "name": "The Colossingum",
-    "order": 20,
-    "description": "",
-    "image": "assets/islands/the-colossingum.png",
-    "wordmark": {
-      "vertical": "assets/islands/wordmarks/the-colossingum-vertical.png"
-    },
-    "theme": {
-      "accent": "#5F7BE0",
-      "background": "#161616"
-    }
-  },
-  {
     "id": "water-island",
     "name": "Water Island",
     "order": 21,
@@ -406,34 +392,6 @@
     }
   },
   {
-    "id": "tribal-island",
-    "name": "Tribal Island",
-    "order": 30,
-    "description": "",
-    "image": "assets/islands/tribal-island.png",
-    "wordmark": {
-      "vertical": "assets/islands/wordmarks/tribal-island-vertical.png"
-    },
-    "theme": {
-      "accent": "#E08F8F",
-      "background": "#161616"
-    }
-  },
-  {
-    "id": "composer-island",
-    "name": "Composer Island",
-    "order": 31,
-    "description": "",
-    "image": "assets/islands/composer-island.png",
-    "wordmark": {
-      "vertical": "assets/islands/wordmarks/composer-island-vertical.png"
-    },
-    "theme": {
-      "accent": "#8FE0B2",
-      "background": "#161616"
-    }
-  },
-  {
     "id": "mirror-light-island",
     "name": "Mirror Light Island",
     "order": 32,
@@ -500,6 +458,20 @@
     },
     "theme": {
       "accent": "#E0C75F",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "the-colossingum",
+    "name": "The Colossingum",
+    "order": 34,
+    "description": "",
+    "image": "assets/islands/the-colossingum.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/the-colossingum-vertical.png"
+    },
+    "theme": {
+      "accent": "#8FB2E0",
       "background": "#161616"
     }
   }

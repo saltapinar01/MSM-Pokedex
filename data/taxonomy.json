@@ -341,26 +341,6 @@
     "shadow": {
       "name": "Shadow",
       "sigil": "assets/icons/elements/shadow.png"
-    },
-    "primordial-air": {
-      "name": "Air (Primordial)",
-      "sigil": "assets/icons/elements/primordial-air.png"
-    },
-    "primordial-cold": {
-      "name": "Cold (Primordial)",
-      "sigil": "assets/icons/elements/primordial-cold.png"
-    },
-    "primordial-earth": {
-      "name": "Earth (Primordial)",
-      "sigil": "assets/icons/elements/primordial-earth.png"
-    },
-    "primordial-plant": {
-      "name": "Plant (Primordial)",
-      "sigil": "assets/icons/elements/primordial-plant.png"
-    },
-    "primordial-water": {
-      "name": "Water (Primordial)",
-      "sigil": "assets/icons/elements/primordial-water.png"
     }
   },
   "acquisitionMethods": {

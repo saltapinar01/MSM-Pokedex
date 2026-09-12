@@ -19,7 +19,11 @@
           "Fire Haven",
           "Fire Oasis",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -42,8 +46,11 @@
           "Earth Island",
           "Fire Haven",
           "Fire Oasis",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Any pairing of two Triple-Element Naturals that both have Air \u2014 e.g. Congle + PomPom, Congle + Scups, PomPom + Scups | Also obtainable on Fire Haven: Any pairing of two Triple-Element monsters that both have Air (e.g. Reedling-line + Floogull-line combos)",
@@ -66,7 +73,11 @@
           "Earth Island",
           "Fire Haven",
           "Fire Oasis",
-          "Fire Haven"
+          "Fire Haven",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Cold: Deedge + Dandidoo; Air: Riff + Cybop; Water: Shellbeat + Quibble; Earth: Quarrister + Pango; Haven: Tring + Shrubb; Oasis: Sneyser + Maw | Also obtainable on Fire Haven: Tring + Shrubb",
@@ -101,7 +112,13 @@
           "Gold Island",
           "Psychic Island",
           "Light Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -123,11 +140,16 @@
           "Water Island",
           "Earth Island",
           "Fire Haven",
-          "The Colossingum",
           "Gold Island",
           "Psychic Island",
           "Light Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Any pairing of two Triple-Element Naturals that both have Plant \u2014 e.g. Bowgart + Pummel, Bowgart + Clamble, Pummel + Clamble | Also obtainable on Fire Haven: Any pairing of two Triple-Element monsters that both have Plant (e.g. Reedling + Repatillo) | Rare Potbelly here: Tapricorn + Rooba | Rare Potbelly here: Spytrap + TooToo",
@@ -154,7 +176,13 @@
           "Shugabush Island",
           "Fire Haven",
           "Psychic Island",
-          "Light Island"
+          "Light Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Plant: Entbrat + Shrubb; Cold: Deedge + Oaktopus; Water: Shellbeat + Dandidoo; Earth: Quarrister + Furcorn; Haven: Tring + Cybop; Light: Blow't + Boskus; Psychic: Gloptic + Phangler; Shugabush: Shugabush + Furcorn | Also obtainable on Fire Haven: Tring + Cybop | Epic Potbelly here: Gloptic + Phangler | Epic Potbelly here: Blow't + Boskus",
@@ -188,7 +216,13 @@
           "The Colossingum",
           "Gold Island",
           "Faerie Island",
-          "Bone Island"
+          "Bone Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -210,10 +244,15 @@
           "Water Island",
           "Earth Island",
           "Fire Haven",
-          "The Colossingum",
           "Gold Island",
           "Faerie Island",
-          "Bone Island"
+          "Bone Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Any pairing of two Triple-Element Naturals that both have Earth \u2014 e.g. T-Rox + Pummel, T-Rox + Clamble, Pummel + Clamble | Also obtainable on Fire Haven: Any pairing of two Triple-Element monsters that both have Earth (e.g. Reedling + Repatillo) | Rare Noggin here: Cantorell + Bridg-it | Rare Noggin here: Withur + Uuduk",
@@ -239,7 +278,13 @@
           "Bone Island",
           "Fire Haven",
           "Faerie Island",
-          "Bone Island"
+          "Bone Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Plant: Entbrat + Fwog; Air: Riff + Drumpler; Water: Shellbeat + Shrubb; Earth: Quarrister + Cybop; Haven: Tring + Dandidoo; Faerie: Pladdie + Boskus; Bone: Plinkajou + Phangler | Also obtainable on Fire Haven: Tring + Dandidoo | Epic Noggin here: Pladdie + Boskus | Epic Noggin here: Plinkajou + Phangler",
@@ -273,7 +318,13 @@
           "The Colossingum",
           "Gold Island",
           "Psychic Island",
-          "Bone Island"
+          "Bone Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -295,10 +346,15 @@
           "Air Island",
           "Water Island",
           "Fire Oasis",
-          "The Colossingum",
           "Gold Island",
           "Psychic Island",
-          "Bone Island"
+          "Bone Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Any pairing of two Triple-Element Naturals that both have Water \u2014 e.g. T-Rox + Pummel, T-Rox + Bowgart, Pummel + Bowgart | Also obtainable on Fire Oasis: Any pairing of two Triple-Element monsters that both have Water | Rare Toe Jammer here: Tapricorn + Periscorp | Rare Toe Jammer here: Withur + Banjaw",
@@ -324,7 +380,13 @@
           "Bone Island",
           "Fire Oasis",
           "Psychic Island",
-          "Bone Island"
+          "Bone Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Plant: Entbrat + Oaktopus; Cold: Deedge + Quibble; Air: Riff + Maw; Water: Shellbeat + Fwog; Oasis: Sneyser + Pango; Psychic: Gloptic + Flowah; Bone: Plinkajou + Stogg | Also obtainable on Fire Oasis: Sneyser + Pango | Epic Toe Jammer here: Gloptic + Flowah | Epic Toe Jammer here: Plinkajou + Stogg",
@@ -360,7 +422,13 @@
           "Faerie Island",
           "Light Island",
           "Shugabush Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -382,12 +450,17 @@
           "Air Island",
           "Earth Island",
           "Fire Oasis",
-          "The Colossingum",
           "Gold Island",
           "Faerie Island",
           "Light Island",
           "Shugabush Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Any pairing of two Triple-Element Naturals that both have Cold \u2014 e.g. T-Rox + Clamble, T-Rox + Bowgart, Clamble + Bowgart | Also obtainable on Fire Oasis: Any pairing of two Triple-Element monsters that both have Cold | Rare Mammott here: Cantorell + Clavi Gnat | Rare Mammott here: any 2 triples sharing Cold",
@@ -415,7 +488,13 @@
           "Fire Oasis",
           "Faerie Island",
           "Light Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Plant: Entbrat + Furcorn; Cold: Deedge + Maw; Air: Riff + Pango; Earth: Quarrister + Drumpler; Oasis: Sneyser + Quibble; Light: Blow't + Flowah; Faerie: Pladdie + Stogg; Shugabush: Shugabush + Oaktopus | Also obtainable on Fire Oasis: Sneyser + Quibble | Epic Mammott here: Pladdie + Stogg | Epic Mammott here: Blow't + Flowah",
@@ -447,7 +526,11 @@
           "Earth Island",
           "The Colossingum",
           "Gold Island",
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Earth Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Noggin + Mammott (guaranteed)",
@@ -467,9 +550,12 @@
           "Plant Island",
           "Air Island",
           "Earth Island",
-          "The Colossingum",
           "Gold Island",
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Earth Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Noggin + Mammott (same combo as Common, use at least one Rare parent)",
@@ -490,7 +576,11 @@
           "Air Island",
           "Earth Island",
           "Faerie Island",
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Earth Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Plant: Clamble + Maw; Air: PomPom + Fwog; Earth: Thumpies + Cybop; Faerie: Ziggurab + HippityHop",
@@ -523,7 +613,11 @@
           "The Colossingum",
           "Gold Island",
           "Bone Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Noggin + Toe Jammer (guaranteed)",
@@ -543,10 +637,13 @@
           "Plant Island",
           "Air Island",
           "Water Island",
-          "The Colossingum",
           "Gold Island",
           "Bone Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Noggin + Toe Jammer (same combo as Common, use at least one Rare parent)",
@@ -568,7 +665,11 @@
           "Water Island",
           "Bone Island",
           "Bone Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Plant Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Plant: Pummel + Furcorn; Air: Scups + Pango; Water: Reedling + Oaktopus; Bone: Thrumble + Denchuhs",
@@ -600,7 +701,10 @@
           "Air Island",
           "Fire Oasis",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Toe Jammer + Mammott (guaranteed)",
@@ -621,8 +725,10 @@
           "Cold Island",
           "Air Island",
           "Fire Oasis",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Toe Jammer + Mammott (same combo as Common, use at least one Rare parent) | Also obtainable on Fire Oasis: Same as Common (Toe Jammer + Mammott), use at least one Rare parent",
@@ -643,7 +749,10 @@
           "Cold Island",
           "Air Island",
           "Fire Oasis",
-          "Fire Oasis"
+          "Fire Oasis",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Plant: Bowgart + Drumpler; Cold: Spunge + Furcorn; Air: T-Rox + Quibble; Oasis: Whaddle + Pango | Also obtainable on Fire Oasis: Whaddle + Pango",
@@ -675,7 +784,10 @@
           "Earth Island",
           "Fire Haven",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Tweedle + Potbelly (guaranteed)",
@@ -696,8 +808,10 @@
           "Water Island",
           "Earth Island",
           "Fire Haven",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Tweedle + Potbelly (same combo as Common, use at least one Rare parent) | Also obtainable on Fire Haven: Same as Common (Tweedle + Potbelly), use at least one Rare parent",
@@ -717,7 +831,10 @@
           "Cold Island",
           "Water Island",
           "Earth Island",
-          "Fire Haven"
+          "Fire Haven",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Cold: Bowgart + Quibble; Water: Pummel + Cybop; Earth: Clamble + Pango; Haven: Reedling + Flowah",
@@ -749,7 +866,10 @@
           "Earth Island",
           "Fire Haven",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Tweedle + Noggin (guaranteed)",
@@ -770,8 +890,10 @@
           "Water Island",
           "Earth Island",
           "Fire Haven",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Tweedle + Noggin (same combo as Common, use at least one Rare parent) | Also obtainable on Fire Haven: Same as Common (Tweedle + Noggin), use at least one Rare parent",
@@ -791,7 +913,10 @@
           "Air Island",
           "Water Island",
           "Earth Island",
-          "Fire Haven"
+          "Fire Haven",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Air: Congle + Drumpler; Water: Scups + Dandidoo; Earth: PomPom + Shrubb; Haven: Reedling + Stogg",
@@ -824,7 +949,10 @@
           "Fire Oasis",
           "The Colossingum",
           "Gold Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Tweedle + Toe Jammer (guaranteed)",
@@ -845,9 +973,11 @@
           "Air Island",
           "Water Island",
           "Fire Oasis",
-          "The Colossingum",
           "Gold Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Tweedle + Toe Jammer (same combo as Common, use at least one Rare parent) | Fire-island combo: Same as Common (Tweedle + Toe Jammer), use at least one Rare parent",
@@ -868,7 +998,10 @@
           "Air Island",
           "Water Island",
           "Fire Oasis",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Cold: Congle + Dandidoo; Air: Scups + Maw; Water: Spunge + Shrubb; Oasis: Wynq + Pango; Shugabush: Shugabush + PomPom",
@@ -900,7 +1033,10 @@
           "Earth Island",
           "Fire Oasis",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Tweedle + Mammott (guaranteed)",
@@ -921,8 +1057,10 @@
           "Air Island",
           "Earth Island",
           "Fire Oasis",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Tweedle + Mammott (same combo as Common, use at least one Rare parent) | Also obtainable on Fire Oasis: Same as Common (Tweedle + Mammott), use at least one Rare parent",
@@ -943,7 +1081,10 @@
           "Air Island",
           "Earth Island",
           "Fire Oasis",
-          "Fire Oasis"
+          "Fire Oasis",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Cold: Thumpies + Oaktopus; Air: Congle + Cybop; Earth: Reedling + Furcorn; Oasis: Whaddle + Maw | Also obtainable on Fire Oasis: Whaddle + Maw",
@@ -976,7 +1117,11 @@
           "The Colossingum",
           "Gold Island",
           "Light Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Earth Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Potbelly + Mammott (guaranteed)",
@@ -996,10 +1141,13 @@
           "Plant Island",
           "Cold Island",
           "Earth Island",
-          "The Colossingum",
           "Gold Island",
           "Light Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Earth Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Potbelly + Mammott (same combo as Common, use at least one Rare parent)",
@@ -1021,7 +1169,11 @@
           "Earth Island",
           "Light Island",
           "Shugabush Island",
-          "Light Island"
+          "Light Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Earth Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Plant: Clamble + Fwog; Cold: Spunge + Maw; Earth: Thumpies + Drumpler; Light: Sooza + Pluckbill; Shugabush: Shugabush + Deedge",
@@ -1054,7 +1206,11 @@
           "The Colossingum",
           "Gold Island",
           "Psychic Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Potbelly + Toe Jammer (guaranteed)",
@@ -1074,10 +1230,13 @@
           "Plant Island",
           "Cold Island",
           "Water Island",
-          "The Colossingum",
           "Gold Island",
           "Psychic Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Potbelly + Toe Jammer (same combo as Common, use at least one Rare parent)",
@@ -1099,7 +1258,11 @@
           "Water Island",
           "Psychic Island",
           "Shugabush Island",
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Water Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Plant: Bowgart + Shrubb; Cold: Spunge + Pango; Water: Reedling + Fwog; Psychic: Rootitoot + Bonkers; Shugabush: Shugabush + Quibble | Epic Oaktopus here: Rootitoot + Bonkers",
@@ -1131,7 +1294,10 @@
           "Earth Island",
           "Fire Haven",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Potbelly + Noggin (guaranteed)",
@@ -1152,8 +1318,10 @@
           "Water Island",
           "Earth Island",
           "Fire Haven",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Potbelly + Noggin (same combo as Common, use at least one Rare parent) | Also obtainable on Fire Haven: Same as Common (Potbelly + Noggin), use at least one Rare parent",
@@ -1173,7 +1341,10 @@
           "Plant Island",
           "Water Island",
           "Earth Island",
-          "Fire Haven"
+          "Fire Haven",
+          "Mirror Plant Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Plant: T-Rox + Oaktopus; Water: Reedling + Quibble; Earth: PomPom + Dandidoo; Haven: Barrb + Cybop",
@@ -1204,7 +1375,9 @@
           "Plant Island",
           "Air Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Maw. Also: Mammott + Fwog, Toe Jammer + Drumpler.",
@@ -1223,8 +1396,9 @@
         "islands": [
           "Plant Island",
           "Air Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Maw. Also: Mammott + Fwog, Toe Jammer + Drumpler (use at least one Rare parent)",
@@ -1242,7 +1416,9 @@
         "image": "assets/monsters/t-rox-epic.png",
         "islands": [
           "Plant Island",
-          "Air Island"
+          "Air Island",
+          "Mirror Plant Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Plant: Pummel + Drumpler; Air: Congle + Fwog",
@@ -1273,7 +1449,9 @@
           "Plant Island",
           "Water Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Potbelly + Fwog. Also: Noggin + Oaktopus, Toe Jammer + Shrubb.",
@@ -1292,8 +1470,9 @@
         "islands": [
           "Plant Island",
           "Water Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Potbelly + Fwog. Also: Noggin + Oaktopus, Toe Jammer + Shrubb (use at least one Rare parent)",
@@ -1311,7 +1490,9 @@
         "image": "assets/monsters/pummel-epic.png",
         "islands": [
           "Plant Island",
-          "Water Island"
+          "Water Island",
+          "Mirror Plant Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Plant: Bowgart + Fwog; Water: Scups + Shrubb",
@@ -1342,7 +1523,9 @@
           "Plant Island",
           "Earth Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Potbelly + Drumpler. Also: Noggin + Furcorn, Mammott + Shrubb.",
@@ -1361,8 +1544,9 @@
         "islands": [
           "Plant Island",
           "Earth Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Potbelly + Drumpler. Also: Noggin + Furcorn, Mammott + Shrubb (use at least one Rare parent)",
@@ -1380,7 +1564,9 @@
         "image": "assets/monsters/clamble-epic.png",
         "islands": [
           "Plant Island",
-          "Earth Island"
+          "Earth Island",
+          "Mirror Plant Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Plant: Pummel + Maw; Earth: PomPom + Furcorn",
@@ -1411,7 +1597,9 @@
           "Plant Island",
           "Cold Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Best: Potbelly + Maw. Also: Mammott + Oaktopus, Toe Jammer + Furcorn.",
@@ -1430,8 +1618,9 @@
         "islands": [
           "Plant Island",
           "Cold Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Best: Potbelly + Maw. Also: Mammott + Oaktopus, Toe Jammer + Furcorn (use at least one Rare parent)",
@@ -1449,7 +1638,9 @@
         "image": "assets/monsters/bowgart-epic.png",
         "islands": [
           "Plant Island",
-          "Cold Island"
+          "Cold Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Plant: Clamble + Oaktopus; Cold: Congle + Furcorn",
@@ -1481,7 +1672,9 @@
           "Air Island",
           "Fire Oasis",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Best: Tweedle + Maw. Also: Toe Jammer + Pango, Mammott + Quibble.",
@@ -1501,8 +1694,9 @@
           "Cold Island",
           "Air Island",
           "Fire Oasis",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Best: Tweedle + Maw. Also: Toe Jammer + Pango, Mammott + Quibble (use at least one Rare parent) | Also obtainable on Fire Oasis: Same as Common, use at least one Rare parent",
@@ -1522,7 +1716,9 @@
           "Cold Island",
           "Air Island",
           "Fire Oasis",
-          "Fire Oasis"
+          "Fire Oasis",
+          "Mirror Cold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Cold: Thumpies + Maw; Air: Scups + Drumpler; Oasis: Woolabee + Quibble | Also obtainable on Fire Oasis: Woolabee + Quibble",
@@ -1554,7 +1750,9 @@
           "Earth Island",
           "The Colossingum",
           "Gold Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Air Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Tweedle + Drumpler. Also: Noggin + Pango, Mammott + Cybop.",
@@ -1573,9 +1771,10 @@
         "islands": [
           "Air Island",
           "Earth Island",
-          "The Colossingum",
           "Gold Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Air Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Tweedle + Drumpler. Also: Noggin + Pango, Mammott + Cybop (use at least one Rare parent)",
@@ -1594,7 +1793,9 @@
         "islands": [
           "Air Island",
           "Earth Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Air Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Air: T-Rox + Cybop; Earth: Reedling + Drumpler; Shugabush: Shugabush + Mammott",
@@ -1625,7 +1826,9 @@
           "Air Island",
           "Water Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Air Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Tweedle + Fwog. Also: Noggin + Quibble, Toe Jammer + Cybop.",
@@ -1644,8 +1847,9 @@
         "islands": [
           "Air Island",
           "Water Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Air Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Tweedle + Fwog. Also: Noggin + Quibble, Toe Jammer + Cybop (use at least one Rare parent)",
@@ -1663,7 +1867,9 @@
         "image": "assets/monsters/scups-epic.png",
         "islands": [
           "Air Island",
-          "Water Island"
+          "Water Island",
+          "Mirror Air Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Air: PomPom + Maw; Water: Pummel + Dandidoo",
@@ -1695,7 +1901,9 @@
           "Water Island",
           "The Colossingum",
           "Gold Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Cold Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Toe Jammer + Dandidoo. Also: Potbelly + Quibble, Tweedle + Oaktopus.",
@@ -1714,9 +1922,10 @@
         "islands": [
           "Cold Island",
           "Water Island",
-          "The Colossingum",
           "Gold Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Cold Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Toe Jammer + Dandidoo. Also: Potbelly + Quibble, Tweedle + Oaktopus (use at least one Rare parent)",
@@ -1735,7 +1944,9 @@
         "islands": [
           "Cold Island",
           "Water Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Cold Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Cold: Thumpies + Quibble; Water: Scups + Oaktopus",
@@ -1766,7 +1977,9 @@
           "Cold Island",
           "Earth Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Mammott + Dandidoo. Also: Potbelly + Pango, Tweedle + Furcorn.",
@@ -1785,8 +1998,9 @@
         "islands": [
           "Cold Island",
           "Earth Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Cold Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Mammott + Dandidoo. Also: Potbelly + Pango, Tweedle + Furcorn (use at least one Rare parent)",
@@ -1804,7 +2018,9 @@
         "image": "assets/monsters/thumpies-epic.png",
         "islands": [
           "Cold Island",
-          "Earth Island"
+          "Earth Island",
+          "Mirror Cold Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Cold: Congle + Oaktopus; Earth: Reedling + Pango",
@@ -1836,7 +2052,9 @@
           "Earth Island",
           "Fire Haven",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Dandidoo. Also: Potbelly + Cybop, Tweedle + Shrubb.",
@@ -1856,8 +2074,9 @@
           "Water Island",
           "Earth Island",
           "Fire Haven",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Dandidoo. Also: Potbelly + Cybop, Tweedle + Shrubb (use at least one Rare parent) | Also obtainable on Fire Haven: Same as Common, use at least one Rare parent",
@@ -1877,7 +2096,9 @@
           "Water Island",
           "Earth Island",
           "Fire Haven",
-          "Fire Haven"
+          "Fire Haven",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Water: Spunge + Fwog; Earth: Thumpies + Shrubb; Haven: Repatillo + Cybop | Also obtainable on Fire Haven: Repatillo + Cybop",
@@ -1908,7 +2129,8 @@
         "islands": [
           "Plant Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island"
         ],
         "breeding": {
           "description": "Best: T-Rox + Potbelly. Others: Clamble+Toe Jammer, Bowgart+Noggin, Pummel+Mammott, Shrubb+Maw, Oaktopus+Drumpler, Furcorn+Fwog.",
@@ -1926,8 +2148,8 @@
         "image": "assets/monsters/entbrat-rare.png",
         "islands": [
           "Plant Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island"
         ],
         "breeding": {
           "description": "Best: T-Rox + Potbelly (use at least one Rare parent). Others per Common Entbrat combo list.",
@@ -1975,7 +2197,8 @@
         "islands": [
           "Air Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Best: T-Rox + Tweedle. Others: Scups+Mammott, Congle+Noggin, PomPom+Toe Jammer, Cybop+Maw, Quibble+Drumpler, Pango+Fwog.",
@@ -1993,8 +2216,8 @@
         "image": "assets/monsters/riff-rare.png",
         "islands": [
           "Air Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Best: T-Rox + Tweedle (use at least one Rare parent). Others per Common Riff combo list.",
@@ -2043,7 +2266,8 @@
           "Cold Island",
           "The Colossingum",
           "Gold Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Best: Toe Jammer + Thumpies. Others: Mammott+Spunge, Potbelly+Congle, Tweedle+Bowgart, Maw+Dandidoo, Oaktopus+Pango, Furcorn+Quibble.",
@@ -2061,9 +2285,9 @@
         "image": "assets/monsters/deedge-rare.png",
         "islands": [
           "Cold Island",
-          "The Colossingum",
           "Gold Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Best: Toe Jammer + Thumpies (use at least one Rare parent). Others per Common Deedge combo list.",
@@ -2081,7 +2305,8 @@
         "image": "assets/monsters/deedge-epic.png",
         "islands": [
           "Cold Island",
-          "Shugabush Island"
+          "Shugabush Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Cold: Bowgart + Pango; Shugabush: Shugabush + Potbelly",
@@ -2112,7 +2337,8 @@
         "islands": [
           "Water Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Spunge. Others: Toe Jammer+Reedling, Potbelly+Scups, Tweedle+Pummel, Fwog+Dandidoo, Shrubb+Quibble, Oaktopus+Cybop.",
@@ -2130,8 +2356,8 @@
         "image": "assets/monsters/shellbeat-rare.png",
         "islands": [
           "Water Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Spunge (use at least one Rare parent). Others per Common Shellbeat combo list.",
@@ -2179,7 +2405,8 @@
         "islands": [
           "Earth Island",
           "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Thumpies. Others: Mammott+Reedling, Potbelly+PomPom, Tweedle+Clamble, Drumpler+Dandidoo, Furcorn+Cybop, Shrubb+Pango.",
@@ -2197,8 +2424,8 @@
         "image": "assets/monsters/quarrister-rare.png",
         "islands": [
           "Earth Island",
-          "The Colossingum",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Best: Noggin + Thumpies (use at least one Rare parent). Others per Common Quarrister combo list.",
@@ -2231,7 +2458,7 @@
   {
     "id": "candelavra",
     "name": "Candelavra",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "plant",
       "cold",
@@ -2281,7 +2508,11 @@
           "Faerie Island",
           "Light Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -2306,7 +2537,11 @@
           "Faerie Island",
           "Light Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 3h 30m, succeeds after 8h, using Relics and Keys).",
@@ -2329,7 +2564,11 @@
           "Faerie Island",
           "Light Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island (fails after 3h 30m (Common) / 4h (Rare)), succeeding after 15h.",
@@ -2431,7 +2670,9 @@
           "Fire Haven",
           "Psychic Island",
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Potbelly + Kayna",
@@ -2453,7 +2694,9 @@
           "Fire Haven",
           "Psychic Island",
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 5h, succeeds after 13h 30m, using Relics and Keys).",
@@ -2486,7 +2729,9 @@
           "Fire Haven",
           "Faerie Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Noggin + Kayna",
@@ -2508,7 +2753,9 @@
           "Fire Haven",
           "Faerie Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 5h, succeeds after 13h 30m, using Relics and Keys).",
@@ -2529,7 +2776,9 @@
           "Fire Haven",
           "Faerie Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island, succeeding after 1d 5h.",
@@ -2789,7 +3038,9 @@
           "Fire Oasis",
           "Psychic Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Toe Jammer + Kayna",
@@ -2811,7 +3062,9 @@
           "Fire Oasis",
           "Psychic Island",
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 5h, succeeds after 13h 30m, using Relics and Keys).",
@@ -2844,7 +3097,9 @@
           "Fire Oasis",
           "Faerie Island",
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Mammott + Kayna",
@@ -2866,7 +3121,9 @@
           "Fire Oasis",
           "Faerie Island",
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 5h, succeeds after 13h 30m, using Relics and Keys).",
@@ -2887,7 +3144,9 @@
           "Fire Oasis",
           "Faerie Island",
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island, succeeding after 19h.",
@@ -3423,7 +3682,8 @@
         "islands": [
           "Psychic Island",
           "Magical Sanctum",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -3442,7 +3702,8 @@
         "islands": [
           "Psychic Island",
           "Magical Sanctum",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Any 2 different Triple-Element monsters sharing Psychic (Tapricorn, Rooba, Periscorp) Also breedable on Magical Sanctum from any two of Frondley + Larvaluss + G'day (each of which contains this element).",
@@ -3461,7 +3722,8 @@
         "islands": [
           "Magical Sanctum",
           "Psychic Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Not bred; Epic obtained via Epic Chest / Epic Item, like other Epic Single-Element Monsters.",
@@ -3490,7 +3752,8 @@
         "name": "Bonkers",
         "image": "assets/monsters/bonkers-common.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Potbelly + Theremind",
@@ -3505,7 +3768,8 @@
         "name": "Rare Bonkers",
         "image": "assets/monsters/bonkers-rare.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Bonkers: Potbelly + Theremind (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -3532,7 +3796,8 @@
         "name": "Poppette",
         "image": "assets/monsters/poppette-common.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Toe Jammer + Theremind",
@@ -3547,7 +3812,8 @@
         "name": "Rare Poppette",
         "image": "assets/monsters/poppette-rare.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Poppette: Toe Jammer + Theremind (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -3574,7 +3840,8 @@
         "name": "Yuggler",
         "image": "assets/monsters/yuggler-common.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Kayna + Theremind",
@@ -3589,7 +3856,8 @@
         "name": "Rare Yuggler",
         "image": "assets/monsters/yuggler-rare.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -3605,7 +3873,7 @@
   {
     "id": "rootitoot",
     "name": "Rootitoot",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "plant",
       "water",
@@ -3620,7 +3888,8 @@
           "Psychic Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Flowah + Toe Jammer",
@@ -3640,7 +3909,8 @@
           "Psychic Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 10h, succeeds after 1d 2h 30m, using Relics and Keys).",
@@ -3660,7 +3930,8 @@
           "Psychic Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island, succeeding after 1d 11h.",
@@ -3690,7 +3961,8 @@
         "name": "Tapricorn",
         "image": "assets/monsters/tapricorn-common.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bonkers + Toe Jammer",
@@ -3705,7 +3977,8 @@
         "name": "Rare Tapricorn",
         "image": "assets/monsters/tapricorn-rare.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Tapricorn: Bonkers + Toe Jammer (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -3733,7 +4006,8 @@
         "name": "Rooba",
         "image": "assets/monsters/rooba-common.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Yuggler + Potbelly",
@@ -3748,7 +4022,8 @@
         "name": "Rare Rooba",
         "image": "assets/monsters/rooba-rare.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -3763,7 +4038,8 @@
         "name": "Epic Rooba",
         "image": "assets/monsters/rooba-epic.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred on Psychic Island from Periscorp + Flowah \u2014 confirmed as the best combination.",
@@ -3791,7 +4067,8 @@
         "name": "Periscorp",
         "image": "assets/monsters/periscorp-common.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Yuggler + Toe Jammer",
@@ -3806,7 +4083,8 @@
         "name": "Rare Periscorp",
         "image": "assets/monsters/periscorp-rare.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Periscorp: Yuggler + Toe Jammer (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -3835,7 +4113,8 @@
         "name": "Gloptic",
         "image": "assets/monsters/gloptic-common.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Rooba + Toe Jammer",
@@ -3850,7 +4129,8 @@
         "name": "Rare Gloptic",
         "image": "assets/monsters/gloptic-rare.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Gloptic: Rooba + Toe Jammer (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -3877,7 +4157,8 @@
         "image": "assets/monsters/booqwurm-common.png",
         "islands": [
           "Psychic Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Periscorp + Bonkers (Mindboggle seasonal event only)",
@@ -3893,7 +4174,8 @@
         "image": "assets/monsters/booqwurm-rare.png",
         "islands": [
           "Psychic Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Rare variant art confirmed; specific breeding combination for this tier not yet independently verified.",
@@ -3909,7 +4191,8 @@
         "image": "assets/monsters/booqwurm-epic.png",
         "islands": [
           "Psychic Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Epic variant art confirmed; specific breeding combination for this tier not yet independently verified.",
@@ -3937,7 +4220,8 @@
         "islands": [
           "Faerie Island",
           "Magical Sanctum",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -3956,7 +4240,8 @@
         "islands": [
           "Faerie Island",
           "Magical Sanctum",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Any 2 different Triple-Element monsters sharing Faerie (Cantorell, Bridg-it, Clavi Gnat) Also breedable on Magical Sanctum from any two of Frondley + Larvaluss + Mushaboom (each of which contains this element).",
@@ -3975,7 +4260,8 @@
         "islands": [
           "Magical Sanctum",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Not bred; Epic obtained via Epic Chest / Epic Item, like other Epic Single-Element Monsters.",
@@ -4004,7 +4290,8 @@
         "name": "HippityHop",
         "image": "assets/monsters/hippityhop-common.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Noggin + Floot Fly",
@@ -4019,7 +4306,8 @@
         "name": "Rare HippityHop",
         "image": "assets/monsters/hippityhop-rare.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -4046,7 +4334,8 @@
         "name": "Squot",
         "image": "assets/monsters/squot-common.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Mammott + Floot Fly",
@@ -4061,7 +4350,8 @@
         "name": "Rare Squot",
         "image": "assets/monsters/squot-rare.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Squot: Mammott + Floot Fly (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4088,7 +4378,8 @@
         "name": "Wimmzies",
         "image": "assets/monsters/wimmzies-common.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Kayna + Floot Fly",
@@ -4103,7 +4394,8 @@
         "name": "Rare Wimmzies",
         "image": "assets/monsters/wimmzies-rare.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -4119,7 +4411,7 @@
   {
     "id": "ziggurab",
     "name": "Ziggurab",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "earth",
       "cold",
@@ -4134,7 +4426,8 @@
           "Faerie Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Boskus + Noggin",
@@ -4154,7 +4447,8 @@
           "Faerie Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 10h, succeeds after 1d 2h 30m, using Relics and Keys).",
@@ -4174,7 +4468,8 @@
           "Faerie Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island, succeeding after 1d 11h.",
@@ -4204,7 +4499,8 @@
         "name": "Cantorell",
         "image": "assets/monsters/cantorell-common.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Squot + Noggin (also: Drumpler + Floot Fly)",
@@ -4219,7 +4515,8 @@
         "name": "Rare Cantorell",
         "image": "assets/monsters/cantorell-rare.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Cantorell: Squot + Noggin (also: Drumpler + Floot Fly) (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4234,7 +4531,8 @@
         "name": "Epic Cantorell",
         "image": "assets/monsters/cantorell-epic.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred on Faerie Island from Clavi Gnat + HippityHop \u2014 confirmed as the best combination.",
@@ -4262,7 +4560,8 @@
         "name": "Bridg-it",
         "image": "assets/monsters/bridg-it-common.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Wimmzies + Noggin",
@@ -4277,7 +4576,8 @@
         "name": "Rare Bridg-it",
         "image": "assets/monsters/bridg-it-rare.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -4305,7 +4605,8 @@
         "name": "Clavi Gnat",
         "image": "assets/monsters/clavi-gnat-common.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Wimmzies + Mammott",
@@ -4320,7 +4621,8 @@
         "name": "Rare Clavi Gnat",
         "image": "assets/monsters/clavi-gnat-rare.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Clavi Gnat: Wimmzies + Mammott (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4349,7 +4651,8 @@
         "name": "Pladdie",
         "image": "assets/monsters/pladdie-common.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Clavi Gnat + Noggin",
@@ -4364,7 +4667,8 @@
         "name": "Rare Pladdie",
         "image": "assets/monsters/pladdie-rare.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Pladdie: Clavi Gnat + Noggin (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4391,7 +4695,8 @@
         "image": "assets/monsters/ffidyll-common.png",
         "islands": [
           "Faerie Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Pladdie + Floot Fly (Cloverspell seasonal event only)",
@@ -4407,7 +4712,8 @@
         "image": "assets/monsters/ffidyll-rare.png",
         "islands": [
           "Faerie Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Pladdie + Floot Fly",
@@ -4423,7 +4729,8 @@
         "image": "assets/monsters/ffidyll-epic.png",
         "islands": [
           "Faerie Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Epic variant art confirmed; specific breeding combination for this tier not yet independently verified.",
@@ -4451,7 +4758,8 @@
         "islands": [
           "Light Island",
           "Magical Sanctum",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -4470,7 +4778,8 @@
         "islands": [
           "Light Island",
           "Magical Sanctum",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Any 2 different Triple-Element monsters sharing Light (Spytrap, TooToo, Fiddlement) Also breedable on Magical Sanctum from any two of Frondley + Mushaboom + G'day (each of which contains this element).",
@@ -4489,7 +4798,8 @@
         "islands": [
           "Magical Sanctum",
           "Light Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Not bred; Epic obtained via Epic Chest / Epic Item, like other Epic Single-Element Monsters.",
@@ -4518,7 +4828,8 @@
         "name": "Gob",
         "image": "assets/monsters/gob-common.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Potbelly + Fluoress",
@@ -4533,7 +4844,8 @@
         "name": "Rare Gob",
         "image": "assets/monsters/gob-rare.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -4560,7 +4872,8 @@
         "name": "Bulbo",
         "image": "assets/monsters/bulbo-common.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Mammott + Fluoress",
@@ -4575,7 +4888,8 @@
         "name": "Rare Bulbo",
         "image": "assets/monsters/bulbo-rare.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Bulbo: Mammott + Fluoress (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4602,7 +4916,8 @@
         "name": "Pluckbill",
         "image": "assets/monsters/pluckbill-common.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Kayna + Fluoress",
@@ -4617,7 +4932,8 @@
         "name": "Rare Pluckbill",
         "image": "assets/monsters/pluckbill-rare.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Pluckbill: Kayna + Fluoress (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4633,7 +4949,7 @@
   {
     "id": "sooza",
     "name": "Sooza",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "plant",
       "cold",
@@ -4648,7 +4964,8 @@
           "Light Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Flowah + Mammott (also: Boskus + Potbelly, Furcorn + Kayna)",
@@ -4668,7 +4985,8 @@
           "Light Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 10h, succeeds after 1d 2h 30m, using Relics and Keys).",
@@ -4688,7 +5006,8 @@
           "Light Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island, succeeding after 1d 3h.",
@@ -4718,7 +5037,8 @@
         "name": "Spytrap",
         "image": "assets/monsters/spytrap-common.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Gob + Mammott (also: Furcorn + Fluoress, Bulbo + Potbelly)",
@@ -4733,7 +5053,8 @@
         "name": "Rare Spytrap",
         "image": "assets/monsters/spytrap-rare.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Spytrap: Gob + Mammott (also: Furcorn + Fluoress, Bulbo + Potbelly) (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4761,7 +5082,8 @@
         "name": "TooToo",
         "image": "assets/monsters/tootoo-common.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Pluckbill + Potbelly (also: Gob + Kayna, Flowah + Fluoress)",
@@ -4776,7 +5098,8 @@
         "name": "Rare TooToo",
         "image": "assets/monsters/tootoo-rare.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -4791,7 +5114,8 @@
         "name": "Epic TooToo",
         "image": "assets/monsters/tootoo-epic.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Bred on Light Island from Spytrap + Flowah \u2014 confirmed as the best combination.",
@@ -4819,7 +5143,8 @@
         "name": "Fiddlement",
         "image": "assets/monsters/fiddlement-common.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Pluckbill + Mammott (also: Boskus + Fluoress, Bulbo + Kayna)",
@@ -4834,7 +5159,8 @@
         "name": "Rare Fiddlement",
         "image": "assets/monsters/fiddlement-rare.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Fiddlement: Pluckbill + Mammott (also: Boskus + Fluoress, Bulbo + Kayna) (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4863,7 +5189,8 @@
         "name": "Blow't",
         "image": "assets/monsters/blowt-common.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "TooToo + Mammott (also: Fiddlement + Potbelly, Spytrap + Kayna, Sooza + Fluoress)",
@@ -4878,7 +5205,8 @@
         "name": "Rare Blow't",
         "image": "assets/monsters/blowt-rare.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Blow't: TooToo + Mammott (also: Fiddlement + Potbelly, Spytrap + Kayna, Sooza + Fluoress) (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -4905,7 +5233,8 @@
         "image": "assets/monsters/whiz-bang-common.png",
         "islands": [
           "Light Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Blow't + Spytrap (SkyPainting seasonal event only)",
@@ -4921,7 +5250,8 @@
         "image": "assets/monsters/whiz-bang-rare.png",
         "islands": [
           "Light Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Rare variant art confirmed; specific breeding combination for this tier not yet independently verified.",
@@ -4937,7 +5267,8 @@
         "image": "assets/monsters/whiz-bang-epic.png",
         "islands": [
           "Light Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Epic variant art confirmed; specific breeding combination for this tier not yet independently verified.",
@@ -4965,7 +5296,8 @@
         "islands": [
           "Bone Island",
           "Magical Sanctum",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchase from Market, or acquire from a breeding failure",
@@ -4984,7 +5316,8 @@
         "islands": [
           "Magical Sanctum",
           "Bone Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred from any two of Larvaluss + Mushaboom + G'day (each of which contains the Bone element).",
@@ -5003,7 +5336,8 @@
         "islands": [
           "Magical Sanctum",
           "Bone Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Not bred; Epic obtained via Epic Chest / Epic Item, like other Epic Single-Element Monsters.",
@@ -5032,7 +5366,8 @@
         "name": "Peckidna",
         "image": "assets/monsters/peckidna-common.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Noggin + Clackula",
@@ -5047,7 +5382,8 @@
         "name": "Rare Peckidna",
         "image": "assets/monsters/peckidna-rare.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Peckidna: Noggin + Clackula (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -5074,7 +5410,8 @@
         "name": "Denchuhs",
         "image": "assets/monsters/denchuhs-common.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Toe Jammer + Clackula",
@@ -5089,7 +5426,8 @@
         "name": "Rare Denchuhs",
         "image": "assets/monsters/denchuhs-rare.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Denchuhs: Toe Jammer + Clackula (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -5116,7 +5454,8 @@
         "name": "Hawlo",
         "image": "assets/monsters/hawlo-common.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Kayna + Clackula",
@@ -5131,7 +5470,8 @@
         "name": "Rare Hawlo",
         "image": "assets/monsters/hawlo-rare.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -5147,7 +5487,7 @@
   {
     "id": "thrumble",
     "name": "Thrumble",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "earth",
       "water",
@@ -5162,7 +5502,8 @@
           "Bone Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Phangler + Noggin",
@@ -5182,7 +5523,8 @@
           "Bone Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 10h, succeeds after 1d 2h 30m, using Relics and Keys).",
@@ -5202,7 +5544,8 @@
           "Bone Island",
           "Fire Haven",
           "Fire Oasis",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island, succeeding after 1d 7h.",
@@ -5232,7 +5575,8 @@
         "name": "Withur",
         "image": "assets/monsters/withur-common.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Denchuhs + Noggin (also: Fwog + Clackula)",
@@ -5247,7 +5591,8 @@
         "name": "Rare Withur",
         "image": "assets/monsters/withur-rare.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -5275,7 +5620,8 @@
         "name": "Uuduk",
         "image": "assets/monsters/uuduk-common.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Hawlo + Noggin",
@@ -5290,7 +5636,8 @@
         "name": "Rare Uuduk",
         "image": "assets/monsters/uuduk-rare.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Uuduk: Hawlo + Noggin (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -5318,7 +5665,8 @@
         "name": "Banjaw",
         "image": "assets/monsters/banjaw-common.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Hawlo + Toe Jammer",
@@ -5333,7 +5681,8 @@
         "name": "Rare Banjaw",
         "image": "assets/monsters/banjaw-rare.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Same as Common, use at least one Rare parent",
@@ -5362,7 +5711,8 @@
         "name": "Plinkajou",
         "image": "assets/monsters/plinkajou-common.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Banjaw + Noggin",
@@ -5377,7 +5727,8 @@
         "name": "Rare Plinkajou",
         "image": "assets/monsters/plinkajou-rare.png",
         "islands": [
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common Plinkajou: Banjaw + Noggin (confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance).",
@@ -5404,7 +5755,8 @@
         "image": "assets/monsters/clavavera-common.png",
         "islands": [
           "Bone Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Withur + Clackula (Beat Hereafter/Day of the Dead seasonal event only)",
@@ -5420,7 +5772,8 @@
         "image": "assets/monsters/clavavera-rare.png",
         "islands": [
           "Bone Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Withur + Clackula",
@@ -5436,7 +5789,8 @@
         "image": "assets/monsters/clavavera-epic.png",
         "islands": [
           "Bone Island",
-          "Seasonal Shanty"
+          "Seasonal Shanty",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Epic variant art confirmed; specific breeding combination for this tier not yet independently verified.",
@@ -6676,7 +7030,8 @@
         "image": "assets/monsters/hairionette-major.png",
         "islands": [
           "Paironormal Carnival",
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "A Single-Element Paironormal (Control); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
@@ -6727,7 +7082,8 @@
         "image": "assets/monsters/owlesque-major.png",
         "islands": [
           "Paironormal Carnival",
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "A Single-Element Paironormal (Hoax); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
@@ -6778,7 +7134,8 @@
         "image": "assets/monsters/arcorina-major.png",
         "islands": [
           "Paironormal Carnival",
-          "Bone Island"
+          "Bone Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "A Single-Element Paironormal (Ruin); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
@@ -6829,7 +7186,8 @@
         "image": "assets/monsters/shhimmer-major.png",
         "islands": [
           "Paironormal Carnival",
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "A Single-Element Paironormal (Depths); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
@@ -7344,7 +7702,8 @@
         "islands": [
           "Water Island",
           "Ethereal Island",
-          "The Colossingum"
+          "The Colossingum",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Water Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7360,7 +7719,8 @@
         "image": "assets/monsters/jeeode-rare.png",
         "islands": [
           "Water Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Water Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7376,7 +7736,8 @@
         "image": "assets/monsters/jeeode-epic.png",
         "islands": [
           "Water Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Water Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7404,7 +7765,8 @@
         "islands": [
           "Air Island",
           "Ethereal Island",
-          "The Colossingum"
+          "The Colossingum",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Air Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7420,7 +7782,8 @@
         "image": "assets/monsters/reebro-rare.png",
         "islands": [
           "Air Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Air Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7436,7 +7799,8 @@
         "image": "assets/monsters/reebro-epic.png",
         "islands": [
           "Air Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Air Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7464,7 +7828,8 @@
         "islands": [
           "Plant Island",
           "Ethereal Island",
-          "The Colossingum"
+          "The Colossingum",
+          "Mirror Plant Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Plant Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7480,7 +7845,8 @@
         "image": "assets/monsters/ghazt-rare.png",
         "islands": [
           "Plant Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Plant Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Plant Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7496,7 +7862,8 @@
         "image": "assets/monsters/ghazt-epic.png",
         "islands": [
           "Plant Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Plant Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Plant Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7524,7 +7891,8 @@
         "islands": [
           "Earth Island",
           "Ethereal Island",
-          "The Colossingum"
+          "The Colossingum",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Earth Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7540,7 +7908,8 @@
         "image": "assets/monsters/humbug-rare.png",
         "islands": [
           "Earth Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Earth Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7556,7 +7925,8 @@
         "image": "assets/monsters/humbug-epic.png",
         "islands": [
           "Earth Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Earth Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7584,7 +7954,8 @@
         "islands": [
           "Cold Island",
           "Ethereal Island",
-          "The Colossingum"
+          "The Colossingum",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Cold Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7600,7 +7971,8 @@
         "image": "assets/monsters/grumpyre-rare.png",
         "islands": [
           "Cold Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Cold Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -7616,7 +7988,8 @@
         "image": "assets/monsters/grumpyre-epic.png",
         "islands": [
           "Cold Island",
-          "Ethereal Island"
+          "Ethereal Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Cold Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
@@ -8224,10 +8597,7 @@
         "name": "Yooreek",
         "image": "assets/monsters/yooreek-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Mech in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
@@ -8242,10 +8612,7 @@
         "name": "Rare Yooreek",
         "image": "assets/monsters/yooreek-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Mech in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8275,10 +8642,7 @@
         "name": "Meebkin",
         "image": "assets/monsters/meebkin-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Cold Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
@@ -8293,10 +8657,7 @@
         "name": "Rare Meebkin",
         "image": "assets/monsters/meebkin-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Cold Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8326,13 +8687,10 @@
         "name": "Blarret",
         "image": "assets/monsters/blarret-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
-          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Earth Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
+          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
           "timeNormal": "",
           "timeEnhanced": ""
         },
@@ -8344,10 +8702,7 @@
         "name": "Rare Blarret",
         "image": "assets/monsters/blarret-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8377,10 +8732,7 @@
         "name": "Gaddzooks",
         "image": "assets/monsters/gaddzooks-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
@@ -8395,10 +8747,7 @@
         "name": "Rare Gaddzooks",
         "image": "assets/monsters/gaddzooks-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8428,13 +8777,10 @@
         "name": "Auglur",
         "image": "assets/monsters/auglur-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
-          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Earth Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
+          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
           "timeNormal": "",
           "timeEnhanced": ""
         },
@@ -8446,10 +8792,7 @@
         "name": "Rare Auglur",
         "image": "assets/monsters/auglur-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8479,13 +8822,10 @@
         "name": "Flasque",
         "image": "assets/monsters/flasque-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Earth Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
-          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Crystal/Poison in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Earth Island, Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
+          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Crystal/Poison in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
           "timeNormal": "",
           "timeEnhanced": ""
         },
@@ -8497,10 +8837,7 @@
         "name": "Rare Flasque",
         "image": "assets/monsters/flasque-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Earth Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Crystal/Poison in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8530,10 +8867,7 @@
         "name": "Nitebear",
         "image": "assets/monsters/nitebear-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Crystal in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
@@ -8548,10 +8882,7 @@
         "name": "Rare Nitebear",
         "image": "assets/monsters/nitebear-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Crystal in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8581,13 +8912,10 @@
         "name": "Piplash",
         "image": "assets/monsters/piplash-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Earth Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
-          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Earth Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
+          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
           "timeNormal": "",
           "timeEnhanced": ""
         },
@@ -8599,10 +8927,7 @@
         "name": "Rare Piplash",
         "image": "assets/monsters/piplash-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Earth Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8632,13 +8957,10 @@
         "name": "X'rt",
         "image": "assets/monsters/x-rt-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
-          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Crystal/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Earth Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
+          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Crystal/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
           "timeNormal": "",
           "timeEnhanced": ""
         },
@@ -8650,10 +8972,7 @@
         "name": "Rare X'rt",
         "image": "assets/monsters/x-rt-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Crystal/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
@@ -8683,13 +9002,10 @@
         "name": "Teeter-Tauter",
         "image": "assets/monsters/teeter-tauter-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Earth Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
-          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Mech/Crystal/Poison in the Super-Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Earth Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
+          "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Mech/Crystal/Poison in the Super-Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
           "timeNormal": "",
           "timeEnhanced": ""
         },
@@ -8715,11 +9031,7 @@
         "name": "Whaill",
         "image": "assets/monsters/whaill-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Poison (its missing element), in the Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Meebkin, Gaddzooks, Nitebear. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
@@ -8734,11 +9046,7 @@
         "name": "Rare Whaill",
         "image": "assets/monsters/whaill-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Poison (its missing element), in the Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Meebkin, Gaddzooks, Nitebear. Also obtainable by Dish-Harmonizing at its Islet.",
@@ -8769,11 +9077,7 @@
         "name": "Vhenshun",
         "image": "assets/monsters/vhenshun-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Crystal (its missing element), in the Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Blarret, Auglur, Piplash. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
@@ -8788,11 +9092,7 @@
         "name": "Rare Vhenshun",
         "image": "assets/monsters/vhenshun-rare.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Crystal (its missing element), in the Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Blarret, Auglur, Piplash. Also obtainable by Dish-Harmonizing at its Islet.",
@@ -8823,11 +9123,7 @@
         "name": "Pentumbra",
         "image": "assets/monsters/pentumbra-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Mech (its missing element), in the Super-Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Meebkin, Blarret, Flasque, X'rt. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
@@ -8856,11 +9152,7 @@
         "name": "Rhysmuth",
         "image": "assets/monsters/rhysmuth-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Earth Island",
-          "Mirror Plant Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Shadow (its missing element), in the Mega-Super-Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Gaddzooks, Auglur, Flasque, Teeter-Tauter. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
@@ -8889,14 +9181,10 @@
         "name": "Oogiddy",
         "image": "assets/monsters/oogiddy-common.png",
         "islands": [
-          "Ethereal Workshop",
-          "Mirror Air Island",
-          "Mirror Cold Island",
-          "Mirror Earth Island",
-          "Mirror Water Island"
+          "Ethereal Workshop"
         ],
         "breeding": {
-          "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Plasma (its missing element), in the Ultra-Mega-Super-Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Nitebear, Piplash, X'rt, Teeter-Tauter. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
+          "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Plasma (its missing element), in the Ultra-Mega-Super-Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Nitebear, Piplash, X'rt, Teeter-Tauter. Its own Islet is Poison Islet, which hasn't been released yet \u2014 so Dish-Harmonizing isn't currently a way to get this monster; only the Synthesizer route above works for now. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
           "timeNormal": "",
           "timeEnhanced": ""
         },
@@ -8953,7 +9241,9 @@
           "Magical Sanctum",
           "Psychic Island",
           "Light Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Theremind + Fluoress (Psychic+Light).",
@@ -8973,7 +9263,9 @@
           "Magical Sanctum",
           "Psychic Island",
           "Light Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common \u2014 from Theremind + Fluoress \u2014 while Rare is in season/available.",
@@ -9005,7 +9297,9 @@
           "Magical Sanctum",
           "Psychic Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Theremind + Floot Fly (Psychic+Faerie).",
@@ -9025,7 +9319,9 @@
           "Magical Sanctum",
           "Psychic Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common \u2014 from Theremind + Floot Fly \u2014 while Rare is in season/available.",
@@ -9057,7 +9353,9 @@
           "Magical Sanctum",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Fluoress + Floot Fly (Light+Faerie).",
@@ -9077,7 +9375,9 @@
           "Magical Sanctum",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common \u2014 from Fluoress + Floot Fly \u2014 while Rare is in season/available.",
@@ -9097,7 +9397,9 @@
           "Magical Sanctum",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred from a specific pair of Epic Magicals; exact combination not independently confirmed.",
@@ -9129,7 +9431,9 @@
           "Magical Sanctum",
           "Bone Island",
           "Light Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Clackula + Fluoress (Bone+Light).",
@@ -9149,7 +9453,9 @@
           "Magical Sanctum",
           "Bone Island",
           "Light Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common \u2014 from Clackula + Fluoress \u2014 while Rare is in season/available.",
@@ -9181,7 +9487,9 @@
           "Magical Sanctum",
           "Psychic Island",
           "Bone Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Theremind + Clackula (Psychic+Bone).",
@@ -9201,7 +9509,9 @@
           "Magical Sanctum",
           "Psychic Island",
           "Bone Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common \u2014 from Theremind + Clackula \u2014 while Rare is in season/available.",
@@ -9233,7 +9543,9 @@
           "Magical Sanctum",
           "Bone Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Clackula + Floot Fly (Bone+Faerie).",
@@ -9253,7 +9565,9 @@
           "Magical Sanctum",
           "Bone Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common \u2014 from Clackula + Floot Fly \u2014 while Rare is in season/available.",
@@ -9287,7 +9601,10 @@
           "Psychic Island",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from D\u00e9j\u00e0-Jin + Fluoress \u2014 confirmed as the best combination (shortest wait time per failed attempt).",
@@ -9308,7 +9625,10 @@
           "Psychic Island",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common, while Rare is in season/available.",
@@ -9342,7 +9662,10 @@
           "Psychic Island",
           "Bone Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Osstax + Theremind \u2014 confirmed as the best combination.",
@@ -9363,7 +9686,10 @@
           "Psychic Island",
           "Bone Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common, while Rare is in season/available.",
@@ -9397,7 +9723,10 @@
           "Bone Island",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Osstax + Fluoress \u2014 confirmed as the best combination (shortest wait time per failed attempt).",
@@ -9418,7 +9747,10 @@
           "Bone Island",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Osstax + Fluoress \u2014 confirmed as the best combination (shortest wait time per failed attempt).",
@@ -9452,7 +9784,10 @@
           "Psychic Island",
           "Bone Island",
           "Light Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Xyster + Fluoress \u2014 confirmed as the best combination.",
@@ -9473,7 +9808,10 @@
           "Psychic Island",
           "Bone Island",
           "Light Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Xyster + Fluoress \u2014 confirmed as the best combination.",
@@ -9509,7 +9847,11 @@
           "Bone Island",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred on Magical Sanctum from Larvaluss + Fluoress \u2014 confirmed as the best combination (Triple + Single is more effective than Double + Double for Quads on this island). Other working combinations: Theremind + Mushaboom, Floot Fly + G'day, Clackula + Frondley, D\u00e9j\u00e0-Jin + Roarick, Xyster + Knucklehead, Cahoot + Osstax.",
@@ -9531,7 +9873,11 @@
           "Bone Island",
           "Light Island",
           "Faerie Island",
-          "Magical Nexus"
+          "Magical Nexus",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Bred the same way as Common, while Rare is in season/available.",
@@ -11914,7 +12260,12 @@
           "Ethereal Island",
           "Fire Haven",
           "Gold Island",
-          "Wublin Island"
+          "Wublin Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Purchased from the Market for 75,000,000 Coins (150,000 Shards on Ethereal Island) and takes 2 days to incubate. Placed as an inactive Box form, powered up by Boxing all 19 awakened Wublins (one of each) \u2014 the requirement below is specific to Wublin Island; other islands box that island's own resident monsters instead.",
@@ -12037,7 +12388,12 @@
           "Ethereal Island",
           "Fire Haven",
           "Gold Island",
-          "Wublin Island"
+          "Wublin Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Unlocked at Level 20 for 1 Starpower. Powers up by Boxing any 10 of the 19 Rare Wublins (not all 19 required, unlike Common).",
@@ -12062,7 +12418,12 @@
           "Earth Island",
           "Ethereal Island",
           "Fire Haven",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Evolved from an awakened Rare Wubbox; exact requirement not itemized in available sources.",
@@ -12103,7 +12464,16 @@
           "Faerie Island",
           "Bone Island",
           "Ethereal Island",
-          "Magical Sanctum"
+          "Magical Sanctum",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchased from the Market using Keys. Cannot be bred. Up to 10 can be placed per island.",
@@ -12127,7 +12497,11 @@
           "Faerie Island",
           "Bone Island",
           "Psychic Island",
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Not purchasable or breedable \u2014 obtained only from the Dipster Digs mini-game (guaranteed by completing level 10). Considered the Epic-tier equivalent, themed around chess pieces. Up to 2 can be placed per island, taking a 2\u00d72 grid space instead of the usual 1\u00d71.",
@@ -12165,7 +12539,16 @@
           "Faerie Island",
           "Bone Island",
           "Ethereal Island",
-          "Magical Sanctum"
+          "Magical Sanctum",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchased from the Market using Keys. Cannot be bred. Up to 10 can be placed per island.",
@@ -12189,7 +12572,11 @@
           "Faerie Island",
           "Bone Island",
           "Psychic Island",
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Not purchasable or breedable \u2014 obtained only from the Dipster Digs mini-game (guaranteed by completing level 10). Considered the Epic-tier equivalent, themed around chess pieces. Up to 2 can be placed per island, taking a 2\u00d72 grid space instead of the usual 1\u00d71.",
@@ -12227,7 +12614,16 @@
           "Faerie Island",
           "Bone Island",
           "Ethereal Island",
-          "Magical Sanctum"
+          "Magical Sanctum",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchased from the Market using Keys. Cannot be bred. Up to 10 can be placed per island.",
@@ -12269,7 +12665,16 @@
           "Faerie Island",
           "Bone Island",
           "Ethereal Island",
-          "Magical Sanctum"
+          "Magical Sanctum",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchased from the Market using Keys. Cannot be bred. Up to 10 can be placed per island.",
@@ -12326,7 +12731,16 @@
           "Faerie Island",
           "Bone Island",
           "Ethereal Island",
-          "Magical Sanctum"
+          "Magical Sanctum",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchased from the Market using Keys. Cannot be bred. Up to 10 can be placed per island.",
@@ -12368,7 +12782,16 @@
           "Faerie Island",
           "Bone Island",
           "Ethereal Island",
-          "Magical Sanctum"
+          "Magical Sanctum",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchased from the Market using Keys. Cannot be bred. Up to 10 can be placed per island.",
@@ -12392,7 +12815,11 @@
           "Faerie Island",
           "Bone Island",
           "Psychic Island",
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Not purchasable or breedable \u2014 obtained only from the Dipster Digs mini-game (guaranteed by completing level 5, though it can drop earlier). Considered the Rare-tier equivalent of Tonal Dipsters. Up to 5 can be placed per island.",
@@ -12430,7 +12857,16 @@
           "Faerie Island",
           "Bone Island",
           "Ethereal Island",
-          "Magical Sanctum"
+          "Magical Sanctum",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Air Island",
+          "Mirror Water Island",
+          "Mirror Earth Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Purchased from the Market using Keys. Cannot be bred. Up to 10 can be placed per island.",
@@ -12454,7 +12890,11 @@
           "Faerie Island",
           "Bone Island",
           "Psychic Island",
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island",
+          "Mirror Faerie Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Not purchasable or breedable \u2014 obtained only from the Dipster Digs mini-game (guaranteed by completing level 5, though it can drop earlier). Considered the Rare-tier equivalent of Tonal Dipsters. Up to 5 can be placed per island.",
@@ -12470,7 +12910,7 @@
   {
     "id": "pongping",
     "name": "PongPing",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "earth",
       "cold",
@@ -12485,7 +12925,8 @@
         "image": "assets/monsters/pongping-common.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -12504,7 +12945,8 @@
         "image": "assets/monsters/pongping-rare.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -12522,7 +12964,8 @@
         "image": "assets/monsters/pongping-epic.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -12543,7 +12986,7 @@
   {
     "id": "krillby",
     "name": "Krillby",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "earth",
       "air",
@@ -12558,7 +13001,8 @@
         "image": "assets/monsters/krillby-common.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -12576,7 +13020,8 @@
         "image": "assets/monsters/krillby-rare.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -12594,7 +13039,8 @@
         "image": "assets/monsters/krillby-epic.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -12615,7 +13061,7 @@
   {
     "id": "flum-ox",
     "name": "Flum Ox",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "earth",
       "water",
@@ -12630,7 +13076,8 @@
         "image": "assets/monsters/flum-ox-common.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -12648,7 +13095,8 @@
         "image": "assets/monsters/flum-ox-rare.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -12666,7 +13114,8 @@
         "image": "assets/monsters/flum-ox-epic.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -12687,7 +13136,7 @@
   {
     "id": "incisaur",
     "name": "Incisaur",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "cold",
       "water",
@@ -12702,7 +13151,8 @@
         "image": "assets/monsters/incisaur-common.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -12720,7 +13170,8 @@
         "image": "assets/monsters/incisaur-rare.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -12738,7 +13189,8 @@
         "image": "assets/monsters/incisaur-epic.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -12759,7 +13211,7 @@
   {
     "id": "edamimi",
     "name": "Edamimi",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "water",
       "earth",
@@ -12774,7 +13226,8 @@
         "image": "assets/monsters/edamimi-common.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -12792,7 +13245,8 @@
         "image": "assets/monsters/edamimi-rare.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -12810,7 +13264,8 @@
         "image": "assets/monsters/edamimi-epic.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -12831,7 +13286,7 @@
   {
     "id": "bisonorus",
     "name": "Bisonorus",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "air",
       "water",
@@ -12846,7 +13301,8 @@
         "image": "assets/monsters/bisonorus-common.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -12866,7 +13322,8 @@
         "image": "assets/monsters/bisonorus-rare.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -12886,7 +13343,8 @@
         "image": "assets/monsters/bisonorus-epic.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -12911,7 +13369,7 @@
   {
     "id": "tiawa",
     "name": "Tiawa",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "water",
       "earth",
@@ -12926,7 +13384,8 @@
         "image": "assets/monsters/tiawa-common.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -12944,7 +13403,8 @@
         "image": "assets/monsters/tiawa-rare.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -12962,7 +13422,8 @@
         "image": "assets/monsters/tiawa-epic.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -12983,7 +13444,7 @@
   {
     "id": "yelmut",
     "name": "Yelmut",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "cold",
       "air",
@@ -12998,7 +13459,8 @@
         "image": "assets/monsters/yelmut-common.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 300 Relics (or from the StarShop on its home island) only during select availability windows \u2014 not always purchasable.",
@@ -13016,7 +13478,8 @@
         "image": "assets/monsters/yelmut-rare.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 20h, succeeds after 2d 4h 30m, using Relics and Keys).",
@@ -13034,7 +13497,8 @@
         "image": "assets/monsters/yelmut-epic.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Evolved from a Rare via the Enhanced Crucible on Amber Island, succeeding after 20h.",
@@ -13062,7 +13526,8 @@
         "name": "Phosphoran Phlox",
         "image": "assets/monsters/phosphoran-phlox-active.png",
         "islands": [
-          "Light Island"
+          "Light Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Purchased from the Market for 10,000,000 Coins as an inactive flower \u2014 only unlocked for purchase after completing the Earth Island Colossal Conundrum quest. Activated by linking other Monsters to it to increase its Soul'er Power (similar to Boxing a Wubbox); currency generation scales with how many Monsters are linked. Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently.",
@@ -13090,7 +13555,8 @@
         "name": "Cruv'laaphtian Crocus",
         "image": "assets/monsters/cruv-laaphtian-crocus-active.png",
         "islands": [
-          "Psychic Island"
+          "Psychic Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Purchased from the Market for 10,000,000 Coins as an inactive flower \u2014 only unlocked for purchase after completing the Earth Island Colossal Conundrum quest. Activated by linking other Monsters to it to increase its Soul'er Power (similar to Boxing a Wubbox); currency generation scales with how many Monsters are linked. Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently.",
@@ -13116,7 +13582,8 @@
         "name": "Faesoddoid Fungus",
         "image": "assets/monsters/faesoddoid-fungus-active.png",
         "islands": [
-          "Faerie Island"
+          "Faerie Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Purchased from the Market for 10,000,000 Coins as an inactive flower \u2014 only unlocked for purchase after completing the Earth Island Colossal Conundrum quest. Activated by linking other Monsters to it to increase its Soul'er Power (similar to Boxing a Wubbox); currency generation scales with how many Monsters are linked. Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently.",
@@ -13144,7 +13611,8 @@
         "islands": [
           "Plant Island",
           "Shugabush Island",
-          "Gold Island"
+          "Gold Island",
+          "Mirror Plant Island"
         ],
         "breeding": {
           "description": "Bred on Plant Island from Bowgart + Clamble, then fed to Level 15 and teleported to Shugabush Island.",
@@ -13353,7 +13821,8 @@
         "image": "assets/monsters/bblizzard-common.png",
         "islands": [
           "Cold Island",
-          "bbli$zard Island"
+          "bbli$zard Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Bred on Cold Island from Thumpies + Congle, then fed to Level 15 and teleported to bbli$zard Island.",
@@ -13459,7 +13928,10 @@
         "islands": [
           "Plant Island",
           "Cold Island",
-          "Earth Island"
+          "Earth Island",
+          "Mirror Plant Island",
+          "Mirror Cold Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased from the Market for 100 Relics.",
@@ -13487,7 +13959,8 @@
         "name": "Parlsona",
         "image": "assets/monsters/parlsona-common.png",
         "islands": [
-          "Plant Island"
+          "Plant Island",
+          "Mirror Plant Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased from the Market for 100 Relics.",
@@ -13513,7 +13986,8 @@
         "name": "Maggpi",
         "image": "assets/monsters/maggpi-common.png",
         "islands": [
-          "Cold Island"
+          "Cold Island",
+          "Mirror Cold Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased from the Market for 100 Relics.",
@@ -13539,7 +14013,8 @@
         "name": "Stoowarb",
         "image": "assets/monsters/stoowarb-common.png",
         "islands": [
-          "Earth Island"
+          "Earth Island",
+          "Mirror Earth Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased from the Market for 100 Relics.",
@@ -13565,7 +14040,8 @@
         "name": "Charrkoll",
         "image": "assets/monsters/charrkoll-common.png",
         "islands": [
-          "Air Island"
+          "Air Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased from the Market for 100 Relics. The newest Werdo (Jan 2026) \u2014 its island pairing is inferred as completing the Natural Island set, not directly confirmed.",
@@ -13591,7 +14067,8 @@
         "name": "Alcordion",
         "image": "assets/monsters/alcordion-common.png",
         "islands": [
-          "Air Island"
+          "Air Island",
+          "Mirror Air Island"
         ],
         "breeding": {
           "description": "Bred from Scups + PomPom on Air Island.",
@@ -13617,7 +14094,8 @@
         "name": "T-Pirainha",
         "image": "assets/monsters/t-pirainha-common.png",
         "islands": [
-          "Water Island"
+          "Water Island",
+          "Mirror Water Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Obtained exclusively as a reward from the Waveform Act in the Clubbox.",
@@ -13633,7 +14111,7 @@
   {
     "id": "bowhead",
     "name": "Bowhead",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "plant",
       "air",
@@ -13648,7 +14126,8 @@
         "image": "assets/monsters/bowhead-common.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 500 Relics (only during select periods). On Amber Island it's instead acquired as a Vessel for 40 Relics, revitalized by zapping in the egg of every breedable Monster with the Water Element.",
@@ -13666,7 +14145,8 @@
         "image": "assets/monsters/bowhead-rare.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 1d 16h, succeeds after 3d 23h 30m, using Relics and Keys).",
@@ -13685,7 +14165,8 @@
         "image": "assets/monsters/bowhead-epic.png",
         "islands": [
           "Psychic Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Psychic Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -13708,7 +14189,7 @@
   {
     "id": "tuskski",
     "name": "Tuskski",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "plant",
       "cold",
@@ -13723,7 +14204,8 @@
         "image": "assets/monsters/tuskski-common.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 250 Relics (only during select periods). On Amber Island it's instead acquired as a Vessel for 40 Relics, revitalized by zapping in the egg of every breedable Monster with the Cold Element.",
@@ -13741,7 +14223,8 @@
         "image": "assets/monsters/tuskski-rare.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 1d 16h, succeeds after 3d 23h 30m, using Relics and Keys).",
@@ -13760,7 +14243,8 @@
         "image": "assets/monsters/tuskski-epic.png",
         "islands": [
           "Faerie Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Faerie Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -13783,7 +14267,7 @@
   {
     "id": "gnarls",
     "name": "Gnarls",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "plant",
       "cold",
@@ -13798,7 +14282,8 @@
         "image": "assets/monsters/gnarls-common.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 500 Relics (only during select periods). On Amber Island it's instead acquired as a Vessel for 40 Relics, revitalized by zapping in the egg of every breedable Monster with the Plant Element.",
@@ -13816,7 +14301,8 @@
         "image": "assets/monsters/gnarls-rare.png",
         "islands": [
           "Bone Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Bone Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 1d 16h, succeeds after 3d 23h 30m, using Relics and Keys).",
@@ -13835,7 +14321,7 @@
   {
     "id": "drummidary",
     "name": "Drummidary",
-    "classId": "magical",
+    "classId": "fire",
     "elements": [
       "cold",
       "air",
@@ -13850,7 +14336,8 @@
         "image": "assets/monsters/drummidary-common.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Cannot be bred. Purchased in the Market for 500 Relics (only during select periods). On Amber Island it's instead acquired as a Vessel for 40 Relics, revitalized by zapping in the egg of every breedable Monster with the Earth Element.",
@@ -13868,7 +14355,8 @@
         "image": "assets/monsters/drummidary-rare.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Evolved from a Common via the Crucible on Amber Island (fails after 1d 16h, succeeds after 3d 23h 30m, using Relics and Keys).",
@@ -13887,7 +14375,8 @@
         "image": "assets/monsters/drummidary-epic.png",
         "islands": [
           "Light Island",
-          "Amber Island"
+          "Amber Island",
+          "Mirror Light Island"
         ],
         "breeding": {
           "description": "Epic art is confirmed to exist, but this specific evolution wasn't listed in the Crucible's own time-table \u2014 it may not be Crucible-evolvable yet, or the table simply hadn't been updated for it.",
@@ -13912,7 +14401,7 @@
     "name": "Lowb",
     "classId": "primordial",
     "elements": [
-      "primordial-plant"
+      "plant"
     ],
     "variantSystem": "standard_rarity",
     "variants": {
@@ -13938,7 +14427,7 @@
     "name": "Fandhul",
     "classId": "primordial",
     "elements": [
-      "primordial-cold"
+      "cold"
     ],
     "variantSystem": "standard_rarity",
     "variants": {
@@ -13964,7 +14453,7 @@
     "name": "Bogle",
     "classId": "primordial",
     "elements": [
-      "primordial-air"
+      "air"
     ],
     "variantSystem": "standard_rarity",
     "variants": {
@@ -13990,7 +14479,7 @@
     "name": "Droah",
     "classId": "primordial",
     "elements": [
-      "primordial-water"
+      "water"
     ],
     "variantSystem": "standard_rarity",
     "variants": {

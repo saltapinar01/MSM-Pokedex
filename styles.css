@@ -246,16 +246,15 @@ input:focus-visible {
 .empty-state h3 { color: var(--text-primary); margin-bottom: 6px; }
 
 .monster-card {
-  background: var(--surface);
-  border: 1px solid var(--card-border, var(--border-quiet));
+  background: var(--card-accent, var(--surface));
+  border: 1px solid rgba(0,0,0,0.15);
   border-radius: var(--radius-card);
-  padding: 12px 10px 10px;
+  padding: 10px 10px 12px;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  background-image: var(--card-gradient, none);
+  gap: 6px;
   transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
@@ -268,13 +267,10 @@ input:focus-visible {
 .monster-card__image-wrap {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 12px;
-  background: var(--card-accent, var(--surface-raised));
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
 }
 
 .monster-card__image {
@@ -291,17 +287,10 @@ input:focus-visible {
 }
 
 .monster-card__name {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.98rem;
   text-align: center;
-  color: var(--text-primary);
-}
-
-.monster-card__variant {
-  font-size: 0.85rem;
-  color: var(--card-accent, var(--text-muted));
-  font-weight: 600;
-  text-transform: capitalize;
+  color: var(--card-fill-text, var(--text-primary));
 }
 
 /* ---------- Profile sheet ---------- */
@@ -455,46 +444,76 @@ input:focus-visible {
 #profile-subclass { display: inline-flex; align-items: center; gap: 6px; }
 #profile-subclass .sigil { width: 16px; height: 16px; }
 
-/* Island View (Phase 5): island photo + vertical wordmark side by side */
-.island-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--border-quiet);
-}
-.island-row__image {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  object-fit: cover;
-  background: var(--surface-raised);
-}
-.island-row__wordmark {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
-.island-row__count {
-  margin-left: auto;
-  font-size: 0.92rem;
+/* Island View: fixed-height tiles, solid class-majority color fill,
+   wordmark+count stacked on the left, island photo on the right */
+.island-group__title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
+  margin: 18px 16px 8px;
 }
+.island-group:first-child .island-group__title { margin-top: 8px; }
 
 .island-list {
   display: flex;
   flex-direction: column;
 }
+
 .island-row {
   cursor: pointer;
   border: none;
-  background: none;
   width: 100%;
   text-align: left;
-  color: inherit;
   font: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 96px;
+  padding: 0 18px;
+  margin: 0 12px 10px;
+  border-radius: 16px;
+  background: var(--island-fill, var(--surface));
+  color: var(--island-text, var(--text-primary));
 }
-.island-row:hover { background: var(--surface); }
+.island-row:hover { filter: brightness(1.06); }
+
+.island-row__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  padding: 14px 0;
+  min-width: 0;
+}
+.island-row__wordmark {
+  max-height: 44px;
+  max-width: 150px;
+  width: auto;
+  object-fit: contain;
+}
+.island-row__name-fallback {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--island-text, var(--text-primary));
+}
+.island-row__count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--island-text, var(--text-primary));
+  opacity: 0.9;
+}
+
+.island-row__image {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+}
 
 .island-roster { padding: 8px 0; }
 .island-roster__back {
@@ -511,8 +530,8 @@ input:focus-visible {
   gap: 12px;
   padding: 4px 16px 16px;
 }
-.island-roster__header img.island-row__image { width: 64px; height: 64px; }
-.island-roster__header img.island-row__wordmark { height: 46px; }
+.island-roster__header .island-row__image { width: 64px; height: 64px; }
+.island-roster__header .island-row__wordmark { max-height: 46px; }
 .island-roster__count { margin-left: auto; font-size: 0.96rem; color: var(--text-muted); }
 
 .breed-combo {
