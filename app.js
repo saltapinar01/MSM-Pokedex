@@ -85,6 +85,81 @@ function normalizeData(data) {
       (state.breedingByParents[parentId] ||= []).push(b);
     }
   }
+
+  // Flat index of every free-text breeding blurb in the dex, used for the
+  // reverse "Used To Breed" lookup (see getBreedsInto). Most real-data combos
+  // are prose, not structured parent IDs, so this is a best-effort text match
+  // rather than a guaranteed-accurate parent list.
+  state.breedingTextBlurbs = [];
+  for (const m of data.monsters) {
+    for (const [variantId, variant] of Object.entries(m.variants)) {
+      if (variant.breeding && variant.breeding.description) {
+        state.breedingTextBlurbs.push({
+          targetMonsterId: m.id,
+          targetVariantId: variantId,
+          text: variant.breeding.description,
+        });
+      }
+    }
+  }
+}
+
+// ---------- Reverse breeding lookup ("Used To Breed") ----------
+//
+// Two sources, merged and deduped:
+//  1. Structured breeding.json combos where this monster is a listed parent
+//     (exact, but only covers monsters that still use the legacy path).
+//  2. A whole-word, case-insensitive scan of every other variant's free-text
+//     breeding description for this monster's name (heuristic — a name
+//     mention isn't a guaranteed pairing, hence the "may not be complete"
+//     caption in the UI).
+function getBreedsInto(monster) {
+  const results = [];
+  const seen = new Set();
+
+  for (const combo of state.breedingByParents[monster.id] || []) {
+    const key = `${combo.targetMonsterId}:${combo.targetVariantId}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    results.push({ monsterId: combo.targetMonsterId, variantId: combo.targetVariantId });
+  }
+
+  const escaped = monster.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const nameRe = new RegExp(`\\b${escaped}\\b`, "i");
+  for (const blurb of state.breedingTextBlurbs) {
+    if (blurb.targetMonsterId === monster.id) continue;
+    const key = `${blurb.targetMonsterId}:${blurb.targetVariantId}`;
+    if (seen.has(key) || !nameRe.test(blurb.text)) continue;
+    seen.add(key);
+    results.push({ monsterId: blurb.targetMonsterId, variantId: blurb.targetVariantId });
+  }
+
+  return results.sort((a, b) => {
+    const nameA = state.monsterById[a.monsterId]?.name || "";
+    const nameB = state.monsterById[b.monsterId]?.name || "";
+    return nameA.localeCompare(nameB);
+  });
+}
+
+function renderBreedsInto(monster) {
+  const section = document.getElementById("section-breeds-into");
+  const results = getBreedsInto(monster);
+  if (!results.length) { section.hidden = true; return; }
+  section.hidden = false;
+
+  const el = document.getElementById("profile-breeds-into");
+  el.innerHTML = "";
+  for (const r of results) {
+    const targetMonster = state.monsterById[r.monsterId];
+    if (!targetMonster) continue;
+    const variantData = targetMonster.variants[r.variantId];
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "chip chip--link";
+    chip.textContent = variantData?.name || targetMonster.name;
+    chip.addEventListener("click", () => openProfile(r.monsterId, r.variantId));
+    el.appendChild(chip);
+  }
 }
 
 // ---------- Search + Filters ----------
@@ -193,6 +268,7 @@ function renderFilterGroup(containerId, category, options) {
       toggleFilter(category, opt.id);
       chip.classList.toggle("is-selected");
       updateFilterCountBadge();
+      renderMonsterGrid(); // live-apply — no need to wait for "Show results"
     });
     container.appendChild(chip);
   }
@@ -269,10 +345,32 @@ function renderMonsterCard(monster) {
     <div class="monster-card__image-wrap">
       ${imageOrPlaceholderHTML(variantData?.image, monster.name)}
     </div>
+    ${renderVariantBadgesHTML(monster, system, displayVariantId)}
   `;
 
   card.addEventListener("click", () => openProfile(monster.id, displayVariantId));
   return card;
+}
+
+// One badge per variant the class's system defines, so the grid shows rarity
+// availability at a glance without opening the profile: filled = released,
+// dashed/dim = not released yet, ringed = the variant currently pictured.
+// Hidden entirely for single-variant systems (e.g. Titansoul) where it'd add
+// nothing.
+function renderVariantBadgesHTML(monster, system, currentVariantId) {
+  if (!system.variants || system.variants.length <= 1) return "";
+  return `
+    <div class="monster-card__variants" role="img" aria-label="Variants available">
+      ${system.variants.map((v) => {
+        const exists = Boolean(monster.variants[v]);
+        const isCurrent = v === currentVariantId;
+        const classes = ["variant-badge", !exists && "is-locked", isCurrent && "is-current"]
+          .filter(Boolean).join(" ");
+        const title = `${v.charAt(0).toUpperCase()}${v.slice(1)}${exists ? "" : " — unreleased"}`;
+        return `<span class="${classes}" title="${escapeHTML(title)}">${escapeHTML(v.charAt(0).toUpperCase())}</span>`;
+      }).join("")}
+    </div>
+  `;
 }
 
 function imageOrPlaceholderHTML(src, altBase) {
@@ -477,6 +575,7 @@ function renderProfile() {
   setChipSection("section-islands", "profile-islands", variant.islands || []);
 
   renderBreedingSection(monster, variant);
+  renderBreedsInto(monster);
   renderEggRequirements(variant);
 
   renderListSection("section-acquisition", "profile-acquisition",
@@ -659,14 +758,12 @@ function wireEvents() {
   document.getElementById("filter-btn").addEventListener("click", openFilterDrawer);
   document.getElementById("filter-close").addEventListener("click", closeFilterDrawer);
   document.getElementById("filter-backdrop").addEventListener("click", closeFilterDrawer);
-  document.getElementById("filter-apply").addEventListener("click", () => {
-    closeFilterDrawer();
-    renderMonsterGrid();
-  });
+  document.getElementById("filter-apply").addEventListener("click", closeFilterDrawer);
   document.getElementById("filter-clear").addEventListener("click", () => {
     state.activeFilters = { classes: [], variants: [], elements: [], islands: [] };
     updateFilterCountBadge();
     renderFilterDrawer();
+    renderMonsterGrid(); // keep it live-applying, same as individual chip taps
   });
 
   document.querySelectorAll(".view-switch__btn").forEach((btn) => {
@@ -674,6 +771,66 @@ function wireEvents() {
   });
 
   document.getElementById("island-roster-back").addEventListener("click", renderIslandList);
+}
+
+// ---------- Background offline sync ----------
+//
+// The service worker only caches images on-demand as you browse (see
+// service-worker.js), so a fresh install with no signal would show
+// placeholders for anything you haven't opened yet. This kicks off a
+// low-priority background pass right after the first successful load that
+// walks every image URL in the dex and asks the SW to warm the cache for
+// each one it doesn't already have — so the app keeps working fully offline
+// even for monsters/islands you've never tapped into.
+
+function collectAllAssetURLs() {
+  const urls = new Set();
+  for (const m of state.monsters) {
+    for (const v of Object.values(m.variants)) {
+      if (v.image) urls.add(v.image);
+    }
+  }
+  for (const isl of state.islands) {
+    if (isl.image) urls.add(isl.image);
+    if (isl.wordmark?.vertical) urls.add(isl.wordmark.vertical);
+    if (isl.wordmark?.horizontal) urls.add(isl.wordmark.horizontal);
+  }
+  for (const el of Object.values(state.taxonomy?.elements || {})) {
+    if (el.sigil) urls.add(el.sigil);
+  }
+  for (const sub of Object.values(state.taxonomy?.subclasses || {})) {
+    if (sub.sigil) urls.add(sub.sigil);
+  }
+  return [...urls];
+}
+
+function startBackgroundSync() {
+  if (!("serviceWorker" in navigator)) return;
+
+  const statusEl = document.getElementById("sync-status");
+  let shown = false;
+
+  navigator.serviceWorker.addEventListener("message", (event) => {
+    const { type, done, total } = event.data || {};
+    if (type === "CACHE_PROGRESS") {
+      if (!shown && done < total) {
+        shown = true;
+        statusEl.hidden = false;
+      }
+      if (shown) statusEl.textContent = `Preparing offline copy… ${done}/${total}`;
+    } else if (type === "CACHE_DONE") {
+      if (shown) {
+        statusEl.textContent = "Offline copy ready.";
+        setTimeout(() => { statusEl.hidden = true; }, 1500);
+      }
+    }
+  });
+
+  navigator.serviceWorker.ready.then((reg) => {
+    if (!reg.active) return;
+    const urls = collectAllAssetURLs();
+    if (urls.length) reg.active.postMessage({ type: "CACHE_ALL", urls });
+  });
 }
 
 // ---------- Boot ----------
@@ -693,6 +850,7 @@ async function init() {
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js").catch(console.error);
+    startBackgroundSync();
   }
   if (navigator.storage && navigator.storage.persist) {
     navigator.storage.persist();

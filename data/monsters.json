@@ -2460,11 +2460,11 @@
     "name": "Candelavra",
     "classId": "fire",
     "elements": [
-      "plant",
-      "cold",
-      "air",
+      "fire",
+      "water",
       "earth",
-      "fire"
+      "cold",
+      "air"
     ],
     "variantSystem": "standard_rarity",
     "variants": {
@@ -7034,12 +7034,13 @@
           "Mirror Psychic Island"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Control); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Psychic Island from Gloptic + any Triple-Element Monster, during the day (6:00 AM\u20138:00 PM local time). Gloptic + Rooba is the best specific pairing (shorter/cheaper than Gloptic + Rootitoot); not guaranteed.",
+          "timeNormal": "1 day 8 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Minor copy in the Carnival's Centri-Fuge for 100 Starpower to fill in its Major form."
         ],
         "notes": [
           "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
@@ -7053,12 +7054,13 @@
           "Paironormal Carnival"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Control); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Mirror Psychic Island the same way as the Major form, but at night (6:00 PM\u20138:00 AM local time). Can also be bought directly from the Market on Mirror Psychic Island during that same window.",
+          "timeNormal": "1 day 8 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Major copy in the Carnival's Centri-Fuge for 100 Starpower to fill in its Minor form."
         ],
         "notes": [
           "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
@@ -7086,12 +7088,13 @@
           "Mirror Faerie Island"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Hoax); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Faerie Island from Pladdie + any Triple-Element Monster, during the day (6:00 AM\u20138:00 PM local time). Pladdie + Bridg-it is the best specific pairing (shorter/cheaper than Pladdie + Ziggurab); not guaranteed.",
+          "timeNormal": "1 day 10 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Minor copy in the Carnival's Centri-Fuge (using Starpower \u2014 exact cost not confirmed for this monster) to fill in its Major form."
         ],
         "notes": [
           "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
@@ -7105,12 +7108,13 @@
           "Paironormal Carnival"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Hoax); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Mirror Faerie Island the same way as the Major form, but at night (6:00 PM\u20138:00 AM local time). Can also be bought directly from the Market on Mirror Faerie Island during that same window.",
+          "timeNormal": "1 day 10 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Major copy in the Carnival's Centri-Fuge (using Starpower \u2014 exact cost not confirmed for this monster) to fill in its Minor form."
         ],
         "notes": [
           "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
@@ -7138,12 +7142,13 @@
           "Mirror Bone Island"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Ruin); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Bone Island from Plinkajou + any Triple-Element Monster, during the day (6:00 AM\u20138:00 PM local time). Plinkajou + Withur or Banjaw is the best specific pairing (shorter/cheaper than Plinkajou + Thrumble); not guaranteed.",
+          "timeNormal": "1 day 12 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Minor copy in the Carnival's Centri-Fuge (using Starpower \u2014 exact cost not confirmed for this monster) to fill in its Major form."
         ],
         "notes": [
           "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
@@ -7157,12 +7162,13 @@
           "Paironormal Carnival"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Ruin); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Mirror Bone Island the same way as the Major form, but at night (6:00 PM\u20138:00 AM local time). Can also be bought directly from the Market on Mirror Bone Island during that same window.",
+          "timeNormal": "1 day 12 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Major copy in the Carnival's Centri-Fuge (using Starpower \u2014 exact cost not confirmed for this monster) to fill in its Minor form."
         ],
         "notes": [
           "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
@@ -7190,12 +7196,13 @@
           "Mirror Light Island"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Depths); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Light Island from Blow't + any Triple-Element Monster, during the day (6:00 AM\u20138:00 PM local time). Blow't + Spytrap is the best specific pairing (shorter/cheaper than Blow't + Sooza); not guaranteed.",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Minor copy in the Carnival's Centri-Fuge (using Starpower \u2014 exact cost not confirmed for this monster) to fill in its Major form."
         ],
         "notes": [
           "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
@@ -7209,12 +7216,13 @@
           "Paironormal Carnival"
         ],
         "breeding": {
-          "description": "A Single-Element Paironormal (Depths); obtained by breeding a failure result on Paironormal Carnival, using the island's Quad-Element monster and any Triple-Element monster, rather than from two specific named parents.",
-          "timeNormal": "",
+          "description": "Bred on Mirror Light Island the same way as the Major form, but at night (6:00 PM\u20138:00 AM local time). Can also be bought directly from the Market on Mirror Light Island during that same window.",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins \u2014 breeding there ignores time of day entirely once transposed.",
+          "Fugue an existing Major copy in the Carnival's Centri-Fuge (using Starpower \u2014 exact cost not confirmed for this monster) to fill in its Minor form."
         ],
         "notes": [
           "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
@@ -7245,11 +7253,9 @@
           "timeNormal": "",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added October 1, 2025."
       },
@@ -7264,12 +7270,10 @@
           "timeNormal": "",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added October 1, 2025."
       }
@@ -7296,11 +7300,9 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added October 1, 2025."
       },
@@ -7315,12 +7317,10 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added October 1, 2025."
       }
@@ -7348,11 +7348,9 @@
           "timeNormal": "2 days 8 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added October 1, 2025."
       },
@@ -7367,12 +7365,10 @@
           "timeNormal": "2 days 8 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added October 1, 2025."
       }
@@ -7399,11 +7395,9 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added December 10, 2025."
       },
@@ -7418,12 +7412,10 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added December 10, 2025."
       }
@@ -7451,11 +7443,9 @@
           "timeNormal": "2 days 8 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added January 28, 2026."
       },
@@ -7470,12 +7460,10 @@
           "timeNormal": "2 days 8 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added January 28, 2026."
       }
@@ -7503,11 +7491,9 @@
           "timeNormal": "2 days 8 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added March 25, 2026."
       },
@@ -7522,12 +7508,10 @@
           "timeNormal": "2 days 8 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added March 25, 2026."
       }
@@ -7554,11 +7538,9 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added June 10, 2026."
       },
@@ -7573,12 +7555,10 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added June 10, 2026."
       }
@@ -7605,11 +7585,9 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added July 15, 2026."
       },
@@ -7624,12 +7602,10 @@
           "timeNormal": "1 day 21 hours",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added July 15, 2026."
       }
@@ -7657,11 +7633,9 @@
           "timeNormal": "",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
+          "Produces Starpower (not Coins) on Paironormal Carnival."
         ],
         "interestingFact": "Added September 2, 2026."
       },
@@ -7676,12 +7650,10 @@
           "timeNormal": "",
           "timeEnhanced": ""
         },
-        "alternativeAcquisition": [
-          "Can also be obtained on Paironormal Carnival by Transposing a Level-18 copy from its Magical Island (or Mirror Island for Minor)."
-        ],
+        "alternativeAcquisition": [],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
-          "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
+          "Produces Wildcards (not Coins) on Paironormal Carnival.",
+          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app."
         ],
         "interestingFact": "Added September 2, 2026."
       }
@@ -8601,7 +8573,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Mech in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8616,7 +8588,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Mech in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8646,7 +8618,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8661,7 +8633,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8691,7 +8663,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8706,7 +8678,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8736,7 +8708,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8751,7 +8723,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Crystal in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8781,7 +8753,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8796,7 +8768,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Poison in the Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8826,7 +8798,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Crystal/Poison in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8841,7 +8813,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Crystal/Poison in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8871,7 +8843,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Crystal in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8886,7 +8858,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Crystal in the Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8916,7 +8888,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8931,7 +8903,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8961,7 +8933,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Crystal/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8976,7 +8948,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Crystal/Poison in the Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s).",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9006,7 +8978,7 @@
         ],
         "breeding": {
           "description": "Not bred. Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Mech/Crystal/Poison in the Super-Hyper-Refined Synthesizer. Successful synthesis takes 1 day 6 hours. Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed). If the attempt fails, the Meebs return after 10 hours instead. Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster \u2014 only the Synthesizer route above works for now.",
-          "timeNormal": "",
+          "timeNormal": "1 day 6 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9035,7 +9007,7 @@
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Poison (its missing element), in the Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Meebkin, Gaddzooks, Nitebear. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
-          "timeNormal": "",
+          "timeNormal": "1 day 18 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9050,7 +9022,7 @@
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Poison (its missing element), in the Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Meebkin, Gaddzooks, Nitebear. Also obtainable by Dish-Harmonizing at its Islet.",
-          "timeNormal": "",
+          "timeNormal": "1 day 18 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9081,7 +9053,7 @@
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Crystal (its missing element), in the Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Blarret, Auglur, Piplash. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
-          "timeNormal": "",
+          "timeNormal": "1 day 18 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9096,7 +9068,7 @@
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Crystal (its missing element), in the Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Yooreek, Blarret, Auglur, Piplash. Also obtainable by Dish-Harmonizing at its Islet.",
-          "timeNormal": "",
+          "timeNormal": "1 day 18 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9127,7 +9099,7 @@
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Mech (its missing element), in the Super-Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Meebkin, Blarret, Flasque, X'rt. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
-          "timeNormal": "",
+          "timeNormal": "1 day 18 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9156,7 +9128,7 @@
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Shadow (its missing element), in the Mega-Super-Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Gaddzooks, Auglur, Flasque, Teeter-Tauter. Also obtainable by Dish-Harmonizing at its Islet. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
-          "timeNormal": "",
+          "timeNormal": "1 day 18 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9185,7 +9157,7 @@
         ],
         "breeding": {
           "description": "Not bred (Quad-Element Ethereals aren't present on Ethereal Island). Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Plasma (its missing element), in the Ultra-Mega-Super-Hyper-Refined Synthesizer. Takes 1 day 18 hours. Best (most stable) base Triple first: Nitebear, Piplash, X'rt, Teeter-Tauter. Its own Islet is Poison Islet, which hasn't been released yet \u2014 so Dish-Harmonizing isn't currently a way to get this monster; only the Synthesizer route above works for now. If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost).",
-          "timeNormal": "",
+          "timeNormal": "1 day 18 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -9215,12 +9187,12 @@
         ],
         "breeding": {
           "description": "The only Quint-Element Ethereal. Synthesized at the Ethereal Workshop by consuming a Quad-Element Ethereal plus 3 Meebs of each of that Quad's 4 elements and 4 Meebs of its missing 5th element, in the Ultra-Mega-Super-Hyper-Refined Synthesizer. Takes 2 days 7 hours. Best (most stable) base Quad first: Whaill, Vhenshun, Pentumbra, Rhysmuth, Oogiddy. Not obtainable via Dish-Harmonizing \u2014 Islets don't carry BeMeebEth. If the attempt fails, the Meebs return after 22 hours instead. After a successful synthesis, the Synthesizer goes on a 2-day cooldown before another BeMeebEth can be made (though Triples and Quads can still be synthesized during that window).",
-          "timeNormal": "",
+          "timeNormal": "2 days 7 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
         "notes": [],
-        "interestingFact": "The only Quint-Element Monster in the game."
+        "interestingFact": "One of 7 Quint-Element Monsters in the game: 5 Fire Quints on Amber Island (Candelavra, Drummidary, Bowhead, Tuskski, Gnarls), the Natural Quint (Mimic), and this one \u2014 the only Ethereal Quint, containing all 5 Ethereal elements."
       }
     }
   },
@@ -14072,7 +14044,7 @@
         ],
         "breeding": {
           "description": "Bred from Scups + PomPom on Air Island.",
-          "timeNormal": "",
+          "timeNormal": "2 days 2 hours",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -14113,11 +14085,11 @@
     "name": "Bowhead",
     "classId": "fire",
     "elements": [
-      "plant",
-      "air",
       "water",
-      "earth",
-      "fire"
+      "fire",
+      "plant",
+      "cold",
+      "air"
     ],
     "variantSystem": "standard_rarity",
     "variants": {
@@ -14191,11 +14163,11 @@
     "name": "Tuskski",
     "classId": "fire",
     "elements": [
-      "plant",
       "cold",
-      "water",
+      "fire",
+      "plant",
       "earth",
-      "fire"
+      "air"
     ],
     "variantSystem": "standard_rarity",
     "variants": {
@@ -14270,10 +14242,10 @@
     "classId": "fire",
     "elements": [
       "plant",
+      "fire",
       "cold",
-      "water",
       "earth",
-      "fire"
+      "water"
     ],
     "variantSystem": "standard_rarity",
     "variants": {
@@ -14323,11 +14295,11 @@
     "name": "Drummidary",
     "classId": "fire",
     "elements": [
-      "cold",
-      "air",
-      "plant",
       "earth",
-      "fire"
+      "fire",
+      "cold",
+      "water",
+      "air"
     ],
     "variantSystem": "standard_rarity",
     "variants": {

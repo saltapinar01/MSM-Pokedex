@@ -86,14 +86,20 @@ input:focus-visible {
   font-weight: 600;
 }
 
-.view-switch__btn.is-active {
-  background: var(--surface-raised);
-  color: var(--text-primary);
-}
-
 .view-switch__btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+/* ---------- Offline sync banner ---------- */
+
+.sync-status {
+  background: var(--surface-raised);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border-quiet);
 }
 
 .search-bar {
@@ -293,6 +299,37 @@ input:focus-visible {
   color: var(--card-fill-text, var(--text-primary));
 }
 
+.monster-card__variants {
+  display: flex;
+  gap: 4px;
+}
+
+.variant-badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--card-fill-text, #fff);
+}
+
+.variant-badge.is-locked {
+  opacity: 0.35;
+  border-style: dashed;
+  background: transparent;
+}
+
+.variant-badge.is-current {
+  border-color: currentColor;
+  background: rgba(255, 255, 255, 0.4);
+}
+
 /* ---------- Profile sheet ---------- */
 
 .profile-backdrop {
@@ -438,6 +475,23 @@ input:focus-visible {
   font-size: 0.9rem;
 }
 .chip--sigil { display: inline-flex; align-items: center; gap: 5px; }
+
+.section-caption {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: -2px 0 8px;
+}
+
+.chip--link {
+  cursor: pointer;
+  font: inherit;
+  color: var(--class-accent);
+  border-color: var(--class-border);
+}
+.chip--link:hover,
+.chip--link:focus-visible {
+  background: var(--class-glow);
+}
 
 /* Sigils: subclass + element icons render before their label text */
 .sigil { width: 14px; height: 14px; object-fit: contain; flex-shrink: 0; }

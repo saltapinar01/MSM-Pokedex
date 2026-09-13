@@ -27,6 +27,8 @@
   </div>
 </header>
 
+<div id="sync-status" class="sync-status" hidden></div>
+
 <main id="monster-grid" class="monster-grid" aria-live="polite">
   <p class="loading-state">Loading monsters…</p>
 </main>
@@ -67,7 +69,7 @@
   </div>
   <div class="filter-drawer__footer">
     <button id="filter-clear" class="filter-btn filter-btn--ghost" type="button">Clear All</button>
-    <button id="filter-apply" class="filter-btn filter-btn--primary" type="button">Show results</button>
+    <button id="filter-apply" class="filter-btn filter-btn--primary" type="button">Done</button>
   </div>
 </section>
 
@@ -106,6 +108,12 @@
     <section class="profile-section" id="section-breeding" hidden>
       <h3>Breeding</h3>
       <div id="profile-breeding"></div>
+    </section>
+
+    <section class="profile-section" id="section-breeds-into" hidden>
+      <h3>Used To Breed</h3>
+      <p class="section-caption">Matched from breeding notes elsewhere in the dex — may not be complete.</p>
+      <div id="profile-breeds-into" class="chip-row"></div>
     </section>
 
     <section class="profile-section" id="section-eggs" hidden>
