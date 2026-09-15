@@ -11,7 +11,8 @@
     "theme": {
       "accent": "#6FA96B",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "amber-island",
@@ -25,7 +26,8 @@
     "theme": {
       "accent": "#7FBFE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "bone-island",
@@ -39,7 +41,8 @@
     "theme": {
       "accent": "#E2B24C",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "cold-island",
@@ -53,7 +56,8 @@
     "theme": {
       "accent": "#B98FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "earth-island",
@@ -67,7 +71,8 @@
     "theme": {
       "accent": "#E2632F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "faerie-island",
@@ -81,7 +86,8 @@
     "theme": {
       "accent": "#C97BD1",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "fire-haven",
@@ -95,7 +101,8 @@
     "theme": {
       "accent": "#5FD1C1",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "fire-oasis",
@@ -109,7 +116,8 @@
     "theme": {
       "accent": "#D1A15F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "gold-island",
@@ -123,7 +131,8 @@
     "theme": {
       "accent": "#8FB2E0",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "light-island",
@@ -137,7 +146,8 @@
     "theme": {
       "accent": "#E08F8F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "mirror-air-island",
@@ -151,7 +161,8 @@
     "theme": {
       "accent": "#8FE0B2",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mirror-cold-island",
@@ -165,7 +176,8 @@
     "theme": {
       "accent": "#D1C15F",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mirror-earth-island",
@@ -179,7 +191,8 @@
     "theme": {
       "accent": "#A15FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mirror-plant-island",
@@ -193,7 +206,8 @@
     "theme": {
       "accent": "#5FA1E0",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mirror-water-island",
@@ -207,7 +221,8 @@
     "theme": {
       "accent": "#E05FA1",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mythical-island",
@@ -221,7 +236,8 @@
     "theme": {
       "accent": "#5FE0D1",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "plant-island",
@@ -235,7 +251,8 @@
     "theme": {
       "accent": "#E0C75F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "psychic-island",
@@ -249,7 +266,8 @@
     "theme": {
       "accent": "#7BE05F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "shugabush-island",
@@ -263,7 +281,8 @@
     "theme": {
       "accent": "#E05F5F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "water-island",
@@ -277,7 +296,8 @@
     "theme": {
       "accent": "#B2E05F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "celestial-island",
@@ -291,7 +311,8 @@
     "theme": {
       "accent": "#E8C766",
       "background": "#22200F"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "paironormal-carnival",
@@ -305,7 +326,8 @@
     "theme": {
       "accent": "#C15FD1",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "ethereal-island",
@@ -319,7 +341,8 @@
     "theme": {
       "accent": "#8FE0B2",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "ethereal-workshop",
@@ -333,7 +356,8 @@
     "theme": {
       "accent": "#8FE0B2",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "magical-sanctum",
@@ -347,7 +371,8 @@
     "theme": {
       "accent": "#B98FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "seasonal-shanty",
@@ -361,7 +386,8 @@
     "theme": {
       "accent": "#D1A15F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "bblizzard-island",
@@ -375,7 +401,8 @@
     "theme": {
       "accent": "#7BE05F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "magical-nexus",
@@ -389,7 +416,8 @@
     "theme": {
       "accent": "#B98FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "mirror-light-island",
@@ -403,7 +431,8 @@
     "theme": {
       "accent": "#B98FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mirror-psychic-island",
@@ -417,7 +446,8 @@
     "theme": {
       "accent": "#B98FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mirror-faerie-island",
@@ -431,7 +461,8 @@
     "theme": {
       "accent": "#B98FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "mirror-bone-island",
@@ -445,7 +476,8 @@
     "theme": {
       "accent": "#B98FE0",
       "background": "#161616"
-    }
+    },
+    "timeline": "mirror"
   },
   {
     "id": "wublin-island",
@@ -459,7 +491,8 @@
     "theme": {
       "accent": "#E0C75F",
       "background": "#161616"
-    }
+    },
+    "timeline": "main"
   },
   {
     "id": "the-colossingum",
@@ -472,6 +505,67 @@
     },
     "theme": {
       "accent": "#8FB2E0",
+      "background": "#161616"
+    },
+    "timeline": "main"
+  },
+  {
+    "id": "plasma-islet",
+    "name": "Plasma Islet",
+    "order": 37,
+    "description": "",
+    "image": "assets/islands/plasma-islet.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/plasma-islet-vertical.png"
+    },
+    "timeline": "mirror",
+    "theme": {
+      "accent": "#9B7FD4",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "shadow-islet",
+    "name": "Shadow Islet",
+    "order": 38,
+    "description": "",
+    "image": "assets/islands/shadow-islet.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/shadow-islet-vertical.png"
+    },
+    "timeline": "mirror",
+    "theme": {
+      "accent": "#8B4B7A",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "mech-islet",
+    "name": "Mech Islet",
+    "order": 39,
+    "description": "",
+    "image": "assets/islands/mech-islet.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/mech-islet-vertical.png"
+    },
+    "timeline": "mirror",
+    "theme": {
+      "accent": "#7FB8C4",
+      "background": "#161616"
+    }
+  },
+  {
+    "id": "crystal-islet",
+    "name": "Crystal Islet",
+    "order": 40,
+    "description": "",
+    "image": "assets/islands/crystal-islet.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/crystal-islet-vertical.png"
+    },
+    "timeline": "mirror",
+    "theme": {
+      "accent": "#7DBF6E",
       "background": "#161616"
     }
   }

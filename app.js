@@ -93,7 +93,18 @@ function normalizeData(data) {
   state.breedingTextBlurbs = [];
   for (const m of data.monsters) {
     for (const [variantId, variant] of Object.entries(m.variants)) {
-      if (variant.breeding && variant.breeding.description) {
+      if (!variant.breeding) continue;
+      if (Array.isArray(variant.breeding.combos) && variant.breeding.combos.length) {
+        for (const combo of variant.breeding.combos) {
+          if (combo.description) {
+            state.breedingTextBlurbs.push({
+              targetMonsterId: m.id,
+              targetVariantId: variantId,
+              text: combo.description,
+            });
+          }
+        }
+      } else if (variant.breeding.description) {
         state.breedingTextBlurbs.push({
           targetMonsterId: m.id,
           targetVariantId: variantId,
@@ -439,8 +450,8 @@ function renderIslandList() {
     return;
   }
 
-  const mainIslands = state.islands.filter((i) => !i.name.startsWith("Mirror ")).sort((a, b) => a.name.localeCompare(b.name));
-  const mirrorIslands = state.islands.filter((i) => i.name.startsWith("Mirror ")).sort((a, b) => a.name.localeCompare(b.name));
+  const mainIslands = state.islands.filter((i) => i.timeline !== "mirror").sort((a, b) => a.name.localeCompare(b.name));
+  const mirrorIslands = state.islands.filter((i) => i.timeline === "mirror").sort((a, b) => a.name.localeCompare(b.name));
 
   list.appendChild(buildIslandGroup("Main Timeline", mainIslands));
   list.appendChild(buildIslandGroup("Mirror Timeline", mirrorIslands));
@@ -466,13 +477,11 @@ function buildIslandGroup(title, islands) {
     row.style.setProperty("--island-fill", fillColor);
     row.style.setProperty("--island-text", textColor);
     row.innerHTML = `
-      <div class="island-row__left">
-        ${wordmark
-          ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'island-row__name-fallback',textContent:'${escapeHTML(island.name)}'}))">`
-          : `<span class="island-row__name-fallback">${escapeHTML(island.name)}</span>`}
-        <span class="island-row__count">${count} Monster${count === 1 ? "" : "s"}</span>
-      </div>
-      ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" onerror="this.remove()">` : ""}
+      ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" loading="lazy" decoding="async" width="68" height="75" onerror="this.remove()">` : ""}
+      ${wordmark
+        ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" loading="lazy" decoding="async" width="150" height="67" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'island-row__name-fallback',textContent:'${escapeHTML(island.name)}'}))">`
+        : `<span class="island-row__name-fallback">${escapeHTML(island.name)}</span>`}
+      <span class="island-row__count">${count} Monster${count === 1 ? "" : "s"}</span>
     `;
     row.addEventListener("click", () => renderIslandRoster(island.id));
     section.appendChild(row);
@@ -490,8 +499,8 @@ function renderIslandRoster(islandId) {
 
   const wordmark = resolveIslandWordmark(island);
   document.getElementById("island-roster-header").innerHTML = `
-    ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" onerror="this.remove()">` : ""}
-    ${wordmark ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}">` : `<span>${escapeHTML(island.name)}</span>`}
+    ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" decoding="async" width="64" height="64" onerror="this.remove()">` : ""}
+    ${wordmark ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" decoding="async" width="150" height="46">` : `<span>${escapeHTML(island.name)}</span>`}
     <span class="island-roster__count">${roster.length} Monster${roster.length === 1 ? "" : "s"}</span>
   `;
 
@@ -578,12 +587,20 @@ function renderProfile() {
   renderBreedsInto(monster);
   renderEggRequirements(variant);
 
+  // If this variant isn't bred at all, "Alternative Acquisition" reads oddly
+  // (alternative to what?) — relabel it as the primary way to get it.
+  const isBred = !document.getElementById("section-breeding").hidden;
+  document.getElementById("section-acquisition-title").textContent =
+    isBred ? "Alternative Acquisition" : "How To Obtain";
+
   renderListSection("section-acquisition", "profile-acquisition",
     (variant.alternativeAcquisition || []).map((a) => {
       if (typeof a === "string") return a;
       const label = state.taxonomy.acquisitionMethods[a.method]?.name || a.method;
       return a.detail ? `${label} — ${a.detail}` : label;
     }));
+
+  renderListSection("section-mechanics", "profile-mechanics", variant.specialMechanics || []);
 
   renderListSection("section-notes", "profile-notes", variant.notes || []);
 
@@ -623,6 +640,30 @@ function renderVariantTiles(monster, system) {
 function renderBreedingSection(monster, variant) {
   const el = document.getElementById("profile-breeding");
   el.innerHTML = "";
+
+  // Multi-combo path: monsters bred differently (or on different islands) get
+  // one block per distinct combo. Islands sharing the exact same combo+timers
+  // are grouped into a single block instead of repeating it — except an
+  // island and its own Mirror counterpart, which are always assumed to match
+  // and aren't worth calling out as a "grouping".
+  if (variant.breeding && Array.isArray(variant.breeding.combos) && variant.breeding.combos.length) {
+    document.getElementById("section-breeding").hidden = false;
+    variant.breeding.combos.forEach((combo) => {
+      const div = document.createElement("div");
+      div.className = "breed-combo";
+      div.innerHTML = `
+        <div class="breed-combo__label">${escapeHTML((combo.islands || []).join(" / "))}</div>
+        <div>${escapeHTML(combo.description || "")}</div>
+        ${combo.note ? `<div class="breed-combo__note">${escapeHTML(combo.note)}</div>` : ""}
+        <div class="breed-combo__timers">
+          <span>Regular: ${escapeHTML(combo.timeNormal || "—")}</span>
+          <span>Enhanced: ${escapeHTML(combo.timeEnhanced || "—")}</span>
+        </div>
+      `;
+      el.appendChild(div);
+    });
+    return;
+  }
 
   // Real-data path: breeding info embedded directly on the variant as text
   // (the source combos are too varied in phrasing to safely auto-parse into
@@ -785,11 +826,9 @@ function wireEvents() {
 
 function collectAllAssetURLs() {
   const urls = new Set();
-  for (const m of state.monsters) {
-    for (const v of Object.values(m.variants)) {
-      if (v.image) urls.add(v.image);
-    }
-  }
+  // Islands first: it's a small, cheap batch (~40 tiny images) and covers the
+  // whole Island View tab, so that screen goes fully offline-ready almost
+  // immediately instead of waiting behind the much larger monster-image batch.
   for (const isl of state.islands) {
     if (isl.image) urls.add(isl.image);
     if (isl.wordmark?.vertical) urls.add(isl.wordmark.vertical);
@@ -800,6 +839,11 @@ function collectAllAssetURLs() {
   }
   for (const sub of Object.values(state.taxonomy?.subclasses || {})) {
     if (sub.sigil) urls.add(sub.sigil);
+  }
+  for (const m of state.monsters) {
+    for (const v of Object.values(m.variants)) {
+      if (v.image) urls.add(v.image);
+    }
   }
   return [...urls];
 }

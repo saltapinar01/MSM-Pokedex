@@ -410,8 +410,10 @@ input:focus-visible {
   max-width: 220px;
   aspect-ratio: 1;
   object-fit: contain;
-  background: var(--surface-raised);
+  background: var(--class-accent, var(--surface-raised));
   border-radius: 20px;
+  padding: 12px;
+  box-sizing: border-box;
 }
 
 /* ---------- Variant tiles (12A: locked/unreleased handling) ---------- */
@@ -517,12 +519,10 @@ input:focus-visible {
 .island-row {
   cursor: pointer;
   border: none;
-  width: 100%;
   text-align: left;
   font: inherit;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   height: 96px;
   padding: 0 18px;
@@ -530,24 +530,16 @@ input:focus-visible {
   border-radius: 16px;
   background: var(--island-fill, var(--surface));
   color: var(--island-text, var(--text-primary));
+  box-sizing: border-box;
 }
 .island-row:hover { filter: brightness(1.06); }
 
-.island-row__left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 8px;
-  height: 100%;
-  padding: 14px 0;
-  min-width: 0;
-}
 .island-row__wordmark {
-  max-height: 44px;
+  height: 70%;
   max-width: 150px;
   width: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 .island-row__name-fallback {
   font-size: 1.05rem;
@@ -559,11 +551,15 @@ input:focus-visible {
   font-weight: 600;
   color: var(--island-text, var(--text-primary));
   opacity: 0.9;
+  margin-left: auto;
+  padding-left: 12px;
+  white-space: nowrap;
 }
 
 .island-row__image {
-  width: 68px;
-  height: 68px;
+  height: 78%;
+  width: auto;
+  max-width: 68px;
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
@@ -597,7 +593,8 @@ input:focus-visible {
   line-height: 1.5;
   color: var(--text-primary);
 }
-.breed-combo__label { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 4px; }
+.breed-combo__label { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 4px; font-weight: 600; }
+.breed-combo__note { color: var(--text-muted); font-size: 0.92rem; margin-top: 4px; font-style: italic; }
 .breed-combo__timers {
   display: flex;
   gap: 14px;
