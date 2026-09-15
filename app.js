@@ -21,6 +21,7 @@ const state = {
   activeFilters: { classes: [], variants: [], elements: [], islands: [] },
   filterDrawerOpen: false,
   selectedIslandId: null,
+  islandListScrollY: 0,
 };
 
 // ---------- Data loading pipeline ----------
@@ -416,7 +417,10 @@ function switchView(view) {
   document.getElementById("island-view").hidden = view !== "islands";
   document.querySelector(".search-bar").hidden = view !== "monsters";
 
-  if (view === "islands") renderIslandList();
+  if (view === "islands") {
+    state.islandListScrollY = 0; // fresh entry into Islands — always start at the top
+    renderIslandList();
+  }
 }
 
 function monstersOnIsland(islandName) {
@@ -451,11 +455,21 @@ function renderIslandList() {
   }
 
   const mainIslands = state.islands.filter((i) => i.timeline !== "mirror").sort((a, b) => a.name.localeCompare(b.name));
-  const mirrorIslands = state.islands.filter((i) => i.timeline === "mirror").sort((a, b) => a.name.localeCompare(b.name));
+  const mirrorIslands = state.islands.filter((i) => i.timeline === "mirror");
 
   list.appendChild(buildIslandGroup("Main Timeline", mainIslands));
-  list.appendChild(buildIslandGroup("Mirror Timeline", mirrorIslands));
+  list.appendChild(buildMirrorIslandGroup("Mirror Timeline", mirrorIslands));
 }
+
+// Mirror Timeline islands are shown in three named subgroups (in this fixed
+// order), alphabetical within each subgroup. Which subgroup an island
+// belongs to is explicit data (`mirrorGroup` in islands.json), not inferred
+// from its name.
+const MIRROR_SUBGROUPS = [
+  { key: "natural", label: "Natural" },
+  { key: "magical", label: "Magical" },
+  { key: "islet", label: "Ethereal Islets" },
+];
 
 function buildIslandGroup(title, islands) {
   const section = document.createElement("div");
@@ -465,31 +479,61 @@ function buildIslandGroup(title, islands) {
   heading.textContent = title;
   section.appendChild(heading);
 
-  for (const island of islands) {
-    const count = monstersOnIsland(island.name).length;
-    const wordmark = resolveIslandWordmark(island);
-    const fillColor = majorityClassColor(island.name);
-    const textColor = contrastTextColor(fillColor);
+  for (const island of islands) section.appendChild(buildIslandRow(island));
+  return section;
+}
 
-    const row = document.createElement("button");
-    row.type = "button";
-    row.className = "island-row";
-    row.style.setProperty("--island-fill", fillColor);
-    row.style.setProperty("--island-text", textColor);
-    row.innerHTML = `
-      ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" loading="lazy" decoding="async" width="68" height="75" onerror="this.remove()">` : ""}
-      ${wordmark
-        ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" loading="lazy" decoding="async" width="150" height="67" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'island-row__name-fallback',textContent:'${escapeHTML(island.name)}'}))">`
-        : `<span class="island-row__name-fallback">${escapeHTML(island.name)}</span>`}
-      <span class="island-row__count">${count} Monster${count === 1 ? "" : "s"}</span>
-    `;
-    row.addEventListener("click", () => renderIslandRoster(island.id));
-    section.appendChild(row);
+function buildMirrorIslandGroup(title, islands) {
+  const section = document.createElement("div");
+  section.className = "island-group";
+  const heading = document.createElement("h2");
+  heading.className = "island-group__title";
+  heading.textContent = title;
+  section.appendChild(heading);
+
+  for (const { key, label } of MIRROR_SUBGROUPS) {
+    const subgroup = islands
+      .filter((i) => i.mirrorGroup === key)
+      .sort((a, b) => a.name.localeCompare(b.name));
+    if (!subgroup.length) continue;
+
+    const subheading = document.createElement("h3");
+    subheading.className = "island-subgroup__title";
+    subheading.textContent = label;
+    section.appendChild(subheading);
+
+    for (const island of subgroup) section.appendChild(buildIslandRow(island));
   }
   return section;
 }
 
+function buildIslandRow(island) {
+  const count = monstersOnIsland(island.name).length;
+  const wordmark = resolveIslandWordmark(island);
+  const fillColor = majorityClassColor(island.name);
+  const textColor = contrastTextColor(fillColor);
+
+  const row = document.createElement("button");
+  row.type = "button";
+  row.className = "island-row";
+  row.style.setProperty("--island-fill", fillColor);
+  row.style.setProperty("--island-text", textColor);
+  row.innerHTML = `
+    ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" loading="lazy" decoding="async" width="68" height="75" onerror="this.remove()">` : ""}
+    ${wordmark
+      ? `<span class="island-row__wordmark-plate"><img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" loading="lazy" decoding="async" width="150" height="67" onerror="this.closest('.island-row__wordmark-plate').replaceWith(Object.assign(document.createElement('span'),{className:'island-row__name-fallback',textContent:'${escapeHTML(island.name)}'}))"></span>`
+      : `<span class="island-row__name-fallback">${escapeHTML(island.name)}</span>`}
+    <span class="island-row__count">${count} Monster${count === 1 ? "" : "s"}</span>
+  `;
+  row.addEventListener("click", () => renderIslandRoster(island.id));
+  return row;
+}
+
 function renderIslandRoster(islandId) {
+  // Remember exactly where the person was in the island list so the back
+  // button can restore it, instead of snapping back to the top tile.
+  state.islandListScrollY = window.scrollY;
+
   state.selectedIslandId = islandId;
   const island = state.islandById[islandId];
   const roster = monstersOnIsland(island.name);
@@ -512,6 +556,14 @@ function renderIslandRoster(islandId) {
   }
   const sorted = [...roster].sort((a, b) => a.name.localeCompare(b.name));
   for (const monster of sorted) grid.appendChild(renderMonsterCard(monster));
+}
+
+// Rebuilds the island list, then restores the scroll position the person
+// was at before they opened a roster, instead of jumping to the top.
+function backToIslandList() {
+  renderIslandList();
+  const y = state.islandListScrollY || 0;
+  requestAnimationFrame(() => window.scrollTo(0, y));
 }
 
 
@@ -811,7 +863,7 @@ function wireEvents() {
     btn.addEventListener("click", () => switchView(btn.dataset.view));
   });
 
-  document.getElementById("island-roster-back").addEventListener("click", renderIslandList);
+  document.getElementById("island-roster-back").addEventListener("click", backToIslandList);
 }
 
 // ---------- Background offline sync ----------

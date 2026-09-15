@@ -511,6 +511,17 @@ input:focus-visible {
 }
 .island-group:first-child .island-group__title { margin-top: 8px; }
 
+.island-subgroup__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  opacity: 0.75;
+  margin: 14px 20px 6px;
+}
+.island-group__title + .island-subgroup__title { margin-top: 0; }
+
 .island-list {
   display: flex;
   flex-direction: column;
@@ -524,6 +535,7 @@ input:focus-visible {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
   height: 96px;
   padding: 0 18px;
   margin: 0 12px 10px;
@@ -534,9 +546,25 @@ input:focus-visible {
 }
 .island-row:hover { filter: brightness(1.06); }
 
+/* Wordmark art ships as full-color logo images, not flat text, so they
+   can clash with whatever accent color a tile happens to use. Giving the
+   wordmark its own neutral plate keeps it legible regardless of the tile
+   color behind it, instead of relying on text-contrast math that only
+   ever applied to the text fallback. */
+.island-row__wordmark-plate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 74%;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+  flex-shrink: 0;
+}
 .island-row__wordmark {
-  height: 70%;
-  max-width: 150px;
+  height: 100%;
+  max-width: 130px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;

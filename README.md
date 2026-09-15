@@ -1,4 +1,72 @@
-# MSM Pokédex — Phase 1
+# MSM Pokédex — Phase 1 (+ Phase 4 data pass)
+
+## Phase 4 changelog (Plasma/Mech/Shadow/Crystal Islet — Double-Element Ethereals)
+
+All 13 monsters from the Phase 4 list already existed in `data/monsters.json`
+as entries (contrary to the "don't exist yet" note from planning) — but 10 of
+the 13 had placeholder/stub breeding data. This pass:
+
+- Verified Common/Rare breeding pairs for all 10 against the MSM Wiki and a
+  cross-referencing Steam community guide (Ghazt, Whisp, Nebulob, Sox,
+  Jellbilly, Reebro, Arackulele, Bellowfish, Dragong, Boodoo, Kazilleon,
+  Jeeode, Fung Pray all use the single+single Ethereal pattern — confirmed,
+  not guessed).
+- Resolved the 4 Epic breeding combos previously flagged "not yet
+  independently confirmed" (Epic Bellowfish, Epic Dragong, Epic Kazilleon,
+  Epic Fung Pray) and filled in the remaining 6 Epic combos' timings.
+- Added real breeding durations (normal + enhanced) for Common/Rare/Epic
+  variants of all 10 monsters.
+- Added sourced name-origin trivia (`interestingFact`) for all 10.
+- **Art decision made:** rather than generate placeholder art, this build
+  relies on the existing image-404 fallback (see `app.js` — a missing image
+  already renders a 🖼 placeholder glyph instead of a broken-image icon or
+  a crash). All 5 Single-Element Ethereals (Ghazt, Reebro, Grumpyre, Jeeode,
+  Humbug) and 8 of the 10 Double-Element Ethereals have **no art yet** —
+  they'll show as placeholders until real art is dropped into
+  `assets/monsters/` following the naming convention in "Adding your own
+  images" below. No code changes were needed for this.
+- **Flagged for the Phase 3 audit, not fixed here (out of Phase 4's scope):**
+  the Epic variant of all 5 Single-Element Ethereals (Ghazt, Reebro,
+  Grumpyre, Jeeode, Humbug) currently reuses the Common variant's breeding
+  description verbatim, which is inaccurate — e.g. Epic Reebro's real combo
+  is Sox + Kazilleon, not "a Quad-Element and a Triple-Element Natural
+  monster." Worth fixing in the Ethereal batch of Phase 3.
+
+## Island View pass (Mirror Timeline grouping + UI fixes)
+
+- **Mirror Timeline grouping:** Mirror islands now render in three fixed
+  subgroups — Natural, Magical, Ethereal Islets (in that order) — each
+  alphabetical within itself. This is driven by an explicit `mirrorGroup`
+  field on each island in `data/islands.json`, not inferred from the name.
+- **Added Minor Paironormal Carnival** as its own Mirror-Timeline island
+  entry, housing every Paironormal's Minor form. Note on naming: the wiki
+  doesn't have a distinct proper name for this — Paironormal Carnival is
+  canonically one island with a Major Mode (Main Timeline) and a Minor Mode
+  (Mirror Timeline) that share the same in-game name. "Minor Paironormal
+  Carnival" is the wiki's own shorthand for the Minor Mode, used here so the
+  two modes can be distinct list entries/rosters. All 13 Paironormal
+  monsters' Minor-form `islands` arrays were repointed from "Paironormal
+  Carnival" to "Minor Paironormal Carnival" to match. Filed under Magical
+  for grouping purposes, since Paironormals are a Magical-Island class.
+- **Fixed inconsistent tile widths:** `<button>` elements don't stretch to
+  fill a block container the way a `<div>` would — they were sizing to
+  their own content (photo + wordmark + count text), so tile width varied
+  row to row. Added an explicit `width: 100%` to `.island-row`.
+- **Fixed unreadable wordmarks:** island wordmarks are full-color logo
+  images, not plain text, so laying them directly over a solid
+  majority-class accent color could clash badly (a raster image can't
+  adapt to its background the way text color can). Wordmarks now sit on a
+  small neutral white plate with a drop shadow, so they stay legible
+  regardless of the tile's fill color.
+- **Fixed back-button scroll jump:** returning from an island's roster now
+  restores your exact scroll position in the island list instead of
+  snapping to the top tile.
+
+## Still pending
+
+- **Phase 3** — full multi-island breeding audit (batched, in progress).
+- **Phase 5** — Celestials / Amber Vessels pass (explicitly deferred, not started).
+
 
 An offline-first PWA reference app for My Singing Monsters. Data lives in JSON;
 the engine (HTML/CSS/JS) never hardcodes monster, class, or variant names.

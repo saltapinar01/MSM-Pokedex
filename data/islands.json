@@ -162,7 +162,8 @@
       "accent": "#8FE0B2",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "natural"
   },
   {
     "id": "mirror-cold-island",
@@ -177,7 +178,8 @@
       "accent": "#D1C15F",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "natural"
   },
   {
     "id": "mirror-earth-island",
@@ -192,7 +194,8 @@
       "accent": "#A15FE0",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "natural"
   },
   {
     "id": "mirror-plant-island",
@@ -207,7 +210,8 @@
       "accent": "#5FA1E0",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "natural"
   },
   {
     "id": "mirror-water-island",
@@ -222,7 +226,8 @@
       "accent": "#E05FA1",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "natural"
   },
   {
     "id": "mythical-island",
@@ -330,6 +335,22 @@
     "timeline": "main"
   },
   {
+    "id": "paironormal-carnival-minor",
+    "name": "Minor Paironormal Carnival",
+    "order": 22.5,
+    "description": "The Mirror-Timeline half of Paironormal Carnival — houses every Paironormal monster in its Minor form. Major forms live on the Main-Timeline Paironormal Carnival instead.",
+    "image": "assets/islands/paironormal-carnival-minor.png",
+    "wordmark": {
+      "vertical": "assets/islands/wordmarks/paironormal-carnival-minor-vertical.png"
+    },
+    "theme": {
+      "accent": "#C15FD1",
+      "background": "#161616"
+    },
+    "timeline": "mirror",
+    "mirrorGroup": "magical"
+  },
+  {
     "id": "ethereal-island",
     "name": "Ethereal Island",
     "order": 24,
@@ -432,7 +453,8 @@
       "accent": "#B98FE0",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "magical"
   },
   {
     "id": "mirror-psychic-island",
@@ -447,7 +469,8 @@
       "accent": "#B98FE0",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "magical"
   },
   {
     "id": "mirror-faerie-island",
@@ -462,7 +485,8 @@
       "accent": "#B98FE0",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "magical"
   },
   {
     "id": "mirror-bone-island",
@@ -477,7 +501,8 @@
       "accent": "#B98FE0",
       "background": "#161616"
     },
-    "timeline": "mirror"
+    "timeline": "mirror",
+    "mirrorGroup": "magical"
   },
   {
     "id": "wublin-island",
@@ -522,7 +547,8 @@
     "theme": {
       "accent": "#9B7FD4",
       "background": "#161616"
-    }
+    },
+    "mirrorGroup": "islet"
   },
   {
     "id": "shadow-islet",
@@ -537,7 +563,8 @@
     "theme": {
       "accent": "#8B4B7A",
       "background": "#161616"
-    }
+    },
+    "mirrorGroup": "islet"
   },
   {
     "id": "mech-islet",
@@ -552,7 +579,8 @@
     "theme": {
       "accent": "#7FB8C4",
       "background": "#161616"
-    }
+    },
+    "mirrorGroup": "islet"
   },
   {
     "id": "crystal-islet",
@@ -567,6 +595,7 @@
     "theme": {
       "accent": "#7DBF6E",
       "background": "#161616"
-    }
+    },
+    "mirrorGroup": "islet"
   }
 ]
