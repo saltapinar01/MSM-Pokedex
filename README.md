@@ -246,6 +246,49 @@ assumption predicted — a reminder that filename confirmation beats visual
 inference when they're available. All three are now saved correctly.
 `CACHE_VERSION` bumped again to `v8`.
 
+## Phase 3 — Batch 1: Epic Single-Element Ethereal breeding fix
+
+Fixed the known bug flagged at the end of Phase 4: all 5 Single-Element
+Ethereals' **Epic** variant was reusing the **Common** variant's breeding
+description verbatim ("a Quad-Element and a Triple-Element Natural
+monster..."), which describes how to get the Common form, not the Epic.
+
+Every Epic Single-Element Ethereal actually has two valid, distinct
+breeding combos — one on its natural island, one on Ethereal Island — and
+per the wiki's own breeding-patterns page, the Ethereal Island combo
+always pairs two Double-Element Ethereals that (a) don't share an element
+with each other and (b) neither carries the Epic's own element. Converted
+all 5 to the `breeding.combos` array format (the Monculus/Kayna template)
+to actually represent this, instead of a single flat description:
+
+| Monster | Natural Island combo | Ethereal Island combo |
+|---|---|---|
+| Epic Ghazt (Plasma) | T-Rox + Furcorn, Plant Island | Boodoo + Dragong |
+| Epic Reebro (Mech) | T-Rox + Pango, Air Island | Sox + Kazilleon |
+| Epic Grumpyre (Shadow) | Dandidoo + Bowgart, Cold Island | Nebulob + Fung Pray |
+| Epic Jeeode (Crystal) | Quibble + Pummel, Water Island | Jellbilly + Arackulele |
+| Epic Humbug (Poison) | Cybop + Clamble, Earth Island | Whisp + Bellowfish |
+
+Each Natural Island combo entry groups the island with its Mirror
+counterpart (e.g. Plant Island + Mirror Plant Island) per the
+"don't split main/mirror pairs" rule, since there's no indication the
+combo differs there. `timeEnhanced` for each is the standard 25% breeding-
+time reduction, not a separately sourced figure. Common/Rare variants for
+these 5 were left as-is — they're already accurate, just less detailed
+(generic "Quad + Triple" phrasing instead of naming the specific parents);
+that's a polish item, not a bug, so it's not in scope for this batch.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Profile layout change (applies going forward to every monster)
+
+Reordered the Monster Profile sections: **Breeding** now comes right after
+Elements, followed by **Used To Breed**, followed by **Islands** (previously
+Islands came before Breeding). This is a template-level change in
+`index.html` — since sections are just shown/hidden and filled in by JS,
+not rebuilt in DOM order, this reorders every monster's profile
+automatically with no per-monster data change needed.
+
 ## Still pending
 
 - **Phase 3** — full multi-island breeding audit (batched, in progress).

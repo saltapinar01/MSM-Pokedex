@@ -7799,9 +7799,27 @@
           "Mirror Water Island"
         ],
         "breeding": {
-          "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Water Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
-          "timeNormal": "",
-          "timeEnhanced": ""
+          "combos": [
+            {
+              "islands": [
+                "Water Island",
+                "Mirror Water Island"
+              ],
+              "description": "Quibble + Pummel",
+              "timeNormal": "1d 2h",
+              "timeEnhanced": "19h 30m",
+              "note": null
+            },
+            {
+              "islands": [
+                "Ethereal Island"
+              ],
+              "description": "Jellbilly + Arackulele",
+              "timeNormal": "7h 13m 20s",
+              "timeEnhanced": "5h 25m",
+              "note": "Neither parent carries Jeeode's Crystal Element — the standard pattern for Single-Element Epic Ethereals bred on Ethereal Island."
+            }
+          ]
         },
         "alternativeAcquisition": [],
         "notes": [],
@@ -7862,9 +7880,27 @@
           "Mirror Air Island"
         ],
         "breeding": {
-          "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Air Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
-          "timeNormal": "",
-          "timeEnhanced": ""
+          "combos": [
+            {
+              "islands": [
+                "Air Island",
+                "Mirror Air Island"
+              ],
+              "description": "T-Rox + Pango",
+              "timeNormal": "1d 10h",
+              "timeEnhanced": "25h 30m",
+              "note": null
+            },
+            {
+              "islands": [
+                "Ethereal Island"
+              ],
+              "description": "Sox + Kazilleon",
+              "timeNormal": "9h 26m 40s",
+              "timeEnhanced": "7h 5m",
+              "note": "Neither parent carries Reebro's Mech Element — the standard pattern for Single-Element Epic Ethereals bred on Ethereal Island."
+            }
+          ]
         },
         "alternativeAcquisition": [],
         "notes": [],
@@ -7925,9 +7961,27 @@
           "Mirror Plant Island"
         ],
         "breeding": {
-          "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Plant Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
-          "timeNormal": "",
-          "timeEnhanced": ""
+          "combos": [
+            {
+              "islands": [
+                "Plant Island",
+                "Mirror Plant Island"
+              ],
+              "description": "T-Rox + Furcorn",
+              "timeNormal": "1d 6h",
+              "timeEnhanced": "22h 30m",
+              "note": null
+            },
+            {
+              "islands": [
+                "Ethereal Island"
+              ],
+              "description": "Boodoo + Dragong",
+              "timeNormal": "8h 20m",
+              "timeEnhanced": "6h 15m",
+              "note": "Neither parent carries Ghazt's Plasma Element — the standard pattern for Single-Element Epic Ethereals bred on Ethereal Island."
+            }
+          ]
         },
         "alternativeAcquisition": [],
         "notes": [],
@@ -7988,9 +8042,27 @@
           "Mirror Earth Island"
         ],
         "breeding": {
-          "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Earth Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
-          "timeNormal": "",
-          "timeEnhanced": ""
+          "combos": [
+            {
+              "islands": [
+                "Earth Island",
+                "Mirror Earth Island"
+              ],
+              "description": "Cybop + Clamble",
+              "timeNormal": "1d 8h",
+              "timeEnhanced": "24h",
+              "note": null
+            },
+            {
+              "islands": [
+                "Ethereal Island"
+              ],
+              "description": "Whisp + Bellowfish",
+              "timeNormal": "8h 53m 20s",
+              "timeEnhanced": "6h 40m",
+              "note": "Neither parent carries Humbug's Poison Element — the standard pattern for Single-Element Epic Ethereals bred on Ethereal Island."
+            }
+          ]
         },
         "alternativeAcquisition": [],
         "notes": [],
@@ -8051,9 +8123,27 @@
           "Mirror Cold Island"
         ],
         "breeding": {
-          "description": "Bred using a Quad-Element and a Triple-Element Natural monster on Cold Island. Once fed to Level 15, it can be teleported to Ethereal Island, where it produces Shards instead of Coins and can breed with other Ethereals.",
-          "timeNormal": "",
-          "timeEnhanced": ""
+          "combos": [
+            {
+              "islands": [
+                "Cold Island",
+                "Mirror Cold Island"
+              ],
+              "description": "Dandidoo + Bowgart",
+              "timeNormal": "1d 4h",
+              "timeEnhanced": "21h",
+              "note": null
+            },
+            {
+              "islands": [
+                "Ethereal Island"
+              ],
+              "description": "Nebulob + Fung Pray",
+              "timeNormal": "7h 46m 40s",
+              "timeEnhanced": "5h 50m",
+              "note": "Neither parent carries Grumpyre's Shadow Element — the standard pattern for Single-Element Epic Ethereals bred on Ethereal Island."
+            }
+          ]
         },
         "alternativeAcquisition": [],
         "notes": [],
