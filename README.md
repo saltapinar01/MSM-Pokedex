@@ -62,6 +62,190 @@ the 13 had placeholder/stub breeding data. This pass:
   restores your exact scroll position in the island list instead of
   snapping to the top tile.
 
+## Profile UX + Island View corrections pass
+
+- **Paironormal Carnival, properly split:** kept "Paironormal Carnival" as
+  the display name in both timelines (matches in-game naming exactly), but
+  they're now two separate island entries under the hood — Main Timeline
+  shows the Major roster/assets, Mirror Timeline shows a standalone tile
+  (not nested under any subgroup) with the Minor roster/assets. Internally
+  this uses a `matchKey` field to disambiguate the two without changing
+  what's displayed; the roster header shows a small "Major Mode"/"Minor
+  Mode" badge so it's unambiguous once you're inside one.
+- **Clickable Element/Island chips on profiles:** clicking an Element chip
+  jumps to Monsters view filtered to just that element (replacing any
+  existing filters, like a tag link). Clicking an Island chip jumps
+  straight into that island's roster in Island View.
+- **Droah reclassified** from Mirror Water Island to Crystal Islet.
+  Verified all four released Primordials against the wiki and corrected
+  the same bug for all of them — they were all on the wrong (Mirror
+  Natural) island:
+  - Lowb (Plant) → Plasma Islet
+  - Fandhul (Cold) → Shadow Islet
+  - Bogle (Air) → Mech Islet
+  - Droah (Water) → Crystal Islet
+  Also confirmed and tightened the Unity-Tree note: a Primordial's
+  happiness-projection only covers **Common**-rarity monsters on its Islet;
+  Rare/Epic Ethereals there still need Likes placed nearby.
+- **Search field:** no longer live-filters on every keystroke. Tapping the
+  field clears it for a fresh search, but the grid keeps showing the
+  previous results until the new search is actually submitted (Enter / the
+  keyboard's search key). Tapping away without submitting restores the
+  field to whatever search is still actually driving the grid.
+- **Sooza, Ziggurab, Thrumble, Rootitoot:** removed Fire Haven / Fire Oasis
+  from their island lists — confirmed via wiki these Fire Triples live on
+  their Magical Island + its Mirror + Amber only, not the Fire islands
+  themselves (they're used *as breeding parents* by Fire Haven/Oasis
+  players for Rare Kayna, which is a different thing from *residing*
+  there). **Flagging for Phase 3:** a broader scan turned up ~13 other
+  Fire-element hybrids (Glowl, Flowah, Stogg, Barrb, Floogull, Repatillo,
+  Tring, Phangler, Boskus, Whaddle, Woolabee, Wynq, Sneyser) that *do*
+  currently list Fire Haven/Fire Oasis — these look correct (Fire hybrids
+  generally do live on the Fire islands) but weren't individually
+  re-verified here, so they should get the same wiki-check treatment
+  during Phase 3 rather than being assumed correct by pattern-matching.
+- **Hairionette corrected:** its Minor form was missing Mirror Psychic
+  Island entirely (only listed Minor Paironormal Carnival), while its
+  Major form wrongly included Mirror Psychic Island (that's Minor's
+  territory, not Major's). Also corrected a real error in the old data:
+  Paironormal Carnival does **not** let Single-Element Paironormals be
+  freshly bred there via breeding-failure or otherwise — per the wiki's
+  own Breeding page, single-element Paironormals can only be Transposed in
+  (from the matching Magical/Mirror-Magical Island) or bought from its
+  Market. The old "breeding there ignores time of day" line was
+  inaccurate and has been removed.
+- **Kayna reviewed, no changes needed:** already correctly modeled —
+  Common is Market-purchase-only (accurate per wiki, not a bug), Rare
+  and Epic already carry properly sourced, grouped multi-island combos
+  matching the Blabbit template.
+
+### On the full multi-island breeding-combo audit
+
+The Blabbit/Monculus/Kayna `breeding.combos` format (multiple islands,
+grouped when the combo is identical, kept separate for main/mirror pairs,
+per-island timers) is the correct target shape and the rendering already
+fully supports it — this is a data-population task, not a code change.
+Systematically reviewing all 244 monsters for missed multi-island combos
+(the Monculus/Hairionette/Kayna pattern) is exactly Phase 3's scope, not a
+side fix — flagging here rather than attempting it inline so it gets the
+same batched, sourced treatment as everything else in that phase.
+
+## Island tile redesign + header-width fix
+
+- **Retired the white wordmark plate.** Instead, each tile now uses a
+  two-zone layout matching the reference design you shared: a neutral
+  near-white ground on the left (where the island photo and its wordmark
+  sit close together, sized near the tile's full height) blending into the
+  class-majority accent color on the right, which carries a large bold
+  monster count + "Monster(s)" label in place of the old small count text.
+  The neutral zone is near-white rather than the app's own dark surface
+  color because the wordmark art is drawn to sit on a light background —
+  matching that is what actually fixes legibility, not a color-contrast
+  trick layered on top of a mismatched background.
+- **Fixed the actual overflow bug behind the "header narrower than tiles"
+  glitch:** `.island-row` had `width: 100%` *and* horizontal margins at the
+  same time — a margin box always extends beyond 100% of its container in
+  that combination, which is exactly what was pushing the document wider
+  than the viewport and left the sticky header (which sizes itself to the
+  viewport) looking clipped next to it. Moved the horizontal gutter onto
+  `.island-list`'s padding instead of the row's margin, and added
+  `overflow-x: hidden` on `html, body` plus an explicit `width: 100%` on
+  `.app-header` as a backstop against the same class of bug elsewhere.
+- **Paironormal Carnival wordmarks are in** (Major: gold, Minor: teal/blue)
+  and saved to `assets/islands/wordmarks/`. The Major-Mode/Minor-Mode badge
+  in the roster header has also been removed, per your note that the
+  timeline location already makes that clear.
+- **Body art now in too:** the Major (clock+cannon) and Minor
+  (roller-coaster+tentacles) island photos are saved to
+  `assets/islands/paironormal-carnival.png` and
+  `assets/islands/paironormal-carnival-minor.png` respectively — Paironormal
+  Carnival's tiles are fully art-complete on both timelines now.
+
+## Ethereal art batch (Phase 4 art gap closed, mostly)
+
+Real art is now in for all 5 Single-Element Ethereals (Ghazt, Reebro,
+Grumpyre, Jeeode, Humbug — common/rare/epic) and 8 of the 10
+Double-Element Ethereals (Arackulele, Nebulob, Jellbilly, Dragong,
+Bellowfish, Boodoo — common/rare/epic — plus Sox's missing epic). All
+processed per the "Adding your own images" convention below: resized to
+400px max edge, quantized to 256 colors, `optimize=True`. Combined ~7.4MB
+of raw uploads compressed down to ~1MB.
+
+Bumped `CACHE_VERSION` to `v4` in `service-worker.js` — needed both because
+existing art got touched (the first Ghazt/Reebro/etc. batch was saved
+uncompressed in the previous pass and has now been reprocessed in place)
+and because the cache-first strategy for images also caches 404 responses:
+anyone who'd already loaded a monster page before this art existed would
+otherwise keep getting served the cached 404 instead of the new image.
+
+Still missing art: **Kazilleon** and **Fung Pray** (common/rare/epic each).
+
+## Fung Pray + Kazilleon art added — Phase 4 Ethereal art now 100% complete
+
+All 13 monsters from the original Phase 4 list (5 Single-Element +
+10 Double-Element Ethereals) now have real, compressed art for every
+variant. Same treatment as before (400px max edge, 256-color quantize,
+optimize) — 4.1MB of uploads compressed to ~170KB. Bumped `CACHE_VERSION`
+to `v5` for the same 404-caching reason as last time.
+
+Note: the wider Triple/Quad/Penta-Element Ethereal set (Yooreek, Meebkin,
+Blarret, Gaddzooks, Auglur, Flasque, Nitebear, Piplash, Teeter-Tauter,
+Pentumbra, Rhysmuth, Oogiddy, BeMeebEth) still has no art — that was never
+part of the original Phase 4 ask, so it's just noted here rather than
+treated as a gap in this phase.
+
+## Triple-Element Ethereal art batch (8 of 9 remaining monsters)
+
+Added real art for all 8 Triple-Element Ethereals (Yooreek, Meebkin,
+Blarret, Gaddzooks, Auglur, Flasque, Nitebear, Piplash — common + rare
+each, no epic tier for these) plus BeMeebEth (the Penta-Element Ethereal,
+common only). Same compression treatment (400px max edge, 256-color
+quantize, optimize) — 10.7MB of uploads compressed to ~340KB.
+`CACHE_VERSION` bumped to `v6`.
+
+Still missing art: the 4 Quad-Element Ethereals — **Teeter-Tauter**,
+**Pentumbra**, **Rhysmuth**, **Oogiddy** (common only, no rare/epic tiers
+for these). Once those land, every Ethereal monster in the dataset will
+have art.
+
+## Quad-Element Ethereal art added — Ethereal class 100% art-complete
+
+Added Teeter-Tauter, Pentumbra, Rhysmuth, and Oogiddy (common only, matching
+their single-variant setup). **All 31 Ethereal monsters now have art for
+every variant they have.**
+
+**Bug found and fixed while processing this batch:** Sox's three variants
+were mislabeled two batches back — the file saved as `sox-common.png` was
+actually the Rare art (teal), `sox-rare.png` was actually the Epic art
+(green, with the crystal-tail and ridged horns), and `sox-epic.png` was
+actually the Common art (plain tan goat). Caught it because this batch
+re-sent Sox's rare/epic art again and the "Rare_Sox.png" this time was
+pixel-identical to what was already saved as `sox-epic.png` — a real
+content conflict, not just a coincidence. Rotated the three files into
+their correct slots (common = tan goat = simplest design, rare = teal
+recolor, epic = green with added crystal growths and ridged horns — the
+complexity progression that holds for every other Ethereal checked so
+far). This turn's `Epic_Sox.png` re-upload was **not** used — it showed a
+spotted, slime-dripping bat-winged creature that doesn't match Sox's
+goat/gazelle body plan at all, so it looks like an unrelated file that got
+swept up under that name. Sox's epic slot now correctly holds the
+already-verified green gazelle art instead.
+
+`CACHE_VERSION` bumped to `v7` (covers both the new art and the Sox fix).
+
+**Correction:** the fix above was based on my own guess at complexity
+progression (plainest = common, most decorated = epic), without an actual
+filename to confirm it — and it guessed wrong. With the real filenames
+confirmed directly, the correct mapping is:
+- `sox-common.png` = teal creature (`Sox.png`)
+- `sox-rare.png` = green gazelle with purple crystal growths (`Rare_Sox.png`)
+- `sox-epic.png` = tan/white goat (`Epic_Sox.png`)
+
+So common/epic ended up swapped from what the "plainest vs. most decorated"
+assumption predicted — a reminder that filename confirmation beats visual
+inference when they're available. All three are now saved correctly.
+`CACHE_VERSION` bumped again to `v8`.
+
 ## Still pending
 
 - **Phase 3** — full multi-island breeding audit (batched, in progress).

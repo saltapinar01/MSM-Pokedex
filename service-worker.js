@@ -1,4 +1,4 @@
-const CACHE_VERSION = "msm-pokedex-v3";
+const CACHE_VERSION = "msm-pokedex-v8";
 const APP_SHELL = [
   "./",
   "./index.html",

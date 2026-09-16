@@ -3882,8 +3882,6 @@
         "image": "assets/monsters/rootitoot-common.png",
         "islands": [
           "Psychic Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Psychic Island"
         ],
@@ -3903,8 +3901,6 @@
         "image": "assets/monsters/rootitoot-rare.png",
         "islands": [
           "Psychic Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Psychic Island"
         ],
@@ -3926,8 +3922,6 @@
         "image": "assets/monsters/rootitoot-epic.png",
         "islands": [
           "Psychic Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Psychic Island"
         ],
@@ -4421,8 +4415,6 @@
         "image": "assets/monsters/ziggurab-common.png",
         "islands": [
           "Faerie Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Faerie Island"
         ],
@@ -4442,8 +4434,6 @@
         "image": "assets/monsters/ziggurab-rare.png",
         "islands": [
           "Faerie Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Faerie Island"
         ],
@@ -4465,8 +4455,6 @@
         "image": "assets/monsters/ziggurab-epic.png",
         "islands": [
           "Faerie Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Faerie Island"
         ],
@@ -4960,8 +4948,6 @@
         "image": "assets/monsters/sooza-common.png",
         "islands": [
           "Light Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Light Island"
         ],
@@ -4981,8 +4967,6 @@
         "image": "assets/monsters/sooza-rare.png",
         "islands": [
           "Light Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Light Island"
         ],
@@ -5004,8 +4988,6 @@
         "image": "assets/monsters/sooza-epic.png",
         "islands": [
           "Light Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Light Island"
         ],
@@ -5499,8 +5481,6 @@
         "image": "assets/monsters/thrumble-common.png",
         "islands": [
           "Bone Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Bone Island"
         ],
@@ -5520,8 +5500,6 @@
         "image": "assets/monsters/thrumble-rare.png",
         "islands": [
           "Bone Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Bone Island"
         ],
@@ -5543,8 +5521,6 @@
         "image": "assets/monsters/thrumble-epic.png",
         "islands": [
           "Bone Island",
-          "Fire Haven",
-          "Fire Oasis",
           "Amber Island",
           "Mirror Bone Island"
         ],
@@ -7139,9 +7115,8 @@
         "name": "Hairionette (Major)",
         "image": "assets/monsters/hairionette-major.png",
         "islands": [
-          "Paironormal Carnival",
           "Psychic Island",
-          "Mirror Psychic Island"
+          "Paironormal Carnival"
         ],
         "breeding": {
           "description": "Bred on Psychic Island from Gloptic + any Triple-Element Monster, during the day (6:00 AM–8:00 PM local time). Gloptic + Rooba is the best specific pairing (shorter/cheaper than Gloptic + Rootitoot); not guaranteed.",
@@ -7149,8 +7124,8 @@
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins — breeding there ignores time of day entirely once transposed.",
-          "Fugue an existing Minor copy in the Carnival's Centri-Fuge for 100 Starpower to fill in its Major form."
+          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins — this only relocates/houses a copy you already have there; Single-Element Paironormals cannot be freshly bred on the Carnival itself, only transposed in or bought from its Market",
+          "Fugue an existing Minor copy in the Carnival's Centri-Fugue to obtain a Major copy"
         ],
         "notes": [
           "Produces Starpower (not Coins) on Paironormal Carnival. On its Magical Island, available 6am-8pm local time; its Minor form takes over on the Mirror Island from 6pm-8am."
@@ -7161,6 +7136,7 @@
         "name": "Hairionette (Minor)",
         "image": "assets/monsters/hairionette-minor.png",
         "islands": [
+          "Mirror Psychic Island",
           "Minor Paironormal Carnival"
         ],
         "breeding": {
@@ -7169,8 +7145,9 @@
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
-          "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins — breeding there ignores time of day entirely once transposed.",
-          "Fugue an existing Major copy in the Carnival's Centri-Fuge for 100 Starpower to fill in its Minor form."
+          "Transpose a Level-18 copy to Paironormal Carnival (Minor Mode) for 100,000 Coins — this only relocates/houses a copy you already have there; Single-Element Paironormals cannot be freshly bred on the Carnival itself, only transposed in or bought from its Market",
+          "Fugue an existing Major copy in the Carnival's Centri-Fugue to obtain a Minor copy",
+          "Can also be bought directly from the Market on Mirror Psychic Island during its active window"
         ],
         "notes": [
           "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
@@ -14863,7 +14840,7 @@
         "name": "Lowb",
         "image": "assets/monsters/lowb-common.png",
         "islands": [
-          "Mirror Plant Island"
+          "Plasma Islet"
         ],
         "breeding": null,
         "alternativeAcquisition": [
@@ -14872,7 +14849,7 @@
           "Or purchased directly from the Shop for 5,000 Shards at any time"
         ],
         "notes": [
-          "Only one can be placed. Functions like a Unity Tree, projecting happiness to every Common Monster on the Islet regardless of placement."
+          "Only one can be placed. Acts as a Unity Tree, but only for Common-rarity monsters on its Islet — Rare/Epic Ethereals there still need Likes placed nearby for full happiness."
         ],
         "interestingFact": "Added February 19, 2025. A 5th Primordial (Tunefor, for the Poison Element) is confirmed to be coming to Poison Islet in a future update — not yet released, so not included here."
       }
@@ -14891,7 +14868,7 @@
         "name": "Fandhul",
         "image": "assets/monsters/fandhul-common.png",
         "islands": [
-          "Mirror Cold Island"
+          "Shadow Islet"
         ],
         "breeding": null,
         "alternativeAcquisition": [
@@ -14900,7 +14877,7 @@
           "Or purchased directly from the Shop for 5,000 Shards at any time"
         ],
         "notes": [
-          "Only one can be placed. Functions like a Unity Tree, projecting happiness to every Common Monster on the Islet regardless of placement."
+          "Only one can be placed. Acts as a Unity Tree, but only for Common-rarity monsters on its Islet — Rare/Epic Ethereals there still need Likes placed nearby for full happiness."
         ],
         "interestingFact": "Added December 10, 2025. A 5th Primordial (Tunefor, for the Poison Element) is confirmed to be coming to Poison Islet in a future update — not yet released, so not included here."
       }
@@ -14919,7 +14896,7 @@
         "name": "Bogle",
         "image": "assets/monsters/bogle-common.png",
         "islands": [
-          "Mirror Air Island"
+          "Mech Islet"
         ],
         "breeding": null,
         "alternativeAcquisition": [
@@ -14928,7 +14905,7 @@
           "Or purchased directly from the Shop for 5,000 Shards at any time"
         ],
         "notes": [
-          "Only one can be placed. Functions like a Unity Tree, projecting happiness to every Common Monster on the Islet regardless of placement."
+          "Only one can be placed. Acts as a Unity Tree, but only for Common-rarity monsters on its Islet — Rare/Epic Ethereals there still need Likes placed nearby for full happiness."
         ],
         "interestingFact": "Added June 25, 2025. A 5th Primordial (Tunefor, for the Poison Element) is confirmed to be coming to Poison Islet in a future update — not yet released, so not included here."
       }
@@ -14947,7 +14924,7 @@
         "name": "Droah",
         "image": "assets/monsters/droah-common.png",
         "islands": [
-          "Mirror Water Island"
+          "Crystal Islet"
         ],
         "breeding": null,
         "alternativeAcquisition": [
@@ -14956,7 +14933,7 @@
           "Or purchased directly from the Shop for 5,000 Shards at any time"
         ],
         "notes": [
-          "Only one can be placed. Functions like a Unity Tree, projecting happiness to every Common Monster on the Islet regardless of placement."
+          "Only one can be placed. Acts as a Unity Tree, but only for Common-rarity monsters on its Islet — Rare/Epic Ethereals there still need Likes placed nearby for full happiness."
         ],
         "interestingFact": "Added unknown (2026). A 5th Primordial (Tunefor, for the Poison Element) is confirmed to be coming to Poison Islet in a future update — not yet released, so not included here."
       }

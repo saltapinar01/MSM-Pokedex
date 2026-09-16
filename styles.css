@@ -29,6 +29,13 @@ html, body {
   background: var(--bg);
   color: var(--text-primary);
   min-height: 100vh;
+  /* The sticky header sizes itself to the viewport; if anything else on the
+     page ever runs wider than the viewport (causing horizontal scroll), the
+     header stays viewport-width while full-bleed content like island tiles
+     keeps the document's wider scroll width — so the header visibly reads
+     "narrower" than the tiles beneath it. Locking out horizontal overflow
+     entirely keeps every full-width element measuring the same width. */
+  overflow-x: hidden;
 }
 
 button {
@@ -47,11 +54,14 @@ input:focus-visible {
 .app-header {
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
   background: rgba(18, 18, 18, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-quiet);
   padding: 14px 16px 12px;
+  box-sizing: border-box;
 }
 
 .app-header__top {
@@ -507,7 +517,7 @@ input:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-muted);
-  margin: 18px 16px 8px;
+  margin: 18px 4px 8px;
 }
 .island-group:first-child .island-group__title { margin-top: 8px; }
 
@@ -518,13 +528,15 @@ input:focus-visible {
   letter-spacing: 0.08em;
   color: var(--text-muted);
   opacity: 0.75;
-  margin: 14px 20px 6px;
+  margin: 14px 4px 6px 8px;
 }
 .island-group__title + .island-subgroup__title { margin-top: 0; }
 
 .island-list {
   display: flex;
   flex-direction: column;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 
 .island-row {
@@ -534,64 +546,63 @@ input:focus-visible {
   font: inherit;
   display: flex;
   align-items: center;
-  gap: 12px;
   width: 100%;
-  height: 96px;
-  padding: 0 18px;
-  margin: 0 12px 10px;
+  height: 112px;
+  padding: 0;
+  margin: 0 0 10px;
   border-radius: 16px;
-  background: var(--island-fill, var(--surface));
+  overflow: hidden;
+  position: relative;
+  /* Left zone is a neutral near-white ground (matching the source island
+     art/wordmarks, which are drawn to sit on a light background) that
+     transitions into the class-majority accent color on the right — same
+     color logic as before, just restyled to match the reference layout. */
+  background: linear-gradient(92deg, #f3f1ec 0%, #f3f1ec 38%, var(--island-fill, var(--surface)) 66%, var(--island-fill, var(--surface)) 100%);
   color: var(--island-text, var(--text-primary));
   box-sizing: border-box;
 }
-.island-row:hover { filter: brightness(1.06); }
+.island-row:hover { filter: brightness(1.04); }
 
-/* Wordmark art ships as full-color logo images, not flat text, so they
-   can clash with whatever accent color a tile happens to use. Giving the
-   wordmark its own neutral plate keeps it legible regardless of the tile
-   color behind it, instead of relying on text-contrast math that only
-   ever applied to the text fallback. */
-.island-row__wordmark-plate {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 74%;
-  padding: 6px 12px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
-  flex-shrink: 0;
-}
-.island-row__wordmark {
+.island-row__image {
   height: 100%;
-  max-width: 130px;
   width: auto;
+  max-width: 34%;
   object-fit: contain;
   flex-shrink: 0;
+  padding: 8px 0 8px 6px;
+  box-sizing: border-box;
+}
+
+/* Wordmark sits directly beside the island photo on the neutral zone —
+   both are sized close to the tile's full height and kept tight together,
+   the way the in-game island-select art pairs them, so no separate plate
+   or contrast trick is needed behind it. */
+.island-row__wordmark {
+  height: 62%;
+  max-width: 42%;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 1;
+  margin-left: -4px;
 }
 .island-row__name-fallback {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--island-text, var(--text-primary));
-}
-.island-row__count {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--island-text, var(--text-primary));
-  opacity: 0.9;
-  margin-left: auto;
-  padding-left: 12px;
-  white-space: nowrap;
+  color: #1a1a1a;
+  margin-left: 4px;
 }
 
-.island-row__image {
-  height: 78%;
-  width: auto;
-  max-width: 68px;
-  object-fit: contain;
+.island-row__count-block {
+  margin-left: auto;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+  text-align: center;
+  padding: 0 20px;
+  color: var(--island-text, #ffffff);
+  line-height: 1.1;
 }
+.island-row__count-number { display: block; font-size: 1.9rem; font-weight: 800; }
+.island-row__count-label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.03em; opacity: 0.92; }
 
 .island-roster { padding: 8px 0; }
 .island-roster__back {
@@ -608,8 +619,8 @@ input:focus-visible {
   gap: 12px;
   padding: 4px 16px 16px;
 }
-.island-roster__header .island-row__image { width: 64px; height: 64px; }
-.island-roster__header .island-row__wordmark { max-height: 46px; }
+.island-roster__header .island-row__image { width: 64px; height: 64px; padding: 0; }
+.island-roster__header .island-row__wordmark { max-height: 46px; margin-left: 0; }
 .island-roster__count { margin-left: auto; font-size: 0.96rem; color: var(--text-muted); }
 
 .breed-combo {

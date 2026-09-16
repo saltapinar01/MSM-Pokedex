@@ -76,6 +76,10 @@ function normalizeData(data) {
 
   state.monsterById = Object.fromEntries(data.monsters.map((m) => [m.id, m]));
   state.islandById = Object.fromEntries(data.islands.map((i) => [i.id, i]));
+  // Lookup by the exact string monster data stores in `variant.islands`
+  // (an island's matchKey when it has one, otherwise its display name) —
+  // used to resolve profile island chips back to a real island to link to.
+  state.islandByMatchKey = Object.fromEntries(data.islands.map((i) => [i.matchKey || i.name, i]));
 
   state.breedingByTarget = {};
   state.breedingByParents = {};
@@ -491,6 +495,15 @@ function buildMirrorIslandGroup(title, islands) {
   heading.textContent = title;
   section.appendChild(heading);
 
+  // Standalone islands (no mirrorGroup) render as their own tiles, outside
+  // the three named subgroups below — e.g. Paironormal Carnival's Minor
+  // Mode isn't a Natural/Magical/Islet island, so it doesn't belong in any
+  // of them.
+  const standalone = islands
+    .filter((i) => !i.mirrorGroup)
+    .sort((a, b) => a.name.localeCompare(b.name));
+  for (const island of standalone) section.appendChild(buildIslandRow(island));
+
   for (const { key, label } of MIRROR_SUBGROUPS) {
     const subgroup = islands
       .filter((i) => i.mirrorGroup === key)
@@ -508,9 +521,9 @@ function buildMirrorIslandGroup(title, islands) {
 }
 
 function buildIslandRow(island) {
-  const count = monstersOnIsland(island.name).length;
+  const count = monstersOnIsland(island.matchKey || island.name).length;
   const wordmark = resolveIslandWordmark(island);
-  const fillColor = majorityClassColor(island.name);
+  const fillColor = majorityClassColor(island.matchKey || island.name);
   const textColor = contrastTextColor(fillColor);
 
   const row = document.createElement("button");
@@ -519,11 +532,14 @@ function buildIslandRow(island) {
   row.style.setProperty("--island-fill", fillColor);
   row.style.setProperty("--island-text", textColor);
   row.innerHTML = `
-    ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" loading="lazy" decoding="async" width="68" height="75" onerror="this.remove()">` : ""}
+    ${island.image ? `<img class="island-row__image" src="${island.image}" alt="" loading="lazy" decoding="async" width="150" height="112" onerror="this.remove()">` : ""}
     ${wordmark
-      ? `<span class="island-row__wordmark-plate"><img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" loading="lazy" decoding="async" width="150" height="67" onerror="this.closest('.island-row__wordmark-plate').replaceWith(Object.assign(document.createElement('span'),{className:'island-row__name-fallback',textContent:'${escapeHTML(island.name)}'}))"></span>`
+      ? `<img class="island-row__wordmark" src="${wordmark}" alt="${escapeHTML(island.name)}" loading="lazy" decoding="async" width="150" height="67" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'island-row__name-fallback',textContent:'${escapeHTML(island.name)}'}))">`
       : `<span class="island-row__name-fallback">${escapeHTML(island.name)}</span>`}
-    <span class="island-row__count">${count} Monster${count === 1 ? "" : "s"}</span>
+    <span class="island-row__count-block">
+      <span class="island-row__count-number">${count}</span>
+      <span class="island-row__count-label">Monster${count === 1 ? "" : "s"}</span>
+    </span>
   `;
   row.addEventListener("click", () => renderIslandRoster(island.id));
   return row;
@@ -536,7 +552,7 @@ function renderIslandRoster(islandId) {
 
   state.selectedIslandId = islandId;
   const island = state.islandById[islandId];
-  const roster = monstersOnIsland(island.name);
+  const roster = monstersOnIsland(island.matchKey || island.name);
 
   document.getElementById("island-list").hidden = true;
   document.getElementById("island-roster").hidden = false;
@@ -627,13 +643,16 @@ function renderProfile() {
   setIconTextSection("section-subclass", "profile-subclass", subclassDef?.sigil, subclassDef?.name);
 
   const elementDefs = (monster.elements || [])
-    .map((id) => state.taxonomy.elements[id])
+    .map((id) => (state.taxonomy.elements[id] ? { id, ...state.taxonomy.elements[id] } : null))
     .filter(Boolean);
   setSigilChipSection("section-elements", "profile-elements", elementDefs);
 
   // Islands are stored as display-name strings for this bulk import (not yet
-  // normalized to island IDs) — render them directly.
-  setChipSection("section-islands", "profile-islands", variant.islands || []);
+  // normalized to island IDs). Each chip resolves back to a real island via
+  // its matchKey (falling back to name) so it can act as a shortcut into
+  // that island's roster in Island View; the chip itself still shows the
+  // island's friendly display name.
+  setIslandChipSection("section-islands", "profile-islands", variant.islands || []);
 
   renderBreedingSection(monster, variant);
   renderBreedsInto(monster);
@@ -770,17 +789,34 @@ function setIconTextSection(sectionId, fieldId, sigilSrc, label) {
   el.innerHTML = `${sigilSrc ? `<img class="sigil" src="${sigilSrc}" alt="" onerror="this.remove()">` : ""}<span>${escapeHTML(label)}</span>`;
 }
 
-// Element chips rendered with each element's sigil before its text.
+// Element chips rendered with each element's sigil before its text. Each
+// chip is a single-filter shortcut into the Monsters view: clicking it
+// replaces the active filters with just that element, the way a search
+// engine's "search by tag" link works — not an additive filter toggle.
 function setSigilChipSection(sectionId, fieldId, defs) {
   const section = document.getElementById(sectionId);
   if (!defs.length) { section.hidden = true; return; }
   section.hidden = false;
   const el = document.getElementById(fieldId);
-  el.innerHTML = defs.map((d) => `
-    <span class="chip chip--sigil">
-      ${d.sigil ? `<img class="sigil" src="${d.sigil}" alt="" onerror="this.remove()">` : ""}${escapeHTML(d.name)}
-    </span>
-  `).join("");
+  el.innerHTML = "";
+  for (const d of defs) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "chip chip--sigil chip--link";
+    chip.innerHTML = `${d.sigil ? `<img class="sigil" src="${d.sigil}" alt="" onerror="this.remove()">` : ""}${escapeHTML(d.name)}`;
+    chip.addEventListener("click", () => filterToElement(d.id));
+    el.appendChild(chip);
+  }
+}
+
+function filterToElement(elementId) {
+  closeProfile(false);
+  state.activeFilters = { classes: [], variants: [], elements: [elementId], islands: [] };
+  state.searchQuery = "";
+  document.getElementById("search-input").value = "";
+  updateFilterCountBadge();
+  switchView("monsters");
+  renderMonsterGrid();
 }
 
 function renderEggRequirements(variant) {
@@ -812,6 +848,41 @@ function setChipSection(sectionId, fieldId, values) {
   el.innerHTML = values.map((v) => `<span class="chip">${escapeHTML(v)}</span>`).join("");
 }
 
+// Island chips: each resolves the stored display-name string back to a real
+// island entry (by matchKey, falling back to name) and, when found, becomes
+// a clickable shortcut straight into that island's roster in Island View.
+// A name that doesn't resolve to any island (shouldn't happen, but data is
+// data) just renders as plain unclickable text instead of a dead button.
+function setIslandChipSection(sectionId, fieldId, values) {
+  const section = document.getElementById(sectionId);
+  if (!values.length) { section.hidden = true; return; }
+  section.hidden = false;
+  const el = document.getElementById(fieldId);
+  el.innerHTML = "";
+  for (const v of values) {
+    const island = state.islandByMatchKey[v];
+    if (island) {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "chip chip--link";
+      chip.textContent = island.name;
+      chip.addEventListener("click", () => goToIsland(island.id));
+      el.appendChild(chip);
+    } else {
+      const span = document.createElement("span");
+      span.className = "chip";
+      span.textContent = v;
+      el.appendChild(span);
+    }
+  }
+}
+
+function goToIsland(islandId) {
+  closeProfile(false);
+  switchView("islands");
+  renderIslandRoster(islandId);
+}
+
 function renderListSection(sectionId, fieldId, items) {
   const section = document.getElementById(sectionId);
   if (!items.length) { section.hidden = true; return; }
@@ -839,13 +910,32 @@ function wireEvents() {
     if (state.profileOpen) closeProfile(false);
   });
 
-  let searchDebounce;
-  document.getElementById("search-input").addEventListener("input", (e) => {
-    clearTimeout(searchDebounce);
-    searchDebounce = setTimeout(() => {
-      state.searchQuery = e.target.value.trim();
-      renderMonsterGrid();
-    }, 150);
+  // Search is commit-on-submit, not live-as-you-type: tapping the field
+  // clears it so it's ready for a fresh word, but the grid keeps showing
+  // the previous results until the new search is actually submitted
+  // (Enter / the keyboard's search key) — so results never flash away
+  // mid-typing.
+  const searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("focus", () => {
+    if (searchInput.value) searchInput.value = "";
+  });
+  searchInput.addEventListener("blur", () => {
+    // Nothing was submitted — restore the text of whatever search is
+    // still actually driving the grid, so the field never shows blank
+    // while stale-looking results are still the ones on screen.
+    if (!searchInput.value.trim()) searchInput.value = state.searchQuery;
+  });
+  const commitSearch = () => {
+    state.searchQuery = searchInput.value.trim();
+    renderMonsterGrid();
+  };
+  searchInput.addEventListener("search", commitSearch); // native clear (x) / keyboard search key
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      commitSearch();
+      searchInput.blur();
+    }
   });
 
   document.getElementById("filter-btn").addEventListener("click", openFilterDrawer);

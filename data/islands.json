@@ -332,13 +332,14 @@
       "accent": "#C15FD1",
       "background": "#161616"
     },
-    "timeline": "main"
+    "timeline": "main",
+    "matchKey": "Paironormal Carnival"
   },
   {
     "id": "paironormal-carnival-minor",
-    "name": "Minor Paironormal Carnival",
+    "name": "Paironormal Carnival",
     "order": 22.5,
-    "description": "The Mirror-Timeline half of Paironormal Carnival — houses every Paironormal monster in its Minor form. Major forms live on the Main-Timeline Paironormal Carnival instead.",
+    "description": "The Mirror-Timeline half of Paironormal Carnival — houses every Paironormal monster in its Minor form and uses the Minor-form art/roster. Shares its display name with the Main-Timeline Paironormal Carnival (which is Major-form only) because that's what the two modes are actually called in-game; they're kept as separate list entries here so each can show its own correct roster.",
     "image": "assets/islands/paironormal-carnival-minor.png",
     "wordmark": {
       "vertical": "assets/islands/wordmarks/paironormal-carnival-minor-vertical.png"
@@ -348,7 +349,7 @@
       "background": "#161616"
     },
     "timeline": "mirror",
-    "mirrorGroup": "magical"
+    "matchKey": "Minor Paironormal Carnival"
   },
   {
     "id": "ethereal-island",
