@@ -289,6 +289,151 @@ Islands came before Breeding). This is a template-level change in
 not rebuilt in DOM order, this reorders every monster's profile
 automatically with no per-monster data change needed.
 
+## Phase 3 — Batch 2: remaining 16 Ethereals (Ethereal Workshop + Islets)
+
+Closes out the Ethereal class entirely — this was the last set of Ethereal
+monsters with unpopulated breeding data (all 16 had `breeding: null` and
+nothing else).
+
+**Important finding that changed the approach for this whole batch:**
+these monsters aren't bred at all, in the two-parent sense the rest of the
+dex uses. Ethereal Workshop and the Ethereal Islets use entirely different
+mechanics:
+
+- **Ethereal Workshop (Triples/Quads/Quint):** obtained by *Synthesizing*
+  — combining 3, 4, or 5 "Meebs" (element-attuned critters) in the
+  Synthesizer. Quads can also be synthesized by using their same-wave
+  Triple as a base monster instead of starting from scratch (e.g. Whaill
+  can be synthesized from Nitebear). There's no such shortcut for Oogiddy.
+- **Ethereal Islets:** obtained by *Dish-Harmonizing* — an existing
+  Monster is broken back into its attuned Meebs, which randomly recombine
+  into two new Monsters. This is genuinely random, not a fixed pair of
+  parents, so it doesn't fit the `breeding.combos` format at all.
+- **Rare tiers** (confirmed to now exist for all 15 of these monsters
+  except BeMeebEth) work differently again: on Ethereal Workshop, a Common
+  is *evolved* into Rare via the Rarefied Attunement Structure; on the
+  Islets, Rares come from the same random Dish-Harmonizing process via a
+  Rarefied Dish-Harmonizer, just with a chance of Rare instead of Common.
+
+Because none of this is actually breeding, forcing it into
+`breeding.combos` would misrepresent it — so `breeding` stays `null` (this
+is correct, not a gap) and the real acquisition mechanism is documented in
+`alternativeAcquisition` instead, which is exactly how Monculus itself
+handles its own non-breeding Wublin Island path.
+
+**Data changes:**
+- All 16 monsters' Common variant now has accurate, specific
+  `alternativeAcquisition` text (exact Meeb elements required, synthesis
+  success/fail timing, Islet Dish-Harmonizing where applicable).
+- Added a Rare variant (previously entirely missing) for Teeter-Tauter,
+  Pentumbra, Rhysmuth, and Oogiddy — confirmed via the wiki that all four
+  now have real Rare tiers, following the same Workshop-evolve /
+  Islet-Dish-Harmonize pattern as the other 11.
+- BeMeebEth gets a note that no Rare or Epic exists for it yet — what
+  circulates online under that name is fan concept art, not real game
+  content.
+- **Bug fix, found by accident while reviewing this batch's own notes:**
+  6 pre-existing `notes` entries (not written by me) incorrectly identified
+  "Poison Islet" as "Mirror Earth Island" — those are unrelated islands.
+  Removed the wrong parenthetical; the substance of the note (Poison Islet
+  hasn't been released yet) was already correct.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Profile template + Monster View navigation pass
+
+- **A–Z jump sidebar (Monster View):** a fixed letter list on the right
+  edge lets you jump straight to the first visible monster starting with
+  that letter. Letters with nothing currently visible (given active
+  filters/search) show disabled rather than disappearing, so the alphabet
+  doesn't reflow as you filter. Hidden automatically in Island View.
+- **Egg Requirements moved** to right after "Vessels, Zapping, Boxing &
+  Revitalizing" (previously came before Alternative Acquisition), and its
+  list now sorts longest hatch-time first, shortest last.
+- **Time format standardized everywhere:** every duration in the dataset —
+  breeding timers, egg hatch times, special-mechanics text, everything —
+  now uses the `1d 6h 20m` style instead of a mix of that and "1 day, 6
+  hours, 20 minutes" prose. 189 conversions across the whole file.
+- **Breeding template refined to match Monculus exactly:** added
+  `Best:` / `Also:` support for the case where one island has more than
+  one valid parent pairing (previously this got crammed into a single
+  prose sentence — fixed for Hairionette, which also had a stale note
+  left over from before the Paironormal Carnival split; cleaned that up
+  too). The flat single-description breeding path (the ~350 monsters not
+  yet migrated to the full multi-combo format) now gets the same
+  island-header visual treatment for consistency, even though its
+  underlying data isn't restructured yet — that's still Phase 3's job,
+  batch by batch.
+- **Alternative Acquisition now supports the same island-grouped template
+  as Breeding**, for monsters whose acquisition genuinely differs by
+  island. Converted all 16 Ethereal Workshop/Islet monsters from Phase 3
+  Batch 2 to this format (separate blocks for "Ethereal Workshop" vs. the
+  Islet(s)), while monsters with a single ungrouped acquisition path (like
+  Monculus's Wublin Island purchase) stay as plain bullet lines — grouping
+  is only applied where it actually clarifies something.
+- **Font consistency confirmed:** `.breed-combo` blocks and
+  `.profile-section li/p` already shared the same size/line-height before
+  this pass; the new Alternative Acquisition blocks reuse `.breed-combo`
+  directly, so everything stays visually consistent without new CSS rules
+  to maintain.
+
+**No art changes in this pass — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 3: Fire hybrid re-verify (Glowl, Flowah, Stogg, Barrb, Floogull, Repatillo, Tring, Phangler, Boskus, Whaddle, Woolabee, Wynq, Sneyser)
+
+**Island assignments confirmed correct** for all 13 — unlike Sooza/Ziggurab/Thrumble/
+Rootitoot (pure Magical monsters wrongly cross-listed to Fire Haven/Oasis), these
+are genuine Fire-element hybrids that legitimately live there. Pattern holds
+across the whole set: Doubles (Glowl, Flowah, Stogg, Phangler, Boskus) live on
+their Fire island + the two Magical Islands (+ Mirrors) sharing their non-Fire
+element; Triples/the Quad (Barrb, Floogull, Repatillo, Tring, Whaddle, Woolabee,
+Wynq, Sneyser) live on their Fire island + Amber only, no Magical cross-listing.
+Spot-checked Glowl, Barrb, and Phangler directly against the wiki to confirm.
+
+**Bigger finding: Rare/Epic for Fire hybrids don't work like Ethereal
+Epics did in Batch 1.** There's no two-parent "Epic combo that lacks the
+monster's element" pattern here — Fire Monster Rares and Epics use a
+completely different mechanism:
+- **Rare** isn't bred via a distinct combination at all — any breeding
+  attempt that would normally produce the Common has a chance to fail
+  upward into a Rare instead. (Confirmed for all 13; documented as a note
+  rather than a fake `breeding.combos` entry, since there's no fixed
+  parent pair to show.)
+- **Epic** breeding combination is genuinely different per island and
+  doesn't follow a memorable formula — the wiki maintains a dedicated
+  "Epic Breeding Combinations" reference page specifically because there
+  isn't a shortcut. Epic Monsters also cannot breed once obtained.
+- **On Amber Island specifically**, neither Rare nor Epic breeds at all —
+  both are Crucible/Enhanced Crucible **evolutions** of an existing
+  Common/Rare, a completely different mechanic, already well-documented
+  in these monsters' pre-existing `specialMechanics` data.
+
+**Data changes:**
+- Added the missing **Epic variant entirely** for Flowah, Barrb, Floogull,
+  Repatillo, Phangler, Woolabee, and Wynq — confirmed via the wiki that
+  real Epic forms exist for all 7; they simply weren't in the dataset at
+  all before this batch.
+- Populated 3 confirmed specific Epic combos: Epic Glowl (Fire Haven:
+  Floogull + Dandidoo; Fire Oasis: Wynq + Quibble), Epic Barrb (Fire
+  Haven: Floogull + Shrubb), Epic Floogull (Fire Haven: Reedling + Glowl).
+- For every other island/monster combination where I could confirm the
+  *mechanism* but not the *specific parent pair*, the note says so
+  explicitly ("not yet independently confirmed for X in this build")
+  rather than guessing — this covers most of the Magical-island Epic
+  combos for the 5 Doubles, and most Epic combos overall for the newly
+  added 7. A dedicated deep-dive batch would be needed to chase down all
+  of these individually; flagging rather than attempting it inline.
+- Added `specialMechanics` (Enhanced Crucible evolution, Vessel cost in
+  Relics) for the 7 newly-added Epic variants, matching the exact template
+  already used by the 6 that had it — Relic cost scales by element count
+  (10 for Doubles, 20 for Triples/Quad, matching the existing pattern).
+- Avoided duplicating the Amber Crucible mechanic across two sections:
+  removed my own first-draft `alternativeAcquisition` entries once I
+  found this was already thoroughly covered in `specialMechanics` for
+  every Rare and 6 of the 13 Epics.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
 ## Still pending
 
 - **Phase 3** — full multi-island breeding audit (batched, in progress).

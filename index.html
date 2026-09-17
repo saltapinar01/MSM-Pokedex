@@ -33,6 +33,8 @@
   <p class="loading-state">Loading monsters…</p>
 </main>
 
+<nav id="az-jump" class="az-jump" aria-label="Jump to letter" hidden></nav>
+
 <main id="island-view" class="island-view" hidden aria-live="polite">
   <div id="island-list" class="island-list"></div>
   <div id="island-roster" class="island-roster" hidden>
@@ -116,20 +118,20 @@
       <div id="profile-islands" class="chip-row"></div>
     </section>
 
-    <section class="profile-section" id="section-eggs" hidden>
-      <h3>Egg Requirements</h3>
-      <ul id="profile-eggs" class="egg-list"></ul>
-    </section>
-
     <section class="profile-section" id="section-acquisition" hidden>
       <h3 id="section-acquisition-title">Alternative Acquisition</h3>
-      <ul id="profile-acquisition"></ul>
+      <div id="profile-acquisition"></div>
     </section>
 
     <section class="profile-section" id="section-mechanics" hidden>
       <h3>Vessels, Zapping, Boxing &amp; Revitalizing</h3>
       <p class="section-caption">Requirements and time constraints for any non-breeding mechanic this monster uses.</p>
       <ul id="profile-mechanics"></ul>
+    </section>
+
+    <section class="profile-section" id="section-eggs" hidden>
+      <h3>Egg Requirements</h3>
+      <ul id="profile-eggs" class="egg-list"></ul>
     </section>
 
     <section class="profile-section" id="section-notes" hidden>

@@ -242,7 +242,7 @@ input:focus-visible {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  padding: 16px;
+  padding: 16px 30px 16px 16px; /* extra right padding clears the A-Z jump sidebar */
 }
 .monster-grid[hidden] { display: none; }
 
@@ -251,6 +251,40 @@ input:focus-visible {
 }
 @media (min-width: 960px) {
   .monster-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* ---------- A-Z jump sidebar ---------- */
+
+.az-jump {
+  position: fixed;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  background: transparent;
+}
+.az-jump[hidden] { display: none; }
+.az-jump__letter {
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 0 4px;
+  cursor: pointer;
+}
+.az-jump__letter:disabled {
+  color: var(--text-muted);
+  opacity: 0.28;
+  cursor: default;
+}
+.az-jump__letter:hover:not(:disabled),
+.az-jump__letter:focus-visible:not(:disabled) {
+  color: var(--text-primary);
 }
 
 .loading-state, .empty-state {
@@ -272,6 +306,7 @@ input:focus-visible {
   align-items: center;
   gap: 6px;
   transition: transform 120ms ease, box-shadow 120ms ease;
+  scroll-margin-top: 76px; /* keeps the card clear of the sticky header when the A–Z jump list scrolls to it */
 }
 
 .monster-card:hover,

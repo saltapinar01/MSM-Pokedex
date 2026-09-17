@@ -31,7 +31,7 @@
           "Can also result from a breeding failure using other monsters"
         ],
         "notes": [],
-        "interestingFact": "The only single-element common Natural whose default breeding time (4 hours) is longer than several double-element monsters, since Air is comparatively 'expensive.'"
+        "interestingFact": "The only single-element common Natural whose default breeding time (4h) is longer than several double-element monsters, since Air is comparatively 'expensive.'"
       },
       "rare": {
         "name": "Rare Tweedle",
@@ -2471,7 +2471,7 @@
         "specialMechanics": [
           "On Amber Island, instead acquired as a Vessel for 40 Relics",
           "Revitalized by zapping in the required eggs",
-          "Vessels on Amber Island come out in timed waves (roughly 28–35 days) — the inventory must be fully zapped before the wave ends, or it's lost"
+          "Vessels on Amber Island come out in timed waves (roughly 28–35d) — the inventory must be fully zapped before the wave ends, or it's lost"
         ]
       }
     }
@@ -2541,7 +2541,7 @@
                 "Mirror Bone Island"
               ],
               "description": "Any two Triple-Element Monsters that include the Fire Element",
-              "timeNormal": "8 hours",
+              "timeNormal": "8h",
               "timeEnhanced": "",
               "note": "Breeds fastest when both parents are native to that specific Magical Island — off-island pairings work but take longer (exact off-island time not confirmed)"
             }
@@ -2588,7 +2588,7 @@
                 "Mirror Bone Island"
               ],
               "description": "One of: Tring + Stogg, Sneyser + Phangler, Blow't + Furcorn, Gloptic + Oaktopus, Pladdie + Drumpler, or Plinkajou + Fwog",
-              "timeNormal": "15 hours",
+              "timeNormal": "15h",
               "timeEnhanced": "",
               "note": "The combination is different per Magical Island, but which of these six pairs belongs to which specific island isn't confirmed from available sources"
             }
@@ -2644,10 +2644,10 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Glowl has a chance to fail upward into a Rare Glowl instead. Breeding a Rare Glowl together with a Common Glowl reliably produces Glowl, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
@@ -2663,11 +2663,32 @@
           "Fire Oasis",
           "Amber Island"
         ],
-        "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from a Rare (see Special Mechanics)"
+        "breeding": {
+          "combos": [
+            {
+              "islands": [
+                "Fire Haven"
+              ],
+              "description": "Floogull + Dandidoo",
+              "note": null,
+              "timeNormal": "1d 1h",
+              "timeEnhanced": ""
+            },
+            {
+              "islands": [
+                "Fire Oasis"
+              ],
+              "description": "Wynq + Quibble",
+              "note": null,
+              "timeNormal": "1d 1h",
+              "timeEnhanced": ""
+            }
+          ]
+        },
+        "alternativeAcquisition": [],
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
@@ -2721,14 +2742,36 @@
           "Mirror Psychic Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Flowah has a chance to fail upward into a Rare Flowah instead. Breeding a Rare Flowah together with a Common Flowah reliably produces Flowah, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
           "Timed race: fails after 5h, succeeds after 13h 30m — you're racing the fail timer, not just waiting out the success timer",
+          "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 10 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
+        ]
+      },
+      "epic": {
+        "name": "Epic Flowah",
+        "image": "assets/monsters/flowah-epic.png",
+        "islands": [
+          "Fire Haven",
+          "Psychic Island",
+          "Light Island",
+          "Amber Island",
+          "Mirror Light Island",
+          "Mirror Psychic Island"
+        ],
+        "breeding": null,
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Haven, Psychic Island, Light Island in this build."
+        ],
+        "alternativeAcquisition": [],
+        "specialMechanics": [
+          "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
+          "Succeeds after 17h",
           "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 10 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
         ]
       }
@@ -2778,10 +2821,10 @@
           "Mirror Bone Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Stogg has a chance to fail upward into a Rare Stogg instead. Breeding a Rare Stogg together with a Common Stogg reliably produces Stogg, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
@@ -2801,10 +2844,10 @@
           "Mirror Bone Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from a Rare (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Haven, Faerie Island, Bone Island in this build."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
@@ -2851,14 +2894,44 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Barrb has a chance to fail upward into a Rare Barrb instead. Breeding a Rare Barrb together with a Common Barrb reliably produces Barrb, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
           "Timed race: fails after 10h, succeeds after 1d 2h 30m — you're racing the fail timer, not just waiting out the success timer",
+          "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
+        ]
+      },
+      "epic": {
+        "name": "Epic Barrb",
+        "image": "assets/monsters/barrb-epic.png",
+        "islands": [
+          "Fire Haven",
+          "Amber Island"
+        ],
+        "breeding": {
+          "combos": [
+            {
+              "islands": [
+                "Fire Haven"
+              ],
+              "description": "Floogull + Shrubb",
+              "note": null,
+              "timeNormal": "1d 15h",
+              "timeEnhanced": ""
+            }
+          ]
+        },
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula."
+        ],
+        "alternativeAcquisition": [],
+        "specialMechanics": [
+          "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
+          "Succeeds after 1d 15h",
           "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
         ]
       }
@@ -2901,14 +2974,44 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Floogull has a chance to fail upward into a Rare Floogull instead. Breeding a Rare Floogull together with a Common Floogull reliably produces Floogull, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
           "Timed race: fails after 10h, succeeds after 1d 2h 30m — you're racing the fail timer, not just waiting out the success timer",
+          "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
+        ]
+      },
+      "epic": {
+        "name": "Epic Floogull",
+        "image": "assets/monsters/floogull-epic.png",
+        "islands": [
+          "Fire Haven",
+          "Amber Island"
+        ],
+        "breeding": {
+          "combos": [
+            {
+              "islands": [
+                "Fire Haven"
+              ],
+              "description": "Reedling + Glowl",
+              "note": null,
+              "timeNormal": "1d 13h",
+              "timeEnhanced": ""
+            }
+          ]
+        },
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula."
+        ],
+        "alternativeAcquisition": [],
+        "specialMechanics": [
+          "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
+          "Succeeds after 1d 13h",
           "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
         ]
       }
@@ -2951,14 +3054,32 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Repatillo has a chance to fail upward into a Rare Repatillo instead. Breeding a Rare Repatillo together with a Common Repatillo reliably produces Repatillo, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
           "Timed race: fails after 10h, succeeds after 1d 2h 30m — you're racing the fail timer, not just waiting out the success timer",
+          "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
+        ]
+      },
+      "epic": {
+        "name": "Epic Repatillo",
+        "image": "assets/monsters/repatillo-epic.png",
+        "islands": [
+          "Fire Haven",
+          "Amber Island"
+        ],
+        "breeding": null,
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Haven in this build."
+        ],
+        "alternativeAcquisition": [],
+        "specialMechanics": [
+          "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
+          "Success time not independently confirmed for this build",
           "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
         ]
       }
@@ -3002,10 +3123,10 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Tring has a chance to fail upward into a Rare Tring instead. Breeding a Rare Tring together with a Common Tring reliably produces Tring, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
@@ -3021,10 +3142,10 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from a Rare (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Haven in this build."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
@@ -3078,14 +3199,36 @@
           "Mirror Bone Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Phangler has a chance to fail upward into a Rare Phangler instead. Breeding a Rare Phangler together with a Common Phangler reliably produces Phangler, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
           "Timed race: fails after 5h, succeeds after 13h 30m — you're racing the fail timer, not just waiting out the success timer",
+          "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 10 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
+        ]
+      },
+      "epic": {
+        "name": "Epic Phangler",
+        "image": "assets/monsters/phangler-epic.png",
+        "islands": [
+          "Fire Oasis",
+          "Psychic Island",
+          "Bone Island",
+          "Amber Island",
+          "Mirror Psychic Island",
+          "Mirror Bone Island"
+        ],
+        "breeding": null,
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Oasis, Psychic Island, Bone Island in this build."
+        ],
+        "alternativeAcquisition": [],
+        "specialMechanics": [
+          "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
+          "Succeeds after 23h",
           "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 10 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
         ]
       }
@@ -3135,10 +3278,10 @@
           "Mirror Faerie Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Boskus has a chance to fail upward into a Rare Boskus instead. Breeding a Rare Boskus together with a Common Boskus reliably produces Boskus, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
@@ -3158,10 +3301,10 @@
           "Mirror Faerie Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from a Rare (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Oasis, Faerie Island, Light Island in this build."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
@@ -3208,10 +3351,10 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Whaddle has a chance to fail upward into a Rare Whaddle instead. Breeding a Rare Whaddle together with a Common Whaddle reliably produces Whaddle, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
@@ -3227,10 +3370,10 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from a Rare (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Oasis in this build."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
@@ -3277,14 +3420,32 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Woolabee has a chance to fail upward into a Rare Woolabee instead. Breeding a Rare Woolabee together with a Common Woolabee reliably produces Woolabee, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
           "Timed race: fails after 10h, succeeds after 1d 2h 30m — you're racing the fail timer, not just waiting out the success timer",
+          "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
+        ]
+      },
+      "epic": {
+        "name": "Epic Woolabee",
+        "image": "assets/monsters/woolabee-epic.png",
+        "islands": [
+          "Fire Oasis",
+          "Amber Island"
+        ],
+        "breeding": null,
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Oasis in this build."
+        ],
+        "alternativeAcquisition": [],
+        "specialMechanics": [
+          "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
+          "Success time not independently confirmed for this build",
           "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
         ]
       }
@@ -3327,14 +3488,32 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Wynq has a chance to fail upward into a Rare Wynq instead. Breeding a Rare Wynq together with a Common Wynq reliably produces Wynq, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
           "Timed race: fails after 10h, succeeds after 1d 2h 30m — you're racing the fail timer, not just waiting out the success timer",
+          "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
+        ]
+      },
+      "epic": {
+        "name": "Epic Wynq",
+        "image": "assets/monsters/wynq-epic.png",
+        "islands": [
+          "Fire Oasis",
+          "Amber Island"
+        ],
+        "breeding": null,
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Oasis in this build."
+        ],
+        "alternativeAcquisition": [],
+        "specialMechanics": [
+          "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
+          "Success time not independently confirmed for this build",
           "On Amber Island specifically, this isn't bred — it's bought as a Vessel in the Market for 20 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
         ]
       }
@@ -3378,10 +3557,10 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from an awakened/bred Common (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Not bred via a distinct combination — any breeding attempt that would normally produce a Common Sneyser has a chance to fail upward into a Rare Sneyser instead. Breeding a Rare Sneyser together with a Common Sneyser reliably produces Sneyser, with a chance of Rare."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Crucible on Amber Island, using Relics and Keys",
@@ -3397,10 +3576,10 @@
           "Amber Island"
         ],
         "breeding": null,
-        "alternativeAcquisition": [
-          "Evolved from a Rare (see Special Mechanics)"
+        "alternativeAcquisition": [],
+        "notes": [
+          "Epic Monsters can't breed once obtained. The breeding combination is unique per island and doesn't follow a simple formula — not yet independently confirmed for Fire Oasis in this build."
         ],
-        "notes": [],
         "interestingFact": "",
         "specialMechanics": [
           "Evolve via the Enhanced Crucible on Amber Island, using Relics and Keys",
@@ -6068,7 +6247,7 @@
         "notes": [
           "Has a 9h incubation time when acquired — unlike other Mythicals, it's not bred via a parent combination."
         ],
-        "interestingFact": "Cataliszt's 9-hour incubation time is why every Common Dreamythical's breeding time is exactly 9 hours higher than the Core Mythical used to breed it (confirmed pattern: G'joob 18h -> Bleatnik 27h, Strombonin 23h -> Cranchee 32h, etc.)."
+        "interestingFact": "Cataliszt's 9-hour incubation time is why every Common Dreamythical's breeding time is exactly 9h higher than the Core Mythical used to breed it (confirmed pattern: G'joob 18h -> Bleatnik 27h, Strombonin 23h -> Cranchee 32h, etc.)."
       },
       "rare": {
         "name": "Rare Cataliszt",
@@ -6502,7 +6681,7 @@
         "interestingFact": "Represents the Water element and is associated with the month of January.",
         "specialMechanics": [
           "Requires 118 eggs total (at least 1 of every 1–3-Element Water Monster, plus Water Island's Quad-Element Monster) to fully revive",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds — 40 per egg, 4,720 Diamonds total — or Wildcards, 1 per egg (118 total)",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6553,7 +6732,7 @@
         "interestingFact": "Represents the Fire element and is associated with the month of February.",
         "specialMechanics": [
           "Revived by zapping in an egg from every Natural and Fire monster on Fire Haven",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6605,7 +6784,7 @@
         "interestingFact": "Represents the Cold element and is associated with the month of March.",
         "specialMechanics": [
           "Revived by zapping in an egg from every 1–3-element monster of the Cold element plus the Quad-element monster on Cold Island",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6657,7 +6836,7 @@
         "interestingFact": "Represents the Plant element and is associated with the month of April.",
         "specialMechanics": [
           "Revived by zapping in an egg from every 1–3-element monster of the Plant element plus the Quad-element monster on Plant Island",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6709,7 +6888,7 @@
         "interestingFact": "Represents the Crystal element and is associated with the month of May.",
         "specialMechanics": [
           "Revived by zapping in an egg from every breedable Natural monster on Water Island — the island where the matching Ethereal monster of this element can be bred",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6761,7 +6940,7 @@
         "interestingFact": "Represents the Mech element and is associated with the month of June.",
         "specialMechanics": [
           "Revived by zapping in an egg from every breedable Natural monster on Air Island — the island where the matching Ethereal monster of this element can be bred",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6813,7 +6992,7 @@
         "interestingFact": "Represents the Electricity element and is associated with the month of July.",
         "specialMechanics": [
           "Revived by zapping in an egg from every breedable Natural monster in the game, plus every Fire monster on Fire Haven — the most demanding Celestial to revive, requiring eggs from 38 unique species",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6865,7 +7044,7 @@
         "interestingFact": "Represents the Poison element and is associated with the month of August.",
         "specialMechanics": [
           "Revived by zapping in an egg from every breedable Natural monster on Earth Island — the island where the matching Ethereal monster of this element can be bred",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6917,7 +7096,7 @@
         "interestingFact": "Represents the Shadow element and is associated with the month of September.",
         "specialMechanics": [
           "Revived by zapping in an egg from every breedable Natural monster on Cold Island — the island where the matching Ethereal monster of this element can be bred",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -6969,7 +7148,7 @@
         "interestingFact": "Represents the Earth element and is associated with the month of October.",
         "specialMechanics": [
           "Revived by zapping in an egg from every 1–3-element monster of the Earth element plus the Quad-element monster on Earth Island",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -7021,7 +7200,7 @@
         "interestingFact": "Represents the Plasma element and is associated with the month of November.",
         "specialMechanics": [
           "Revived by zapping in an egg from every breedable Natural monster on Plant Island — the island where the matching Ethereal monster of this element can be bred",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -7073,7 +7252,7 @@
         "interestingFact": "Represents the Air element and is associated with the month of December.",
         "specialMechanics": [
           "Revived by zapping in an egg from every 1–3-element monster of the Air element plus the Quad-element monster on Air Island",
-          "12 days to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
+          "12d to fill the inventory once the first egg is zapped in — if not completed in time, it resets to an empty statue and every egg inside is lost",
           "Can instead be filled with Diamonds (cost varies per egg) or Wildcards (1 per egg) instead of zapping",
           "Eggs can be zapped from Mirror Islands in addition to (or instead of) Natural and Magical Islands"
         ]
@@ -7119,9 +7298,20 @@
           "Paironormal Carnival"
         ],
         "breeding": {
-          "description": "Bred on Psychic Island from Gloptic + any Triple-Element Monster, during the day (6:00 AM–8:00 PM local time). Gloptic + Rooba is the best specific pairing (shorter/cheaper than Gloptic + Rootitoot); not guaranteed.",
-          "timeNormal": "1 day 8 hours",
-          "timeEnhanced": ""
+          "combos": [
+            {
+              "islands": [
+                "Psychic Island"
+              ],
+              "description": "Gloptic + Rooba",
+              "also": [
+                "Gloptic + any other Triple-Element Monster"
+              ],
+              "note": "Only breedable during the day (6:00 AM–8:00 PM local time). Gloptic + Rooba is the best specific pairing (shorter/cheaper than other Triples); not guaranteed.",
+              "timeNormal": "1d 8h",
+              "timeEnhanced": ""
+            }
+          ]
         },
         "alternativeAcquisition": [
           "Transpose a Level-18 copy to Paironormal Carnival for 100,000 Coins — this only relocates/houses a copy you already have there; Single-Element Paironormals cannot be freshly bred on the Carnival itself, only transposed in or bought from its Market",
@@ -7140,9 +7330,20 @@
           "Minor Paironormal Carnival"
         ],
         "breeding": {
-          "description": "Bred on Mirror Psychic Island the same way as the Major form, but at night (6:00 PM–8:00 AM local time). Can also be bought directly from the Market on Mirror Psychic Island during that same window.",
-          "timeNormal": "1 day 8 hours",
-          "timeEnhanced": ""
+          "combos": [
+            {
+              "islands": [
+                "Mirror Psychic Island"
+              ],
+              "description": "Gloptic + Rooba",
+              "also": [
+                "Gloptic + any other Triple-Element Monster"
+              ],
+              "note": "Bred the same way as the Major form, but only at night (6:00 PM–8:00 AM local time). Can also be bought directly from the Market here during that same window.",
+              "timeNormal": "1d 8h",
+              "timeEnhanced": ""
+            }
+          ]
         },
         "alternativeAcquisition": [
           "Transpose a Level-18 copy to Paironormal Carnival (Minor Mode) for 100,000 Coins — this only relocates/houses a copy you already have there; Single-Element Paironormals cannot be freshly bred on the Carnival itself, only transposed in or bought from its Market",
@@ -7150,7 +7351,6 @@
           "Can also be bought directly from the Market on Mirror Psychic Island during its active window"
         ],
         "notes": [
-          "Minor form is available on the Mirror side of the carnival (Minor Mode) rather than a separately tracked island in this app.",
           "Produces Wildcards (not Coins) on Paironormal Carnival. On its Mirror Magical Island, available 6pm-8am local time; its Major form takes over on the main Island from 6am-8pm."
         ],
         "interestingFact": "One of the four original Single-Element Paironormals (Control)."
@@ -7176,7 +7376,7 @@
         ],
         "breeding": {
           "description": "Bred on Faerie Island from Pladdie + any Triple-Element Monster, during the day (6:00 AM–8:00 PM local time). Pladdie + Bridg-it is the best specific pairing (shorter/cheaper than Pladdie + Ziggurab); not guaranteed.",
-          "timeNormal": "1 day 10 hours",
+          "timeNormal": "1d 10h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
@@ -7196,7 +7396,7 @@
         ],
         "breeding": {
           "description": "Bred on Mirror Faerie Island the same way as the Major form, but at night (6:00 PM–8:00 AM local time). Can also be bought directly from the Market on Mirror Faerie Island during that same window.",
-          "timeNormal": "1 day 10 hours",
+          "timeNormal": "1d 10h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
@@ -7230,7 +7430,7 @@
         ],
         "breeding": {
           "description": "Bred on Bone Island from Plinkajou + any Triple-Element Monster, during the day (6:00 AM–8:00 PM local time). Plinkajou + Withur or Banjaw is the best specific pairing (shorter/cheaper than Plinkajou + Thrumble); not guaranteed.",
-          "timeNormal": "1 day 12 hours",
+          "timeNormal": "1d 12h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
@@ -7250,7 +7450,7 @@
         ],
         "breeding": {
           "description": "Bred on Mirror Bone Island the same way as the Major form, but at night (6:00 PM–8:00 AM local time). Can also be bought directly from the Market on Mirror Bone Island during that same window.",
-          "timeNormal": "1 day 12 hours",
+          "timeNormal": "1d 12h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
@@ -7284,7 +7484,7 @@
         ],
         "breeding": {
           "description": "Bred on Light Island from Blow't + any Triple-Element Monster, during the day (6:00 AM–8:00 PM local time). Blow't + Spytrap is the best specific pairing (shorter/cheaper than Blow't + Sooza); not guaranteed.",
-          "timeNormal": "1 day 6 hours",
+          "timeNormal": "1d 6h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
@@ -7304,7 +7504,7 @@
         ],
         "breeding": {
           "description": "Bred on Mirror Light Island the same way as the Major form, but at night (6:00 PM–8:00 AM local time). Can also be bought directly from the Market on Mirror Light Island during that same window.",
-          "timeNormal": "1 day 6 hours",
+          "timeNormal": "1d 6h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [
@@ -7384,7 +7584,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Owlesque + Arcorina (produces the Hoax/Ruin Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7401,7 +7601,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Owlesque + Arcorina (produces the Hoax/Ruin Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7432,7 +7632,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Dakktyl + Hairionette (produces the Control/Hoax/Ruin Paironormal).",
-          "timeNormal": "2 days 8 hours",
+          "timeNormal": "2d 8h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7449,7 +7649,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Dakktyl + Hairionette (produces the Control/Hoax/Ruin Paironormal).",
-          "timeNormal": "2 days 8 hours",
+          "timeNormal": "2d 8h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7479,7 +7679,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Hairionette + Shhimmer (produces the Control/Depths Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7496,7 +7696,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Hairionette + Shhimmer (produces the Control/Depths Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7527,7 +7727,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Dakktyl + Shhimmer (produces the Hoax/Ruin/Depths Paironormal).",
-          "timeNormal": "2 days 8 hours",
+          "timeNormal": "2d 8h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7544,7 +7744,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Dakktyl + Shhimmer (produces the Hoax/Ruin/Depths Paironormal).",
-          "timeNormal": "2 days 8 hours",
+          "timeNormal": "2d 8h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7575,7 +7775,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Scallyrags + Shhimmer (produces the Control/Hoax/Depths Paironormal).",
-          "timeNormal": "2 days 8 hours",
+          "timeNormal": "2d 8h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7592,7 +7792,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Scallyrags + Shhimmer (produces the Control/Hoax/Depths Paironormal).",
-          "timeNormal": "2 days 8 hours",
+          "timeNormal": "2d 8h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7622,7 +7822,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Hairionette + Arcorina (produces the Control/Ruin Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7639,7 +7839,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Hairionette + Arcorina (produces the Control/Ruin Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7669,7 +7869,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Owlesque + Shhimmer (produces the Hoax/Depths Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -7686,7 +7886,7 @@
         ],
         "breeding": {
           "description": "Bred on Paironormal Carnival from Owlesque + Shhimmer (produces the Hoax/Depths Paironormal).",
-          "timeNormal": "1 day 21 hours",
+          "timeNormal": "1d 21h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -8757,14 +8957,24 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Mech in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Plasma, Shadow and Mech Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Shadow Islet / Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -8778,15 +8988,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Mech in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Yooreek into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Shadow Islet / Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Plant Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -8813,14 +9033,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Crystal in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Received as a free egg from the Synthesizer immediately upon unlocking Ethereal Workshop at Level 19",
+              "Synthesized using three Meebs attuned to Plasma, Shadow and Crystal Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Shadow Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -8834,15 +9065,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Crystal in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Meebkin into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Shadow Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Cold Island, Mirror Plant Island, Mirror Water Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -8868,16 +9109,26 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Poison in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Plasma, Shadow and Poison Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Shadow Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [
-          "Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
+          "Poison Islet hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -8890,15 +9141,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Shadow/Poison in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Blarret into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Shadow Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Cold Island, Mirror Earth Island, Mirror Plant Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -8925,14 +9186,24 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Crystal in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Plasma, Mech and Crystal Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Mech Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -8946,15 +9217,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Crystal in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Gaddzooks into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Mech Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Air Island, Mirror Plant Island, Mirror Water Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -8980,16 +9261,26 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Poison in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Plant Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Plasma, Mech and Poison Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [
-          "Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
+          "Poison Islet hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -9002,15 +9293,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Mech/Poison in the Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Auglur into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Air Island, Mirror Earth Island, Mirror Plant Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -9036,16 +9337,26 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Crystal/Poison in the Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Plant Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Plasma, Crystal and Poison Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [
-          "Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
+          "Poison Islet hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -9058,15 +9369,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Plasma/Crystal/Poison in the Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Flasque into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Plasma Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Earth Island, Mirror Plant Island, Mirror Water Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -9093,14 +9414,24 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Crystal in the Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Shadow, Mech and Crystal Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Shadow Islet / Mech Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -9114,15 +9445,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Crystal in the Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Nitebear into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Shadow Islet / Mech Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Water Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -9148,16 +9489,26 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Poison in the Hyper-Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Cold Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Shadow, Mech and Poison Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Shadow Islet / Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [
-          "Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
+          "Poison Islet hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -9170,15 +9521,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Mech/Poison in the Hyper-Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Piplash into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Shadow Islet / Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Earth Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -9204,16 +9565,26 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Crystal/Poison in the Hyper-Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Cold Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Shadow, Crystal and Poison Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Shadow Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [
-          "Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
+          "Poison Islet hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
         ]
       },
       "rare": {
@@ -9226,15 +9597,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Shadow/Crystal/Poison in the Hyper-Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the matching Ethereal Islet(s)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common X'rt into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Shadow Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Cold Island, Mirror Earth Island, Mirror Water Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours"
+          "Successful synthesis takes 1d 6h"
         ]
       }
     }
@@ -9260,16 +9641,50 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop from 1 Meeb attuned to each of Mech/Crystal/Poison in the Super-Hyper-Refined Synthesizer",
-          "Also obtainable by Dish-Harmonizing at the Attunement Structure on Mirror Air Island, Mirror Water Island (random outcome, weighted by odds, not guaranteed)"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using three Meebs attuned to Mech, Crystal and Poison Meebs in the Synthesizer (Success: 1d 6h, Fail: 10h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          },
+          {
+            "island": "Mech Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [
-          "Poison Islet (Mirror Earth Island) hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
+          "Poison Islet hasn't been released yet, so Dish-Harmonizing there isn't currently possible for this monster — only the Synthesizer route above works for now."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Successful synthesis takes 1 day 6 hours",
-          "If the synthesis attempt fails, the Meebs return after 10 hours instead"
+          "Successful synthesis takes 1d 6h",
+          "If the synthesis attempt fails, the Meebs return after 10h instead"
+        ]
+      },
+      "rare": {
+        "name": "Rare Teeter-Tauter",
+        "image": "assets/monsters/teeter-tauter-rare.png",
+        "islands": [
+          "Ethereal Workshop",
+          "Mech Islet",
+          "Crystal Islet"
+        ],
+        "breeding": null,
+        "alternativeAcquisition": [
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Teeter-Tauter into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Mech Islet / Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ]
       }
     }
@@ -9295,15 +9710,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Poison (its missing element), in the Refined Synthesizer",
-          "Best (most stable) base Triple to use first: Yooreek, Meebkin, Gaddzooks, Nitebear",
-          "Also obtainable by Dish-Harmonizing at its Islet"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using four Meebs attuned to Plasma, Shadow, Mech and Crystal Meebs in the Synthesizer (Success: 1d 18h, Fail: 17h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)",
+              "Also synthesizable by using Nitebear (already placed on Ethereal Workshop) as the base Monster and filling its remaining Meeb slot — this replaces the Nitebear with the new Monster instead of requiring all four Meebs from scratch"
+            ]
+          },
+          {
+            "island": "Plasma Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 1 day 18 hours to synthesize",
-          "If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost)"
+          "Takes 1d 18h to synthesize",
+          "If the attempt fails, the Meebs return after 17h instead (and the base monster used isn't lost)"
         ]
       },
       "rare": {
@@ -9315,16 +9740,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Poison (its missing element), in the Refined Synthesizer",
-          "Best (most stable) base Triple to use first: Yooreek, Meebkin, Gaddzooks, Nitebear",
-          "Also obtainable by Dish-Harmonizing at its Islet"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Whaill into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Plasma Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Plant Island, Mirror Water Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 1 day 18 hours to synthesize"
+          "Takes 1d 18h to synthesize"
         ]
       }
     }
@@ -9350,15 +9784,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Crystal (its missing element), in the Hyper-Refined Synthesizer",
-          "Best (most stable) base Triple to use first: Yooreek, Blarret, Auglur, Piplash",
-          "Also obtainable by Dish-Harmonizing at its Islet"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using four Meebs attuned to Plasma, Shadow, Mech and Poison Meebs in the Synthesizer (Success: 1d 18h, Fail: 17h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)",
+              "Also synthesizable by using Piplash (already placed on Ethereal Workshop) as the base Monster and filling its remaining Meeb slot — this replaces the Piplash with the new Monster instead of requiring all four Meebs from scratch"
+            ]
+          },
+          {
+            "island": "Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 1 day 18 hours to synthesize",
-          "If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost)"
+          "Takes 1d 18h to synthesize",
+          "If the attempt fails, the Meebs return after 17h instead (and the base monster used isn't lost)"
         ]
       },
       "rare": {
@@ -9370,16 +9814,25 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Crystal (its missing element), in the Hyper-Refined Synthesizer",
-          "Best (most stable) base Triple to use first: Yooreek, Blarret, Auglur, Piplash",
-          "Also obtainable by Dish-Harmonizing at its Islet"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Vhenshun into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Mech Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ],
         "notes": [
           "Meebs are attuned to its elements at the Attunement Structure on Mirror Air Island, Mirror Cold Island, Mirror Earth Island, Mirror Plant Island, which cycles daily resonance/cost between the 5 Mirror Islands."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 1 day 18 hours to synthesize"
+          "Takes 1d 18h to synthesize"
         ]
       }
     }
@@ -9405,15 +9858,48 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Mech (its missing element), in the Super-Hyper-Refined Synthesizer",
-          "Best (most stable) base Triple to use first: Meebkin, Blarret, Flasque, X'rt",
-          "Also obtainable by Dish-Harmonizing at its Islet"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using four Meebs attuned to Plasma, Shadow, Crystal and Poison Meebs in the Synthesizer (Success: 1d 18h, Fail: 17h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)",
+              "Also synthesizable by using X'rt (already placed on Ethereal Workshop) as the base Monster and filling its remaining Meeb slot — this replaces the X'rt with the new Monster instead of requiring all four Meebs from scratch"
+            ]
+          },
+          {
+            "island": "Shadow Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 1 day 18 hours to synthesize",
-          "If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost)"
+          "Takes 1d 18h to synthesize",
+          "If the attempt fails, the Meebs return after 17h instead (and the base monster used isn't lost)"
+        ]
+      },
+      "rare": {
+        "name": "Rare Pentumbra",
+        "image": "assets/monsters/pentumbra-rare.png",
+        "islands": [
+          "Ethereal Workshop",
+          "Shadow Islet"
+        ],
+        "breeding": null,
+        "alternativeAcquisition": [
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Pentumbra into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Shadow Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ]
       }
     }
@@ -9439,15 +9925,48 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Shadow (its missing element), in the Mega-Super-Hyper-Refined Synthesizer",
-          "Best (most stable) base Triple to use first: Gaddzooks, Auglur, Flasque, Teeter-Tauter",
-          "Also obtainable by Dish-Harmonizing at its Islet"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using four Meebs attuned to Plasma, Mech, Crystal and Poison Meebs in the Synthesizer (Success: 1d 18h, Fail: 17h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)",
+              "Also synthesizable by using Teeter-Tauter (already placed on Ethereal Workshop) as the base Monster and filling its remaining Meeb slot — this replaces the Teeter-Tauter with the new Monster instead of requiring all four Meebs from scratch"
+            ]
+          },
+          {
+            "island": "Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing — a Monster is broken back down into its attuned Meebs, which randomly recombine into two new Monsters; there's no fixed two-parent combination the way breeding works elsewhere"
+            ]
+          }
         ],
         "notes": [],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 1 day 18 hours to synthesize",
-          "If the attempt fails, the Meebs return after 17 hours instead (and the base monster used isn't lost)"
+          "Takes 1d 18h to synthesize",
+          "If the attempt fails, the Meebs return after 17h instead (and the base monster used isn't lost)"
+        ]
+      },
+      "rare": {
+        "name": "Rare Rhysmuth",
+        "image": "assets/monsters/rhysmuth-rare.png",
+        "islands": [
+          "Ethereal Workshop",
+          "Crystal Islet"
+        ],
+        "breeding": null,
+        "alternativeAcquisition": [
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Rhysmuth into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          },
+          {
+            "island": "Crystal Islet",
+            "lines": [
+              "Obtained via Dish-Harmonizing using the Rarefied Dish-Harmonizer during special promotions — same random Meeb-recombination process as Common, just with a chance for Rare instead of a fixed parent pair"
+            ]
+          }
         ]
       }
     }
@@ -9472,16 +9991,36 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Triple-Element Ethereal plus 2 Meebs of each of that Triple's elements and 3 Meebs of Plasma (its missing element), in the Ultra-Mega-Super-Hyper-Refined Synthesizer",
-          "Best (most stable) base Triple to use first: Nitebear, Piplash, X'rt, Teeter-Tauter"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using four Meebs attuned to Shadow, Mech, Crystal and Poison Meebs in the Synthesizer (Success: 1d 18h, Fail: 17h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          }
         ],
         "notes": [
           "Its own Islet is Poison Islet, which hasn't been released yet — so Dish-Harmonizing isn't currently a way to get this monster; only the Synthesizer route works for now."
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 1 day 18 hours to synthesize",
-          "If the attempt fails, the Meebs return after 17 hours (and the base monster used isn't lost)"
+          "Takes 1d 18h to synthesize",
+          "If the attempt fails, the Meebs return after 17h (and the base monster used isn't lost)"
+        ]
+      },
+      "rare": {
+        "name": "Rare Oogiddy",
+        "image": "assets/monsters/oogiddy-rare.png",
+        "islands": [
+          "Ethereal Workshop"
+        ],
+        "breeding": null,
+        "alternativeAcquisition": [
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Evolve a Common Oogiddy into Rare by tuning up all of its Elements using the Rarefied Attunement Structure (limited-time events)"
+            ]
+          }
         ]
       }
     }
@@ -9507,16 +10046,21 @@
         ],
         "breeding": null,
         "alternativeAcquisition": [
-          "Synthesized at the Ethereal Workshop by consuming a Quad-Element Ethereal plus 3 Meebs of each of that Quad's 4 elements and 4 Meebs of its missing 5th element, in the Ultra-Mega-Super-Hyper-Refined Synthesizer",
-          "Best (most stable) base Quad to use first: Whaill, Vhenshun, Pentumbra, Rhysmuth, Oogiddy"
+          {
+            "island": "Ethereal Workshop",
+            "lines": [
+              "Synthesized using five Meebs attuned to Plasma, Shadow, Mech, Crystal and Poison Meebs in the Synthesizer (Success: 2d 7h, Fail: 22h — a failed attempt scrambles the Meebs' elements rather than returning them as-is)"
+            ]
+          }
         ],
         "notes": [
-          "The only Quint-Element Ethereal. Not obtainable via Dish-Harmonizing — Islets don't carry BeMeebEth."
+          "The only Quint-Element Ethereal. Not obtainable via Dish-Harmonizing — Islets don't carry BeMeebEth.",
+          "No Rare or Epic BeMeebEth exists yet — fan-made concept art for one circulates, but it hasn't been added to the actual game."
         ],
         "interestingFact": "One of 7 Quint-Element Monsters in the game: 5 Fire Quints on Amber Island (Candelavra, Drummidary, Bowhead, Tuskski, Gnarls), the Natural Quint (Mimic), and this one — the only Ethereal Quint, containing all 5 Ethereal elements.",
         "specialMechanics": [
-          "Takes 2 days 7 hours to synthesize",
-          "If the attempt fails, the Meebs return after 22 hours instead",
+          "Takes 2d 7h to synthesize",
+          "If the attempt fails, the Meebs return after 22h instead",
           "After a successful synthesis, the Synthesizer goes on a 2-day cooldown before another BeMeebEth can be made (Triples and Quads can still be synthesized during that window)"
         ]
       }
@@ -10386,7 +10930,7 @@
                 "Water Island"
               ],
               "description": "Spunge + Scups",
-              "timeNormal": "19 hours",
+              "timeNormal": "19h",
               "timeEnhanced": "",
               "note": "Only breedable here during the Eggs-Travaganza season (or an Out-of-Season promotion)"
             },
@@ -10395,7 +10939,7 @@
                 "Seasonal Shanty"
               ],
               "description": "Spunge + Scups",
-              "timeNormal": "19 hours",
+              "timeNormal": "19h",
               "timeEnhanced": "",
               "note": "Always available to breed here, no season restriction"
             }
@@ -10426,7 +10970,7 @@
                 "Water Island"
               ],
               "description": "Spunge + Scups",
-              "timeNormal": "1 day 7 hours 45 minutes",
+              "timeNormal": "1d 7h 45m",
               "timeEnhanced": "",
               "note": "Only breedable here during the Eggs-Travaganza season (or an Out-of-Season promotion)"
             },
@@ -10435,7 +10979,7 @@
                 "Seasonal Shanty"
               ],
               "description": "Spunge + Scups",
-              "timeNormal": "1 day 7 hours 45 minutes",
+              "timeNormal": "1d 7h 45m",
               "timeEnhanced": "",
               "note": "Always available to breed here"
             }
@@ -10463,7 +11007,7 @@
                 "Water Island"
               ],
               "description": "Shellbeat + Oaktopus",
-              "timeNormal": "1 day 1 hour 22 minutes",
+              "timeNormal": "1d 1h 22m",
               "timeEnhanced": "",
               "note": "A different pairing from Common/Rare. Only breedable here during the Eggs-Travaganza season"
             },
@@ -10472,7 +11016,7 @@
                 "Seasonal Shanty"
               ],
               "description": "Shellbeat + Oaktopus",
-              "timeNormal": "1 day 1 hour 22 minutes",
+              "timeNormal": "1d 1h 22m",
               "timeEnhanced": "",
               "note": "Always available to breed here"
             }
@@ -10698,8 +11242,8 @@
                 "Ethereal Island"
               ],
               "description": "Nebulob + Jeeode",
-              "timeNormal": "20 hours 4 minutes",
-              "timeEnhanced": "15 hours 3 minutes",
+              "timeNormal": "20h 4m",
+              "timeEnhanced": "15h 3m",
               "note": "Only breedable during the Life-Formula season"
             },
             {
@@ -10743,7 +11287,7 @@
                 "Ethereal Island"
               ],
               "description": "Nebulob + Jeeode",
-              "timeNormal": "1 day 7 hours 45 minutes",
+              "timeNormal": "1d 7h 45m",
               "timeEnhanced": "",
               "note": "Only breedable during the Life-Formula season"
             },
@@ -10782,7 +11326,7 @@
                 "Ethereal Island"
               ],
               "description": "Whisp + Humbug",
-              "timeNormal": "2 days 9 hours 31 minutes",
+              "timeNormal": "2d 9h 31m",
               "timeEnhanced": "",
               "note": null
             },
@@ -10981,7 +11525,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 10 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 10d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11077,7 +11621,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 5 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 5d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11193,7 +11737,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 10 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 10d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11274,7 +11818,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 2 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 2d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11380,7 +11924,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 7 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 7d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11457,7 +12001,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 3 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 3d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11613,7 +12157,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 14 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 14d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11719,7 +12263,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 5 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 5d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11815,7 +12359,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 7 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 7d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -11921,7 +12465,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 7 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 7d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12008,7 +12552,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 14 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 14d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12105,7 +12649,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 5 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 5d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12206,7 +12750,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 3 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 3d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12278,7 +12822,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 5 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 5d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12375,7 +12919,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 7 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 7d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12471,7 +13015,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 14 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 14d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12567,7 +13111,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 10 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 10d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12654,7 +13198,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 10 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 10d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12750,7 +13294,7 @@
         ],
         "specialMechanics": [
           "Wake it by zapping in every required egg listed under Egg Requirements below",
-          "Time limit: 3 days from purchase — miss it and the inventory resets, progress is lost"
+          "Time limit: 3d from purchase — miss it and the inventory resets, progress is lost"
         ]
       },
       "rare": {
@@ -12929,7 +13473,7 @@
           }
         ],
         "specialMechanics": [
-          "Takes 2 days to incubate before it can be placed",
+          "Takes 2d to incubate before it can be placed",
           "On Wublin Island: powered up by Boxing all 19 awakened Wublins (one of each) — see Egg Requirements below",
           "On regular Natural Islands, Mirror Natural Islands, Fire Islands, and Ethereal Island: powered up by Boxing 15 of that island's own Common Monsters (any Common monster counts, not a fixed list — Seasonals, Mythicals, Legendary Monsters, and Ethereals don't count)",
           "On Gold Island specifically: requires 30 Monsters instead of 15"
@@ -12964,7 +13508,7 @@
         ],
         "interestingFact": "",
         "specialMechanics": [
-          "Takes 14 hours to incubate (3 hours 53 minutes 20 seconds on Ethereal Island specifically)",
+          "Takes 14h to incubate (3h 53m 20s on Ethereal Island specifically)",
           "On Wublin Island: powered up by Boxing any 10 of the 19 Rare Wublins (not all 19, unlike Common) — only evolved/awakened Rare Wublins can be boxed",
           "On other islands: also powered up by Boxing Rare Monsters, but the exact count per island isn't confirmed from available sources"
         ]
@@ -14597,7 +15141,7 @@
         ],
         "breeding": {
           "description": "Bred from Scups + PomPom on Air Island.",
-          "timeNormal": "2 days 2 hours",
+          "timeNormal": "2d 2h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],
@@ -14663,7 +15207,7 @@
         "specialMechanics": [
           "On Amber Island, instead acquired as a Vessel for 40 Relics",
           "Revitalized by zapping in the egg of every breedable Monster with the Water Element",
-          "Vessels on Amber Island come out in timed waves (roughly 28–35 days) — the inventory must be fully zapped before the wave ends, or it's lost"
+          "Vessels on Amber Island come out in timed waves (roughly 28–35d) — the inventory must be fully zapped before the wave ends, or it's lost"
         ]
       },
       "rare": {
@@ -14739,7 +15283,7 @@
         "specialMechanics": [
           "On Amber Island, instead acquired as a Vessel for 40 Relics",
           "Revitalized by zapping in the egg of every breedable Monster with the Cold Element",
-          "Vessels on Amber Island come out in timed waves (roughly 28–35 days) — the inventory must be fully zapped before the wave ends, or it's lost"
+          "Vessels on Amber Island come out in timed waves (roughly 28–35d) — the inventory must be fully zapped before the wave ends, or it's lost"
         ]
       },
       "rare": {
@@ -14815,7 +15359,7 @@
         "specialMechanics": [
           "On Amber Island, instead acquired as a Vessel for 40 Relics",
           "Revitalized by zapping in the egg of every breedable Monster with the Plant Element",
-          "Vessels on Amber Island come out in timed waves (roughly 28–35 days) — the inventory must be fully zapped before the wave ends, or it's lost"
+          "Vessels on Amber Island come out in timed waves (roughly 28–35d) — the inventory must be fully zapped before the wave ends, or it's lost"
         ]
       },
       "rare": {
@@ -14873,7 +15417,7 @@
         "specialMechanics": [
           "On Amber Island, instead acquired as a Vessel for 40 Relics",
           "Revitalized by zapping in the egg of every breedable Monster with the Earth Element",
-          "Vessels on Amber Island come out in timed waves (roughly 28–35 days) — the inventory must be fully zapped before the wave ends, or it's lost"
+          "Vessels on Amber Island come out in timed waves (roughly 28–35d) — the inventory must be fully zapped before the wave ends, or it's lost"
         ]
       },
       "rare": {
@@ -15075,8 +15619,8 @@
           "Fire Oasis"
         ],
         "breeding": {
-          "description": "Only available during limited-time events. Best obtained by breeding Wynq + Glowl when available (1 day 15 hours) — not guaranteed to succeed.",
-          "timeNormal": "1 day 15 hours",
+          "description": "Only available during limited-time events. Best obtained by breeding Wynq + Glowl when available (1d 15h) — not guaranteed to succeed.",
+          "timeNormal": "1d 15h",
           "timeEnhanced": ""
         },
         "alternativeAcquisition": [],

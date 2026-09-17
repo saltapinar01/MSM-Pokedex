@@ -313,6 +313,7 @@ function renderMonsterGrid() {
 
   if (!visible.length) {
     grid.innerHTML = `<div class="empty-state"><h3>No monsters found.</h3><p>Try clearing a filter or changing your search.</p></div>`;
+    renderAzJump([]);
     return;
   }
 
@@ -320,6 +321,47 @@ function renderMonsterGrid() {
 
   for (const monster of sorted) {
     grid.appendChild(renderMonsterCard(monster));
+  }
+  renderAzJump(sorted);
+}
+
+const AZ_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+// Right-edge A–Z shortcut list for the Monster View grid. Only shown when
+// the Monsters view is active (switchView hides it otherwise). Tapping a
+// letter jumps straight to the first visible monster whose name starts
+// with it; letters with nothing currently visible (given the active
+// search/filters) are rendered but disabled rather than hidden, so the
+// alphabet doesn't visually reflow as filters change.
+function renderAzJump(sortedMonsters) {
+  const nav = document.getElementById("az-jump");
+  if (state.currentView !== "monsters") { nav.hidden = true; return; }
+  nav.hidden = false;
+
+  const grid = document.getElementById("monster-grid");
+  const firstIndexForLetter = {};
+  sortedMonsters.forEach((m, i) => {
+    const letter = (m.name[0] || "").toUpperCase();
+    if (/[A-Z]/.test(letter) && !(letter in firstIndexForLetter)) {
+      firstIndexForLetter[letter] = i;
+    }
+  });
+
+  nav.innerHTML = "";
+  for (const letter of AZ_LETTERS) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "az-jump__letter";
+    btn.textContent = letter;
+    if (letter in firstIndexForLetter) {
+      btn.addEventListener("click", () => {
+        const card = grid.children[firstIndexForLetter[letter]];
+        if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    } else {
+      btn.disabled = true;
+    }
+    nav.appendChild(btn);
   }
 }
 
@@ -419,6 +461,7 @@ function switchView(view) {
 
   document.getElementById("monster-grid").hidden = view !== "monsters";
   document.getElementById("island-view").hidden = view !== "islands";
+  document.getElementById("az-jump").hidden = view !== "monsters";
   document.querySelector(".search-bar").hidden = view !== "monsters";
 
   if (view === "islands") {
@@ -664,12 +707,7 @@ function renderProfile() {
   document.getElementById("section-acquisition-title").textContent =
     isBred ? "Alternative Acquisition" : "How To Obtain";
 
-  renderListSection("section-acquisition", "profile-acquisition",
-    (variant.alternativeAcquisition || []).map((a) => {
-      if (typeof a === "string") return a;
-      const label = state.taxonomy.acquisitionMethods[a.method]?.name || a.method;
-      return a.detail ? `${label} — ${a.detail}` : label;
-    }));
+  renderAcquisitionSection("section-acquisition", "profile-acquisition", variant.alternativeAcquisition || []);
 
   renderListSection("section-mechanics", "profile-mechanics", variant.specialMechanics || []);
 
@@ -722,9 +760,17 @@ function renderBreedingSection(monster, variant) {
     variant.breeding.combos.forEach((combo) => {
       const div = document.createElement("div");
       div.className = "breed-combo";
+      // A combo can have more than one valid parent pair on the same island
+      // (a confirmed best pairing plus other pairings that also work). When
+      // that's the case, show "Best:" / "Also:" lines instead of one plain
+      // combo line.
+      const comboHTML = (combo.also && combo.also.length)
+        ? `<div>Best: ${escapeHTML(combo.description || "")}</div>` +
+          combo.also.map((a) => `<div>Also: ${escapeHTML(a)}</div>`).join("")
+        : `<div>${escapeHTML(combo.description || "")}</div>`;
       div.innerHTML = `
         <div class="breed-combo__label">${escapeHTML((combo.islands || []).join(" / "))}</div>
-        <div>${escapeHTML(combo.description || "")}</div>
+        ${comboHTML}
         ${combo.note ? `<div class="breed-combo__note">${escapeHTML(combo.note)}</div>` : ""}
         <div class="breed-combo__timers">
           <span>Regular: ${escapeHTML(combo.timeNormal || "—")}</span>
@@ -738,12 +784,17 @@ function renderBreedingSection(monster, variant) {
 
   // Real-data path: breeding info embedded directly on the variant as text
   // (the source combos are too varied in phrasing to safely auto-parse into
-  // strict parent IDs for reverse lookup — see project notes).
+  // strict parent IDs for reverse lookup — see project notes). Still uses
+  // the same island-header block style as the combos path above, for a
+  // consistent look regardless of which of a monster's islands actually got
+  // the full per-island combo treatment yet.
   if (variant.breeding && variant.breeding.description) {
     document.getElementById("section-breeding").hidden = false;
     const div = document.createElement("div");
     div.className = "breed-combo";
+    const islandLabel = (variant.islands || []).join(" / ");
     div.innerHTML = `
+      ${islandLabel ? `<div class="breed-combo__label">${escapeHTML(islandLabel)}</div>` : ""}
       <div>${escapeHTML(variant.breeding.description)}</div>
       <div class="breed-combo__timers">
         <span>Regular: ${escapeHTML(variant.breeding.timeNormal || "—")}</span>
@@ -819,18 +870,84 @@ function filterToElement(elementId) {
   renderMonsterGrid();
 }
 
+// Parses a "1d 2h 3m 4s" style duration string (any subset of units, in any
+// combination) into total seconds. Returns -1 for anything unparseable/empty
+// so unknown durations always sort last rather than accidentally first.
+function parseDuration(str) {
+  if (!str) return -1;
+  const re = /(\d+)\s*(d|h|m|s)\b/gi;
+  let total = 0;
+  let matched = false;
+  let m;
+  const unitSeconds = { d: 86400, h: 3600, m: 60, s: 1 };
+  while ((m = re.exec(str))) {
+    matched = true;
+    total += parseInt(m[1], 10) * unitSeconds[m[2].toLowerCase()];
+  }
+  return matched ? total : -1;
+}
+
 function renderEggRequirements(variant) {
   const section = document.getElementById("section-eggs");
   const eggs = variant.eggRequirements;
   if (!eggs || !eggs.length) { section.hidden = true; return; }
   section.hidden = false;
+  // Longest breeding/hatch time first, shortest last.
+  const sorted = [...eggs].sort((a, b) => parseDuration(b.hatchTime) - parseDuration(a.hatchTime));
   const el = document.getElementById("profile-eggs");
-  el.innerHTML = eggs.map((e) => `
+  el.innerHTML = sorted.map((e) => `
     <li>
       <span><span class="egg-count">${e.count}×</span>${escapeHTML(e.monster)}</span>
       ${e.hatchTime ? `<span class="egg-time">${escapeHTML(e.hatchTime)}</span>` : ""}
     </li>
   `).join("");
+}
+
+// Alternative Acquisition supports two item shapes in the same list:
+// a plain string (rendered as a simple bullet, same as before) or a
+// { island, lines } group (rendered as its own island-header block,
+// matching the Breeding section's visual template) for monsters whose
+// acquisition genuinely differs by island — e.g. Synthesizing on Ethereal
+// Workshop vs. Dish-Harmonizing on an Ethereal Islet. Only grouped where it
+// actually applies; ungrouped strings stay ungrouped.
+function renderAcquisitionSection(sectionId, fieldId, items) {
+  const section = document.getElementById(sectionId);
+  if (!items || !items.length) { section.hidden = true; return; }
+  section.hidden = false;
+  const el = document.getElementById(fieldId);
+  el.innerHTML = "";
+
+  const plain = [];
+  const flushPlain = () => {
+    if (!plain.length) return;
+    const ul = document.createElement("ul");
+    ul.innerHTML = plain.map((line) => `<li>${escapeHTML(line)}</li>`).join("");
+    el.appendChild(ul);
+    plain.length = 0;
+  };
+
+  for (const item of items) {
+    if (typeof item === "string") {
+      plain.push(item);
+      continue;
+    }
+    if (item && typeof item === "object" && item.method) {
+      // Legacy structured-method shape from breeding.json's acquisitionMethods.
+      const label = state.taxonomy.acquisitionMethods[item.method]?.name || item.method;
+      plain.push(item.detail ? `${label} — ${item.detail}` : label);
+      continue;
+    }
+    // Grouped-by-island shape: { island, lines }.
+    flushPlain();
+    const div = document.createElement("div");
+    div.className = "breed-combo";
+    div.innerHTML = `
+      <div class="breed-combo__label">${escapeHTML(item.island || "")}</div>
+      ${(item.lines || []).map((line) => `<div>${escapeHTML(line)}</div>`).join("")}
+    `;
+    el.appendChild(div);
+  }
+  flushPlain();
 }
 
 function setSection(sectionId, fieldId, value) {
