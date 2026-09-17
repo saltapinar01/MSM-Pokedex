@@ -1,5 +1,80 @@
 # MSM Pokédex — Phase 1 (+ Phase 4 data pass)
 
+## Pre-Batch-4 fix pass (items a–e from the Phase 4 plan)
+
+Five fixes requested before starting Batch 4 (remaining Fire class):
+
+**a. Multi-island breeding combo audit (Anglow, Buzzinga, Blabbit, Ffidyll)**
+- **Anglow / Buzzinga (Common/Rare):** converted the single flat breeding
+  description into the `breeding.combos` format. Both are bred only on
+  their natural island (Water Island for Anglow, Fire Haven for Buzzinga)
+  — their Mythical Island listing was never a second breeding location,
+  it's teleport-only (to breed with Cataliszt for the Dreamythical
+  counterpart), which is what `alternativeAcquisition` already said. The
+  flat single-sentence format just didn't make that distinction visually;
+  the combos format now does. Epic (already Best/Alt prose) converted to
+  the same structured combos array for consistency.
+- **Blabbit:** the Seasonal Shanty "combo" (Spunge + Scups, Common/Rare)
+  was actually wrong, not just unclear — Spunge and Scups don't exist on
+  Seasonal Shanty. Per the wiki, Core Seasonals like Blabbit have **no**
+  fresh two-parent combo there at all; they're obtained by teleport, or
+  (once you already own one) by breeding it with an Aux. Seasonal for a
+  chance at a duplicate. Removed the fake combo and moved the real
+  mechanism into Alternative Acquisition. Also fixed Epic Blabbit's
+  Seasonal Shanty entry, which had duplicated Water Island's combo
+  (Shellbeat + Oaktopus) — the actual Shanty combo is Punkleton + Yool.
+- **Ffidyll:** same class of bug — Pladdie + Floot Fly is real, but it's
+  the Faerie Island combo only. Seasonal Shanty's real combo is
+  Schmoochle + Blabbit. Split into per-island combos for Common and Rare;
+  also confirmed and filled in Epic's previously-unverified combo
+  (Faerie Island: Pladdie + HippityHop; Seasonal Shanty: Viveine + Spurrit).
+- **Not done in this pass:** a full re-verification of all 244 monsters'
+  breeding combos for this same island-mixup pattern. That's a batch-scale
+  task in its own right (same scope as the Phase 3 batches already
+  underway) — flagging it as a candidate for its own dedicated pass rather
+  than guessing at it inline here.
+
+**b. A–Z jump sidebar — bigger targets + drag-to-scrub**
+Letters are now bigger (larger font, more padding, bigger tap area) and
+the whole list got a subtle background pill for grip. Added one-finger
+drag scrubbing in the style of Niagara Launcher's alphabet index: dragging
+up/down anywhere on the list tracks whichever letter is under the finger
+(not just the button you started on), magnifies it, and jumps live as you
+move — a single swipe browses the whole alphabet without lifting and
+re-tapping. Tap-to-jump and keyboard (Tab + Enter) still work as before.
+
+**c. Header was scrolling away — root cause fixed**
+The header was already `position: sticky`, so it *should* have stayed
+pinned — the actual bug was `overflow-x: hidden` on `html, body` (added in
+an earlier pass to fix a horizontal-overflow glitch). `overflow: hidden`
+on any axis, on any ancestor of a sticky element, silently turns that
+ancestor into a scroll container, which breaks sticky positioning for
+everything inside it. Switched to `overflow-x: clip`, which blocks the
+same horizontal overflow without creating a scroll container. Header
+(title, view toggle, search, filters) now stays fixed on both Monster and
+Island views, exactly as intended when it was first added.
+
+**d. Island tile monster counts — uniform black**
+`.island-row__count-block` now uses a fixed `#1a1a1a` instead of the
+per-tile computed contrast color, so every island tile's count reads the
+same regardless of that tile's fill color.
+
+**e. Main Timeline subgrouped, matching Mirror Timeline's pattern**
+Added `mainGroup` + `groupOrder` fields to `data/islands.json` and
+refactored both timelines to render through the same grouped-section
+function, in your specified fixed order (not alphabetical) within each
+group: **Natural → Fire → Magical → Ethereal → Higher Plane → Utility**
+for Main; **Natural → Magical → Ethereal → Utility** for Mirror (subgroup
+labels renamed from "Ethereal Islets" to "Ethereal" and a new "Utility"
+subgroup added for Minor Paironormal Carnival, to match your spec).
+**One discrepancy worth flagging:** your Main → Natural list didn't
+include Earth Island. Since Earth Island (and Mirror Earth Island) still
+exist in the data and Mirror → Natural still lists Mirror Earth Island,
+I added Earth Island to Main → Natural rather than silently dropping it
+from the timeline — let me know if that omission was actually intentional.
+
+**No art changes in this pass — `CACHE_VERSION` not bumped.**
+
 ## Phase 4 changelog (Plasma/Mech/Shadow/Crystal Islet — Double-Element Ethereals)
 
 All 13 monsters from the Phase 4 list already existed in `data/monsters.json`

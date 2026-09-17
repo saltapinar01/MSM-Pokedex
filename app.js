@@ -348,21 +348,85 @@ function renderAzJump(sortedMonsters) {
   });
 
   nav.innerHTML = "";
+  const letterEls = {};
   for (const letter of AZ_LETTERS) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "az-jump__letter";
     btn.textContent = letter;
-    if (letter in firstIndexForLetter) {
-      btn.addEventListener("click", () => {
-        const card = grid.children[firstIndexForLetter[letter]];
-        if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    } else {
-      btn.disabled = true;
-    }
+    btn.disabled = !(letter in firstIndexForLetter);
+    // Kept for keyboard users (Tab + Enter/Space fires a native click even
+    // without a pointer) — the drag-to-scrub handling below is additive,
+    // not a replacement for this.
+    btn.addEventListener("click", () => { if (!btn.disabled) jumpToAzLetter(nav, letter); });
     nav.appendChild(btn);
+    letterEls[letter] = btn;
   }
+
+  // Shared scrub state lives on the nav node itself so the pointer handlers
+  // (bound once, in bindAzJumpScrubbing) always read the current filtered
+  // results without needing to be re-attached on every render.
+  nav._azJump = { letterEls, firstIndexForLetter, grid };
+  bindAzJumpScrubbing(nav);
+}
+
+function jumpToAzLetter(nav, letter) {
+  const { firstIndexForLetter, grid } = nav._azJump;
+  if (!(letter in firstIndexForLetter)) return;
+  const card = grid.children[firstIndexForLetter[letter]];
+  if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// One-finger "wave" scrubbing across the whole A–Z list, in the style of
+// Niagara Launcher's alphabet index: dragging up/down anywhere in the list
+// (not just tapping one button) continuously tracks whichever letter row
+// the finger is currently over, visually magnifies that letter, and jumps
+// live as the finger moves — so a single swipe browses the whole alphabet
+// without lifting and re-tapping letter by letter.
+function bindAzJumpScrubbing(nav) {
+  if (nav._azJumpBound) return;
+  nav._azJumpBound = true;
+
+  let activeBtn = null;
+  const setActive = (btn) => {
+    if (btn === activeBtn) return;
+    if (activeBtn) activeBtn.classList.remove("az-jump__letter--active");
+    activeBtn = btn;
+    if (btn) btn.classList.add("az-jump__letter--active");
+  };
+
+  const letterButtonAt = (clientY) => {
+    const { letterEls } = nav._azJump;
+    let closest = null, closestDist = Infinity;
+    for (const letter of AZ_LETTERS) {
+      const btn = letterEls[letter];
+      const rect = btn.getBoundingClientRect();
+      const dist = Math.abs(clientY - (rect.top + rect.height / 2));
+      if (dist < closestDist) { closestDist = dist; closest = btn; }
+    }
+    return closest;
+  };
+
+  const handleMove = (clientY) => {
+    const btn = letterButtonAt(clientY);
+    if (!btn) return;
+    setActive(btn);
+    if (!btn.disabled) jumpToAzLetter(nav, btn.textContent);
+  };
+
+  nav.addEventListener("pointerdown", (e) => {
+    nav.setPointerCapture(e.pointerId);
+    handleMove(e.clientY);
+  });
+  nav.addEventListener("pointermove", (e) => {
+    // For mouse, only scrub while the button is actually held down;
+    // touch/pen only ever send pointermove here while the finger/tip is
+    // down and captured, so no extra guard is needed for those.
+    if (e.pointerType === "mouse" && e.buttons !== 1) return;
+    handleMove(e.clientY);
+  });
+  nav.addEventListener("pointerup", () => setActive(null));
+  nav.addEventListener("pointercancel", () => setActive(null));
 }
 
 function pickDisplayVariantId(monster, system) {
@@ -501,24 +565,35 @@ function renderIslandList() {
     return;
   }
 
-  const mainIslands = state.islands.filter((i) => i.timeline !== "mirror").sort((a, b) => a.name.localeCompare(b.name));
+  const mainIslands = state.islands.filter((i) => i.timeline !== "mirror");
   const mirrorIslands = state.islands.filter((i) => i.timeline === "mirror");
 
-  list.appendChild(buildIslandGroup("Main Timeline", mainIslands));
-  list.appendChild(buildMirrorIslandGroup("Mirror Timeline", mirrorIslands));
+  list.appendChild(buildGroupedIslandSection("Main Timeline", mainIslands, "mainGroup", MAIN_SUBGROUPS));
+  list.appendChild(buildGroupedIslandSection("Mirror Timeline", mirrorIslands, "mirrorGroup", MIRROR_SUBGROUPS));
 }
 
-// Mirror Timeline islands are shown in three named subgroups (in this fixed
-// order), alphabetical within each subgroup. Which subgroup an island
-// belongs to is explicit data (`mirrorGroup` in islands.json), not inferred
-// from its name.
+// Both timelines render in fixed, named subgroups (in this fixed order),
+// matching in-game class groupings rather than alphabetical order. Which
+// subgroup an island belongs to — and its position within that subgroup —
+// is explicit data (`mainGroup`/`mirrorGroup` + `groupOrder` in
+// islands.json), not inferred from its name.
+const MAIN_SUBGROUPS = [
+  { key: "natural", label: "Natural" },
+  { key: "fire", label: "Fire" },
+  { key: "magical", label: "Magical" },
+  { key: "ethereal", label: "Ethereal" },
+  { key: "higher-plane", label: "Higher Plane" },
+  { key: "utility", label: "Utility" },
+];
+
 const MIRROR_SUBGROUPS = [
   { key: "natural", label: "Natural" },
   { key: "magical", label: "Magical" },
-  { key: "islet", label: "Ethereal Islets" },
+  { key: "ethereal", label: "Ethereal" },
+  { key: "utility", label: "Utility" },
 ];
 
-function buildIslandGroup(title, islands) {
+function buildGroupedIslandSection(title, islands, groupField, subgroupDefs) {
   const section = document.createElement("div");
   section.className = "island-group";
   const heading = document.createElement("h2");
@@ -526,31 +601,17 @@ function buildIslandGroup(title, islands) {
   heading.textContent = title;
   section.appendChild(heading);
 
-  for (const island of islands) section.appendChild(buildIslandRow(island));
-  return section;
-}
-
-function buildMirrorIslandGroup(title, islands) {
-  const section = document.createElement("div");
-  section.className = "island-group";
-  const heading = document.createElement("h2");
-  heading.className = "island-group__title";
-  heading.textContent = title;
-  section.appendChild(heading);
-
-  // Standalone islands (no mirrorGroup) render as their own tiles, outside
-  // the three named subgroups below — e.g. Paironormal Carnival's Minor
-  // Mode isn't a Natural/Magical/Islet island, so it doesn't belong in any
-  // of them.
-  const standalone = islands
-    .filter((i) => !i.mirrorGroup)
+  // Any island missing a group tag renders ungrouped at the end, rather
+  // than silently disappearing — a stale/incomplete data entry should
+  // still be visible and easy to spot.
+  const ungrouped = islands
+    .filter((i) => !i[groupField])
     .sort((a, b) => a.name.localeCompare(b.name));
-  for (const island of standalone) section.appendChild(buildIslandRow(island));
 
-  for (const { key, label } of MIRROR_SUBGROUPS) {
+  for (const { key, label } of subgroupDefs) {
     const subgroup = islands
-      .filter((i) => i.mirrorGroup === key)
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .filter((i) => i[groupField] === key)
+      .sort((a, b) => (a.groupOrder ?? 0) - (b.groupOrder ?? 0));
     if (!subgroup.length) continue;
 
     const subheading = document.createElement("h3");
@@ -560,6 +621,15 @@ function buildMirrorIslandGroup(title, islands) {
 
     for (const island of subgroup) section.appendChild(buildIslandRow(island));
   }
+
+  if (ungrouped.length) {
+    const subheading = document.createElement("h3");
+    subheading.className = "island-subgroup__title";
+    subheading.textContent = "Other";
+    section.appendChild(subheading);
+    for (const island of ungrouped) section.appendChild(buildIslandRow(island));
+  }
+
   return section;
 }
 

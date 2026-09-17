@@ -34,8 +34,14 @@ html, body {
      header stays viewport-width while full-bleed content like island tiles
      keeps the document's wider scroll width — so the header visibly reads
      "narrower" than the tiles beneath it. Locking out horizontal overflow
-     entirely keeps every full-width element measuring the same width. */
-  overflow-x: hidden;
+     entirely keeps every full-width element measuring the same width.
+     Using `clip` rather than `hidden` here on purpose: `overflow: hidden`
+     (in either axis) on an ancestor of a `position: sticky` element makes
+     that ancestor a scroll container, which silently breaks the sticky
+     behavior of everything inside it — this was the actual cause of the
+     header scrolling away instead of staying pinned. `clip` blocks the
+     same horizontal overflow without creating a scroll container. */
+  overflow-x: clip;
 }
 
 button {
@@ -264,18 +270,29 @@ input:focus-visible {
   flex-direction: column;
   align-items: center;
   z-index: 5;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  padding: 6px 2px;
+  /* Own the vertical drag gesture here instead of letting it scroll the
+     page underneath — required for one-finger scrubbing to feel like a
+     dedicated index rather than fighting the page scroll. */
+  touch-action: none;
 }
 .az-jump[hidden] { display: none; }
 .az-jump__letter {
   border: none;
   background: none;
   color: var(--text-muted);
-  font-size: 0.62rem;
+  font-size: 0.86rem;
   font-weight: 700;
-  line-height: 1.25;
-  padding: 0 4px;
+  line-height: 1;
+  padding: 3px 9px;
+  min-width: 30px;
+  min-height: 22px;
   cursor: pointer;
+  border-radius: 6px;
+  transform-origin: right center;
+  transition: transform 90ms ease, color 90ms ease;
 }
 .az-jump__letter:disabled {
   color: var(--text-muted);
@@ -285,6 +302,13 @@ input:focus-visible {
 .az-jump__letter:hover:not(:disabled),
 .az-jump__letter:focus-visible:not(:disabled) {
   color: var(--text-primary);
+}
+/* The letter currently under the finger during a drag-scrub, magnified
+   Niagara-Launcher-index style so it's obvious which one will fire. */
+.az-jump__letter--active {
+  color: var(--text-primary);
+  transform: scale(1.7);
+  font-weight: 800;
 }
 
 .loading-state, .empty-state {
@@ -633,7 +657,9 @@ input:focus-visible {
   flex-shrink: 0;
   text-align: center;
   padding: 0 20px;
-  color: var(--island-text, #ffffff);
+  /* Fixed black rather than the per-tile contrast color (--island-text) —
+     uniform across every island tile regardless of that tile's fill color. */
+  color: #1a1a1a;
   line-height: 1.1;
 }
 .island-row__count-number { display: block; font-size: 1.9rem; font-weight: 800; }
