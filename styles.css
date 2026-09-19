@@ -538,6 +538,65 @@ input:focus-visible {
 .profile-section ul { margin: 0; padding-left: 18px; }
 
 .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Accordion: a vertically stacked list of collapsible island sections.
+   Built on native <details>/<summary> for free keyboard support and
+   accessibility (no custom ARIA state-tracking needed) — only the
+   disclosure marker and layout are styled. */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.accordion__item {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.accordion__header::-webkit-details-marker { display: none; }
+.accordion__title { flex: 1; }
+.accordion__icon {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(45deg);
+  transition: transform 150ms ease;
+  flex-shrink: 0;
+}
+.accordion__item[open] .accordion__icon { transform: rotate(-135deg); }
+.accordion__panel {
+  padding: 4px 14px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.accordion__image {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  flex-shrink: 0;
+}
+.accordion__requirement {
+  font-size: 0.85rem;
+  color: var(--text-secondary, var(--text-primary));
+  line-height: 1.4;
+  margin: 0;
+}
 .chip {
   background: var(--surface-raised);
   border: 1px solid var(--border-quiet);

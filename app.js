@@ -745,6 +745,8 @@ function renderProfile() {
     img.style.display = "none";
   }
 
+  renderIslandAccordion(variant, monster);
+
   renderVariantTiles(monster, system);
 
   // Classes render as text only (handled above via profile-class).
@@ -784,6 +786,26 @@ function renderProfile() {
   renderListSection("section-notes", "profile-notes", variant.notes || []);
 
   setSection("section-fact", "profile-fact", variant.interestingFact);
+}
+
+function renderIslandAccordion(variant, monster) {
+  const section = document.getElementById("section-island-accordion");
+  const items = variant.islandDetails;
+  if (!items || !items.length) { section.hidden = true; return; }
+  section.hidden = false;
+  const el = document.getElementById("profile-island-accordion");
+  el.innerHTML = items.map((entry, i) => `
+    <details class="accordion__item"${i === 0 ? " open" : ""}>
+      <summary class="accordion__header">
+        <span class="accordion__title">${escapeHTML(entry.island)}</span>
+        <span class="accordion__icon" aria-hidden="true"></span>
+      </summary>
+      <div class="accordion__panel">
+        ${entry.image ? `<img class="accordion__image" src="${escapeHTML(entry.image)}" alt="${escapeHTML(monster.name)} on ${escapeHTML(entry.island)}" onerror="this.style.display='none'" />` : ""}
+        <p class="accordion__requirement">${escapeHTML(entry.requirement)}</p>
+      </div>
+    </details>
+  `).join("");
 }
 
 function renderVariantTiles(monster, system) {

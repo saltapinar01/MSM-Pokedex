@@ -1,5 +1,757 @@
 # MSM Pokédex — Phase 1 (+ Phase 4 data pass)
 
+## Correction: Rare/Epic Wubbox requirements mirror Common's exactly
+
+The person corrected the previous pass directly: Rare and Epic Wubbox's
+per-island requirements aren't a different structure from Common's —
+they're just Common's exact same per-island pattern, scaled to that
+tier. That replaces two things that were wrong in the last update:
+- Rare Wublin Island was listed as needing "any 10 of the 19 Rare
+  Wublins" — actually all 19, same as Common.
+- Rare and Epic's other-island entries were vague placeholders ("exact
+  count not confirmed" / "boxing in phases, not itemized") — actually
+  the same concrete 15-per-island / 30-on-Gold-Island rule as Common,
+  just requiring that tier's Monsters instead of Common ones.
+
+Rewrote both tiers' `islandDetails` to mirror Common's 9-entry structure
+exactly (Wublin Island + the 7 other islands at 15 + Gold Island at 30),
+substituting "Rare Monsters" / "Epic Monsters" for "Common Monsters."
+Epic keeps its per-island artwork from the last pass; it has no Wublin
+Island entry since no Epic Wubbox exists there.
+
+## Epic Wubbox images added + gallery replaced with an accordion
+
+**Images:** processed all 9 uploaded per-island Epic Wubbox artworks to
+match every other asset in the project — resized to a 400px-long-side
+cap, converted to palette mode with transparency preserved, optimized
+(24–35KB each, in line with the existing 18–30KB range; the fancier
+designs like Ethereal run slightly larger, which tracks with their extra
+color complexity). Saved as `wubbox-epic-<island>.png` for Plant, Cold,
+Air, Water, Earth, Fire Haven, Fire Oasis, Ethereal, and Gold. Spot-checked
+the most complex one (Ethereal) for palette-conversion banding — none
+visible.
+
+**UI: replaced the appearance gallery from last pass with an accordion**,
+per direct request. Built on native `<details>`/`<summary>` rather than
+hand-rolled JS toggle logic — free keyboard support and accessibility,
+and the browser already tracks open/closed state without extra code. A
+custom chevron (CSS-only, rotates on open) replaces the default disclosure
+triangle. Each panel shows the per-island artwork (where one exists)
+alongside that island's specific requirement text.
+
+This also replaced the data shape from last pass: `imagesByIsland`
+(images only) is gone, folded into a richer `islandDetails` field
+(`{island, image?, requirement}`) that carries both the art and the
+requirement text together — since the actual need turned out to be
+"show requirements per island," not just "show art per island."
+Populated for all 3 Wubbox tiers:
+- **Common:** 9 islands, each with its own requirement text (Wublin
+  Island's "all 19 Wublins" rule, the standard "15 Common Monsters" rule
+  for the 7 other islands, Gold Island's "30 instead of 15" exception).
+  No per-island art — Common Wubbox looks the same everywhere.
+- **Rare:** 2 entries (Wublin Island's specific rule, a general one for
+  everywhere else — the per-island Rare counts elsewhere aren't
+  confirmed, same gap flagged last pass).
+- **Epic:** all 9 islands, each with its new artwork plus a requirement
+  line. The exact Epic Monster counts per elemental "phase" aren't
+  itemized in available sources — flagged rather than invented.
+
+To avoid saying the same thing twice, simplified `alternativeAcquisition`
+back down to just the purchase-price line for each tier, pointing to the
+new accordion for the per-island breakdown that used to live there as
+flat grouped text.
+
+**No other Supernatural research done in this pass** — this was purely
+the asset-and-UI work the person asked for. The 16 remaining Wublin egg
+lists and 13 remaining polarity pairs from the last check are still
+open.
+
+## Two Wubbox design questions, answered with working code
+
+Before continuing the Supernatural data work, addressed two structural
+questions about how Wubbox should be represented:
+
+**"Epic Wubbox looks different per island — show each as a separate
+profile?"** Recommending against literal separate profiles: the game
+itself treats Epic Wubbox as one monster with 9 cosmetic reskins, not 9
+different creatures (no separate Book of Monsters entry per island).
+Making separate profiles would misrepresent that and break things
+elsewhere that assume one profile per real species (search, breeding
+references). Instead, added a new optional `imagesByIsland` field per
+variant and a small "Appearance By Island" gallery section in the profile
+page (index.html, styles.css, app.js all updated) that shows a thumbnail
+per island when that field is populated. **Not populated with real data
+yet** — the project's asset folder only has one generic
+`wubbox-epic.png`, not the 9 distinct per-island designs, so the gallery
+has nothing to show until those image files exist. Infrastructure is
+ready; needs the actual assets.
+
+**"Wubbox needs different monster sets per island — how to capture
+that?"** No new code needed — the Acquisition section already supports
+grouped-by-island blocks (`{island, lines}`), used elsewhere for
+monsters with genuinely different acquisition paths per location.
+Restructured Wubbox's three tiers to use it: Wublin Island's "box all 19
+Wublins" rule now sits in its own block, the "15 Common Monsters" rule
+covering the 5 Natural Islands + mirrors + Fire Haven + Ethereal Island
+in another, and Gold Island's "30 instead of 15" exception in a third.
+
+## Phase 3 — Batch 7 continued: Supernatural price/polarity/egg check (20 monsters)
+
+**Prices: all 19 Wublins now confirmed**, closing out the placeholder bug
+from the last pass. Real prices, low to high: Brump 2,000 → Zynth/Gheegur/
+Scargo 3,000 → Blipsqueak/Screemu/Poewk/Fleechwurm 5,000 → Creepuscule/
+Maulch/Thwok/Dermit 17,000 → Astropod/Zuuker/Bona-Petite/Whajje 20,000 →
+Dwumrohl/Pixolotl/Tympa 34,000. Worth noting: a couple of these (Blipsqueak,
+Screemu, Poewk, Fleechwurm) genuinely are 5,000 — the placeholder wasn't
+wrong for every monster, just wrong as a blanket value applied to all 19
+regardless of their real, very different prices. Also caught a source
+conflict worth flagging: a 2023 Steam guide gives Dwumrohl and Whajje as
+5,000 Coins each, but the primary wiki's current pages say 34,000 and
+20,000 — the wiki's own trivia about a past "price change of all Wublins"
+explains the gap, so the current wiki page was trusted over the older
+guide.
+
+**Egg requirements: 3 of 19 now fully confirmed** with exact counts
+(matching the app's existing `eggRequirements` schema, already used for
+Wubbox's Wublin Island list): Zynth (1 each of T-Rox, Congle, Pango,
+Oaktopus, Drumpler, Maw), Screemu (2 Shellbeat, 6 each Spunge/Shrubb/
+Quibble), Whajje (6 Tweedle, 7 Deedge, 10 each Dandidoo/Cybop/Reedling).
+**Not completed:** the other 16. Partial, non-itemized facts surfaced for
+a few (Dwumrohl needs all 5 Natural Quads + all 5 Naturals Singles +
+Potbelly specifically + zero Doubles, 71 eggs total; Tympa's single
+largest requirement is 24 Drumplers; Dermit needs Fwog and nothing from
+the Fire islands or Light/Psychic/Faerie Island) but not broken into the
+precise per-monster counts the schema needs — these come from a page's
+own inventory table, not search snippets, and getting all 16 properly
+would mean fetching each one individually. Flagging as real, sizeable
+remaining work rather than quietly leaving it incomplete.
+
+**Polarity: unchanged from the prior partial pass** (Brump, Dwumrohl,
+Fleechwurm, Pixolotl, Poewk, Whajje have confirmed pairs or half-pairs;
+the other ~13 don't). One relevant bonus fact did surface this pass:
+confirmation that Fleechwurm (last Wublin released, July 2017) and
+Dwumrohl (among the first, March 2016) are correctly the *only* mutually
+negative pair on the island — matches what was already in the data, no
+change needed, but good independent corroboration.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 7 (partial): Supernatural class check — Wublins (20 monsters)
+
+Started Batch 7 (Supernatural class, 20 monsters — all Wublins plus
+Wubbox). **This turned out to be a scoping pass more than a completion**,
+similar to how Batch 5 started with a "check" before diving in — except
+here the surprise showed up mid-batch rather than up front. Flagging that
+clearly rather than presenting a rushed full pass as finished.
+
+**Structural note:** Wublins genuinely can't be bred — they're bought as
+dormant statues, then woken by zapping in eggs within a time limit
+(Common), or evolved via Keys + Rare/Epic egg-zapping (Rare/Epic, no time
+limit). So `breeding: null` across the board is correct, not a gap — the
+real equivalent of "breeding data" for this class is the statue price,
+the egg requirements, the time limit, and Polarity.
+
+**Real bug found: every one of the 17 not-yet-individually-checked
+Wublins had an identical "5,000 Coins" Market price** — obviously a
+placeholder, not researched per-monster data. Confirmed this directly by
+checking two of them: Brump is actually 2,000 Coins, Astropod is 20,000.
+Real prices are confirmed to range 2,000–34,000 Coins and are
+monster-specific, not uniform. Fixed Brump and Astropod with their real
+prices; for the other 17, **removed the wrong placeholder** and replaced
+it with an explicit "not independently confirmed, real prices are
+monster-specific" note rather than leaving a number that's already known
+to be false in most cases. This needs the same one-by-one treatment the
+Magical and Natural Singles got — 17 more individual page checks, not a
+2-minute cleanup. Recommending it as its own sub-batch (7a — Wublin
+statue prices).
+
+**Polarity — directly relevant to the person's own Wublin Island grid
+project.** Only Whajje's pairing (positive: Dwumrohl, negative: Zynth)
+was on record before this pass. Confirmed 5 more, partially or fully,
+from primary-wiki and community-tool sources describing the positive-pole
+chain (Brump → Fleechwurm → Pixolotl → Scargo → ... → Poewk → Brump,
+looping through all 19) and a couple of negative-pole facts:
+- **Brump:** positive Fleechwurm, negative Blipsqueak (both confirmed)
+- **Dwumrohl:** positive Astropod, negative Fleechwurm (both confirmed —
+  Dwumrohl/Fleechwurm is also confirmed as the only *mutual* negative
+  pair on the island, each reducing the other)
+- **Fleechwurm:** positive Pixolotl (confirmed), negative Dwumrohl
+  (confirmed via the mutual-pair fact above)
+- **Pixolotl:** positive Scargo (confirmed); negative pole not found
+- **Poewk:** positive Brump (confirmed, this is what closes the 19-Wublin
+  loop); negative pole not found
+
+Also confirmed and added the general mechanic rules governing all of
+this: Rare and Epic Wublins **inherit the exact same pole pairing as
+their Common form** (only taking effect once both tiers of the pair are
+actually released — an Epic-tier bonus needs the other monster's Epic
+form to exist too), and the loose grid-size tendency (positive poles
+tend to be a different grid size, 2x2 vs 3x3; negative poles tend to
+share size, likely to discourage same-size farms) with Blipsqueak/Screemu
+as the one known exception.
+
+**Not resolved this pass, and likely won't be quick:** the remaining
+~13 Wublins' full pole pairs. The complete chain almost certainly exists
+in full somewhere (a Tumblr infographic and an itch.io tool both
+reference having the complete picture, but neither rendered as
+extractable text this pass — one's an image, the other's inside an
+interactive Unity app). Worth a dedicated look if this matters enough to
+chase down properly, given it maps directly onto the grid-planning work
+already underway.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 6d: Natural Quads (5 monsters) — closes Batch 6
+
+Covers Entbrat, Riff, Deedge, Shellbeat, Quarrister — **the last of the
+Natural class, and the last sub-batch of Batch 6.**
+
+**Filled in 3 blank Epic times** (Deedge, Shellbeat, Quarrister — same
+disclaimer-text-in-time-field bug as before): Epic Deedge 1d 17h/1d 6h 45m,
+Epic Shellbeat 1d 19h/1d 8h 15m, Epic Quarrister 1d 11h/1d 2h 15m. The 2
+already-filled ones (Entbrat, Riff) matched the same Steam guide exactly —
+9 for 9 now across Batches 6b–6d, no misses.
+
+**A proper cleanup pass on the redundant-clause bug**, since by this point
+it was clearly a widespread pattern rather than a couple of one-offs.
+Went through the whole Natural class and separated the false positives
+from the real bugs:
+- **Real duplicates, fixed (13 total):** Tweedle, Maw, Pango, Potbelly,
+  Noggin, Toe Jammer, and Mammott's Epic descriptions, plus Maw, Dandidoo,
+  Cybop, Quibble, Pango, Shrubb, Congle, and Reedling's Rare descriptions
+  — each had a combo already named in the main sentence, then repeated
+  verbatim after a stray "|" under a redundant label ("Also obtainable
+  on...", "Epic X here:"). **Two of these (Tweedle's Epic, Maw's Rare)
+  were missed on the first pass** and caught on a follow-up sweep before
+  calling this done — worth double-checking after any similar bulk
+  cleanup rather than trusting the first pass was complete.
+- **Legitimate, left alone (5):** the Rare descriptions for Tweedle,
+  Potbelly, Noggin, Toe Jammer, and Mammott also use a "|" character, but
+  what follows it isn't a duplicate — it's genuinely different information
+  (which specific Fire-Triple or Magical-Triple pairs work on a different
+  island). These just happen to share a separator character with the real
+  bug; the content itself checks out.
+
+**This closes Batch 6 (Natural class, 31 monsters) entirely** — Singles +
+Mimic (6), Doubles (10), Triples (10), and Quads (5) are all done.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 6c: Natural Triples (10 monsters)
+
+Covers T-Rox, Pummel, Clamble, Bowgart, Congle, PomPom, Scups, Spunge,
+Thumpies, Reedling. Same pattern as Batch 6b: mostly a verification pass
+against the same Steam breeding-times guide, which by this point has been
+right 7-for-7 on every Epic time it's been checked against — high enough
+confidence to use it directly for the gaps.
+
+**Filled in 3 blank Epic times** (Spunge, Thumpies, Reedling — all three
+had the "not yet confirmed" disclaimer text literally sitting in the time
+fields, same bug pattern as Batch 6b's Dandidoo): Epic Spunge 1d 1h/18h 45m,
+Epic Thumpies 1d 9h/24h 45m, Epic Reedling 17h/12h 45m.
+
+**Confirmed correct, no changes needed:** all 10 Common times (8h/6h for
+T-Rox, 12h/9h for the other 9), all 10 Rare times (10h 30m/7h 52m 30s for
+T-Rox, 15h 30m/11h 37m 30s for the other 9), and the 7 Epic times that
+were already filled in (T-Rox, Pummel, Clamble, Bowgart, Congle, PomPom,
+Scups) — every single one matched the guide exactly.
+
+**Cleaned up two more of the same redundant-clause artifacts** as
+Batch 6b's Oaktopus fix — Congle's and Reedling's Epic descriptions each
+named their Fire-island combo once in the main sentence, then repeated it
+a second time after a stray "|" character. Removed the duplicate half in
+both. No duplicate-island bug this time — that one was fully swept in
+Batch 6b.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 6b: Natural Doubles (10 monsters)
+
+Covers Drumpler, Fwog, Maw, Dandidoo, Cybop, Quibble, Pango, Furcorn,
+Oaktopus, Shrubb. This batch turned into more of a data-integrity sweep
+than fresh research — the combos and times were already largely correct,
+but three real bugs and one systemic issue turned up while verifying.
+
+**Systemic bug, fixed dataset-wide:** duplicate island entries in Epic-tier
+`islands` arrays — e.g. Drumpler's Epic listed "Faerie Island" twice. This
+wasn't isolated to Doubles: it also affected all 5 Natural Singles from
+Batch 6a (Tweedle, Potbelly, Noggin, Toe Jammer, Mammott) plus Congle and
+Reedling (Triples, not yet reached in the batch plan) — 13 tier-entries
+total across the whole dataset. Deduped everywhere in one pass.
+
+**Real Epic-timing bugs, caught by cross-referencing a full table of all
+10 Doubles' Epic times against a Steam community guide sourced from the
+wiki:**
+- **Fwog's Epic time was Maw's time, not its own** (13h/9h 45m — actually
+  Maw's value). Real Epic Fwog is 7h/5h 15m. Fixed.
+- **Drumpler's Epic enhanced time had a rounding error**: 15h × 0.75 =
+  11h 15m exactly, but the data had 11h 45m. Fixed.
+- **Dandidoo's Epic time**, left blank in Batch 6a's cleanup, is now
+  confirmed: 1d 5h / 21h 45m.
+
+Also cleaned up a leftover editing artifact in Oaktopus's Epic
+description — a redundant clause ("Epic Oaktopus here: Rootitoot +
+Bonkers") duplicating the already-stated "Psychic: Rootitoot + Bonkers"
+a second time after a stray "|" character.
+
+**Everything else checked out.** Cross-referenced Common and Rare times
+for all 10 against the same source: all Common times (30m for
+Fwog/Drumpler/Maw, 8h for the other 7) and all Rare times (1h 7m 30s for
+Drumpler/Maw, 1h 15m for Fwog specifically — genuinely different despite
+sharing a Common time, confirmed directly rather than "corrected" to
+match the other two — and 10h 30m for the remaining 7) matched exactly.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 6a: Natural Singles + Mimic (6 monsters)
+
+Starts Batch 6 (Natural class, 31 monsters). This data was noticeably more
+mature going in than Fire or Magical were — spot-checking a cross-section
+of Doubles/Triples/Quads showed combos and times already filled in and
+accurate. So Batch 6 will likely need fewer, larger sub-batches than
+Batch 5 did. Starting with the two structurally distinct pieces: the 5
+Singles (Tweedle, Potbelly, Noggin, Toe Jammer, Mammott) and Mimic (the
+one Quint, Fire Oasis's odd one out).
+
+**Singles confirmed and filled in** (all were missing Market price and
+incubation time entirely): Tweedle 300 Coins/4h, Potbelly 250 Coins/2h,
+Noggin 300 Coins/5s, Toe Jammer 250 Coins/1min, Mammott 300 Coins/2min.
+Also confirmed the breeding-failure mechanic already implied in the data:
+a failed breeding attempt using a Quad-Element Monster has a **100%**
+chance of returning the matching Single, not just "a chance."
+
+**Mimic — three real fixes, plus one of my own that had to be reverted:**
+- **Islands list was incomplete** — that's what I thought at the time. A
+  secondary source claimed Mimic also lived on Gold Island, so I added it.
+  The person then flagged this directly with a link to the primary wiki
+  page, which is unambiguous: "Mimic is a Quint-Element Natural Monster
+  that is **found exclusively on Fire Oasis**" — and the page's own trivia
+  section calls this out explicitly as one of the things that makes Mimic
+  unique among Natural Monsters ("not on any Islands where all other
+  Naturals are found... on only one Island in the main game"). Reverted —
+  Mimic's `islands` is back to just `["Fire Oasis"]` on all 3 tiers. The
+  secondary source that caused this was wrong; lesson taken for future
+  Mimic-adjacent claims.
+- **Rare Mimic's acquisition was a placeholder** ("same as the Common
+  form") with no actual price or time. It's genuinely different: purchased
+  from the **StarShop for 15,000 Starpower**, not the Market, and cannot
+  be bred at all. Filled in with the real path and its 3d 23h 30m
+  incubation.
+- **Epic Mimic's enhanced time was blank** — filled in (1d 15h → 1d 5h 15m).
+  Its combo (Wynq + Glowl) was already present in the data and left as-is.
+  **Flagging for a closer look later, not resolved now:** the primary
+  wiki's main Mimic page states plainly that Mimic "cannot breed or be
+  bred" in the current game, and even lists "no Rare or Epic variant" in
+  its own trivia — though that trivia line looks stale, since a dedicated
+  Rare Mimic page (version 4.8.2, StarShop-only, matching what's in the
+  data) clearly does exist. Whether "Epic Mimic" is real, and whether its
+  Wynq + Glowl combo is accurate, wasn't independently re-confirmed this
+  pass — worth a dedicated check before trusting that entry further.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 5f: Magical Sanctum/Nexus cross-monsters (11 monsters)
+
+Final sub-batch of Batch 5 — **closes out the entire Magical class.** Covers
+Cahoot, Déjà-Jin, Knucklehead, Roarick, Xyster, Osstax (Doubles), Frondley,
+Larvaluss, Mushaboom, G'day (Triples), and Enchantling (Quad). Note: the
+real name is **Frondley**, not "MsFrondley" — that was this project's own
+internal id/shorthand, not a name to actually use.
+
+**This is the single biggest structural finding across all of Batch 5.**
+Every one of these 11 had `islands` arrays listing their 2–4 component
+Magical Islands (Psychic/Light/Faerie/Bone) plus all the matching Mirror
+islands — e.g. Cahoot listed as living on Psychic Island, Light Island,
+*and* Magical Sanctum. **This is wrong for all 11.** Multiple primary wiki
+pages state it explicitly and identically: "Cahoot is a Double-Element
+Magical Monster **exclusive to Magical Sanctum**" — same wording, word for
+word, on Knucklehead's, Xyster's, Frondley's, Roarick's, Osstax's,
+Déjà-Jin's, Larvaluss's, Mushaboom's, G'day's, and Enchantling's own pages.
+None of these 11 monsters live on their component Magical Islands at all —
+their only real residences are **Magical Sanctum and Magical Nexus**.
+Fixed every `islands` array (22 tier-entries) to just `["Magical Sanctum",
+"Magical Nexus"]`.
+
+One consequence: since there's no multi-island mixup to worry about after
+all (there's only one place they're bred), the flat single-description
+breeding format these already had turns out to be the *right* shape for
+these 11 — the risk flagged back in the original Batch 5 planning was
+real, just not the risk expected. The bug was residency, not breeding-combo
+attribution.
+
+**Confirmed a clean, near-universal timing pattern within this group:**
+- **All 6 Doubles breed in 20h/15h enhanced** — confirmed individually for
+  all 6 (Cahoot, Déjà-Jin, Knucklehead, Roarick, Xyster, Osstax all
+  independently landed on the exact same number).
+- **All 4 Triples breed in 1d 6h/22h 30m** — confirmed for 3 of 4
+  (Frondley, Larvaluss, Mushaboom); G'day pattern-matched with high
+  confidence given the other three were unanimous.
+- **Rare timing is also uniform within each tier**, but *not* the same
+  simple ×1.25 multiplier the wiki's general Rare-monster page describes —
+  Rare Doubles here are 1d 2h 30m (confirmed for Knucklehead and Déjà-Jin
+  directly; the other 4 pattern-matched), and Rare Triples are 1d 13h 30m
+  (confirmed for Larvaluss, which *does* match ×1.25 of its Common time
+  exactly — 30h × 1.25 = 37.5h — while the Doubles' Rare time doesn't fit
+  that same formula, so it wasn't used to extrapolate them).
+- **Enchantling (the Quad) is fully confirmed both tiers**: 2d 2h/1d 13h 30m
+  Common, 2d 14h 30m/1d 22h 52m 30s Rare — both exactly ×1.25, both
+  independently confirmed on two separate sources.
+
+**Epic Knucklehead** is confirmed to exist with a confirmed time (2d 3h
+49m/1d 14h 51m 45s), but the source for its exact combo was truncated —
+only "involves Fluoress as one parent" came through cleanly. Filled in the
+time, left the combo flagged as unconfirmed rather than guessed. No other
+Epic entries exist for this group of 11 — didn't find evidence any of the
+other 10 have an Epic yet.
+
+**Another fabricated note found and removed — same one as Batch 5a.** All
+22 tier-entries carried the identical "appears at Level 1 size... shared
+Nexus Nucleus structure" note already debunked and stripped from the 4
+Magical Singles. Removed here too. Worth being alert for this exact phrase
+anywhere else in the Magical data that hasn't been touched yet.
+
+**Not confirmed, flagged rather than guessed:** exact Magical Nexus
+Transpose costs/times for all 11. The per-island Magical hybrids'
+Coin/Diamond cost pattern (2M/10 Diamonds Doubles, 4M/20 Triples,
+8M/40 Quad) is noted as a plausible extrapolation, but since these 11 skip
+the "bred on a component island, then Transposed" step entirely, there's
+a real chance Sanctum-exclusive monsters price differently — didn't find
+a page that actually says so either way.
+
+**This closes Batch 5 (Magical class, 43 monsters) entirely** — Singles
+(4), Psychic/Faerie/Light/Bone hybrids (28), and Sanctum/Nexus
+cross-monsters (11) are all done.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 5e: Bone Island hybrids (7 monsters)
+
+Fifth sub-batch of Batch 5 — **closes out all four per-island Magical
+sub-batches** (Psychic/Faerie/Light/Bone done; only the Sanctum/Nexus
+cross-monsters remain for Batch 5f). Covers Peckidna, Denchuhs, Hawlo
+(Doubles), Withur, Uuduk, Banjaw (Triples), Plinkajou (Quad).
+
+**Common tier already accurate** (confirmed: Peckidna/Denchuhs/Hawlo =
+Noggin/Toe Jammer/Kayna + Clackula, 9h; Withur/Uuduk/Banjaw = combos of
+the 3 Doubles, 16h; Plinkajou = Banjaw + Noggin, 1d 8h). Same Magical
+Nexus `islands` fix applied as the previous three sub-batches.
+
+**Rare Plinkajou: a 4th confirmed cross-island match.** 1d 18h 30m /
+2d 12h 30m Nexus Transpose — identical to Rare Gloptic (Psychic), Rare
+Pladdie (Faerie), and Rare Blow't (Light). The "one Rare time per
+structural tier, shared by every Magical Island" pattern is about as
+proven as it can get at this point; filled in the remaining blanks
+(Peckidna, Denchuhs, Uuduk) from it with a corrected, tier-accurate note
+(caught and fixed a copy-paste bug where the confirmation note for these
+Doubles/Triple briefly said "Rare Quads" — wrong tier, fixed before
+shipping).
+
+**Epic Peckidna — new addition, found during Faerie batch research and
+held for this batch:** Uuduk + Fwog, 1d 22h 15m (1d 10h 41m 15s
+enhanced), plus its Magical Nexus Transpose (20 Diamonds, 2d 16h 15m).
+This breaks the loose "only one Epic per island, and it's a Triple"
+pattern seen on Psychic/Faerie/Light (Rooba/Cantorell/TooToo) — Bone's
+confirmed Epic is a Double instead.
+
+**Epic Withur/Uuduk/Banjaw/Plinkajou/Denchuhs/Hawlo: confirmed NOT to
+exist**, with the clearest signal yet across all 4 Magical Islands. Every
+mention found was explicitly labeled fan content — a wiki community-forum
+post literally titled "I present to you the FIRST epic quad… Epic
+Plinkajou!" (a user's own concept pitch, not a real feature) and a
+"Fanmade Bone Island Epic Wubbox" post listing the same set. Left unadded.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 5d: Light Island hybrids (7 monsters)
+
+Fourth sub-batch of Batch 5. Covers Gob, Bulbo, Pluckbill (Doubles),
+Spytrap, TooToo, Fiddlement (Triples), and Blow't (Quad).
+
+**Common tier already accurate** (confirmed: Gob/Bulbo/Pluckbill =
+Potbelly/Mammott/Kayna + Fluoress, 9h; Spytrap/TooToo/Fiddlement = combos
+of the 3 Doubles, 16h; Blow't = TooToo + Mammott, 1d 8h — exact match).
+Same `islands` fix applied as Batches 5b/5c (Magical Nexus was missing
+from all 7 despite being a real residence).
+
+**Rare Blow't is now a 3rd confirmed cross-island match for the Quad
+tier** — 1d 18h 30m, identical to Rare Gloptic (Psychic) and Rare Pladdie
+(Faerie). At this point the "one Rare time per structural tier, shared
+across every Magical Island" pattern from Batches 5b/5c is about as solid
+as it gets without checking literally every remaining monster. Filled in
+the remaining blanks (Bulbo, Pluckbill, Spytrap, Fiddlement) from that
+pattern, each flagged individually in its breeding description.
+
+**Epic TooToo:** combo was already correct (Spytrap + Flowah); filled in
+the confirmed time (2d 5h 5m / 1d 15h 48m 45s enhanced).
+
+**Epic Gob/Bulbo/Pluckbill/Spytrap/Fiddlement/Blow't: confirmed NOT to
+exist yet**, more clearly than the "mixed signal" calls in Batches 5b/5c.
+A fan-continuation wiki page listing a speculative future "Epic Wubbox"
+lineup for Light Island includes all 6 of these — which is exactly the
+kind of unreleased/fan-predicted content this project treats as
+unreliable, not evidence they're real. Left unadded, same as before, but
+with more confidence this time that "not yet released" (rather than "data
+gap") is the right read.
+
+**Magical Nexus:** Blow't's Transpose figures came back an exact 3rd
+match too (8,000,000 Coins/2d 2h Common, 40 Diamonds/2d 12h 30m Rare —
+identical to Gloptic and Pladdie). Also got a first confirmed Triple-tier
+Common Transpose time via TooToo (4,000,000 Coins/1d 10h) — Rooba,
+Periscorp, Tapricorn, Cantorell, Bridg-it, and Clavi-gnat's equivalent
+times are still unconfirmed and could likely be backfilled from this now
+that it's known, if useful for a later cleanup pass.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 5c: Faerie Island hybrids (7 monsters) + Psychic retroactive fix
+
+Third sub-batch of Batch 5. Covers Hippityhop, Squot, Wimmzies (Doubles),
+Cantorell, Bridg-it, Clavi-gnat (Triples), and Pladdie (Quad).
+
+**Retroactive fix from Batch 5b:** the 7 Psychic Island hybrids got their
+Magical Nexus *acquisition text* added last batch, but their `islands`
+arrays were never updated to actually list Magical Nexus as a residence —
+an inconsistency (the text said they're there, the data said they
+weren't). Fixed for all 7. Applied the same fix proactively to this
+batch's 7 Faerie monsters so it doesn't recur.
+
+**Common tier was already accurate** (confirmed against the wiki:
+Hippityhop/Squot/Wimmzies = Noggin/Mammott/Kayna + Floot Fly, 9h;
+Cantorell/Bridg-it/Clavi-gnat = combos of the 3 Doubles, 16h; Pladdie =
+Clavi Gnat + Noggin, 1d 8h — exact match).
+
+**Rare timing gap, same shape as Batch 5b, now on firmer footing.**
+Directly confirmed Rare Pladdie at 1d 18h 30m — identical to Rare
+Gloptic's (Psychic's Quad) confirmed time. Combined with Batch 5b's
+finding that Rare Doubles and Rare Triples each share one universal time
+regardless of island, this is now a **2-for-2 cross-island confirmation**
+(Psychic and Faerie both land on the same Double/Triple/Quad-tier times).
+Filled in the remaining blanks (Squot, Cantorell, Clavi-gnat) from that
+now well-supported pattern, flagged individually in each one's breeding
+description as pattern-matched rather than page-by-page confirmed.
+
+**Epic Cantorell:** combo was already correct (Clavi Gnat + HippityHop);
+filled in the confirmed time (2d 12h 32m / 1d 21h 24m enhanced).
+
+**Epic Hippityhop/Squot/Wimmzies/Bridg-it/Clavi-gnat/Pladdie:** same call
+as Batch 5b — pages for some of these (e.g. Epic Wimmzies) appear to
+exist on secondary sites, but no combo could be confirmed on the primary
+wiki this pass. Left unadded rather than guessed.
+
+**Magical Nexus acquisition** added for all 7, same Coin/Diamond pattern
+as Batch 5b (Doubles 2,000,000 Coins / 10 Diamonds; Triples 4,000,000 /
+20 Diamonds; Quad 8,000,000 / 40 Diamonds). Pladdie's exact Transpose
+times were directly confirmed (2d 2h Common, 2d 12h 30m Rare — matching
+Gloptic's exactly); the others' costs are confirmed but exact times
+weren't found this pass.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 5b: Psychic Island hybrids (7 monsters)
+
+Second sub-batch of Batch 5. Covers Bonkers, Poppette, Yuggler (Doubles),
+Tapricorn, Rooba, Periscorp (Triples), and Gloptic (Quad).
+
+**Good news first:** unlike the Fire class batches, this data was already
+mostly correct going in — Common-tier combos and times all checked out
+against the wiki (Bonkers/Poppette/Yuggler: Potbelly, Toe Jammer, or Kayna
++ Theremind, 9h; Tapricorn/Rooba/Periscorp: combos of the 3 Doubles, 16h;
+Gloptic: Rooba + Toe Jammer, 1d 8h — confirmed exact match).
+
+**What was actually missing — Rare timing and Magical Nexus, across the
+board.** Every one of the 7 had `alternativeAcquisition: []` (completely
+empty) despite all of them living on Magical Nexus per their `islands`
+list — the Transpose path was never recorded for any of them. Added
+confirmed costs/times: Nexus Transpose is Coins for Common (2,000,000 for
+Doubles, 4,000,000 for Triples, 8,000,000 for the Quad — confirmed
+pattern) and Diamonds for Rare (10 for Doubles, 20 for Triples, 40 for
+the Quad). Exact Common-tier Transpose *times* were only individually
+confirmed for Bonkers/Poppette (1d 3h) and Gloptic (2d 2h) — left
+unconfirmed rather than guessed for Yuggler/Tapricorn/Rooba/Periscorp.
+
+Rare breeding times were also blank for 5 of the 7 (only Yuggler and
+Rooba had them filled in). Directly confirmed Rare Bonkers and Rare
+Poppette at 12h 30m/9h 22m 30s — identical to Rare Yuggler's existing
+value, confirming these 3 Doubles share one Rare timing. Rare Gloptic
+confirmed at 1d 18h 30m/1d 7h 52m 30s. For Rare Tapricorn and Rare
+Periscorp, no individual wiki page confirmation was found — filled in via
+the same strong same-tier pattern as Rare Rooba (1d 1h 30m/19h 7m 30s)
+and flagged as pattern-matched, not individually confirmed, right in the
+breeding description.
+
+**Epic tier — flagging real uncertainty rather than guessing.** Only
+Rooba currently has an Epic entry (Periscorp + Flowah, already in the
+data, left as-is). For Bonkers, Poppette, Yuggler, Tapricorn, and
+Periscorp: the wiki's own "Epic Monsters" category page lists Epic
+Poppette, Epic Tapricorn, and Epic Yuggler as existing entries, but
+repeated searches couldn't turn up a confirmed breeding combo, time, or
+even a solid release-date confirmation for any of the three (one
+secondary source's monster-tier navigation didn't show an Epic tier for
+Poppette at all, which cuts the other way). Epic Bonkers, Epic Periscorp,
+and Epic Gloptic didn't turn up in the category listing at all, which
+reads as "not released yet" rather than "data gap." Given the mixed
+signal, **no Epic entries were added for these 5** rather than risking a
+wrong combo — worth a dedicated follow-up search pass, or picking up
+naturally once a proper "Epic X" wiki page exists for one of them and
+turns up cleanly in search.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 5a: Magical Singles (4 monsters)
+
+First sub-batch of Batch 5 (Magical class, 43 monsters — split into 6
+sub-batches per the processing plan). Covers the 4 Single-Element Magical
+Monsters: Theremind (Psychic), Floot Fly (Faerie), Fluoress (Light),
+Clackula (Bone).
+
+**Confirmed structural facts (mysingingmonsters.fandom.com):**
+- **Common cannot be bred at all** — this matches what the data already
+  had (`breeding: null`), but the acquisition details were vague or
+  wrong. Added confirmed Market price + incubation time per monster
+  (Theremind 25,000 Coins/3h; Floot Fly 30,000 Coins/4h; Fluoress 30,000
+  Coins/2h; Clackula 25,000 Coins/5h), the Magical Sanctum path (teleport
+  a Level-15 copy — not sold separately there), and the Magical Nexus
+  path (Transpose after feeding to Level 18, or a direct 1,800-Diamond
+  purchase — previously missing entirely).
+- **Rare** is bred from **any 2 Triple-Element Monsters sharing that
+  element** — a real, different combo on the home island vs. on Magical
+  Sanctum (Sanctum's Triples are the cross-island 2/3-element Magicals,
+  not the home island's own Triples). **Found and fixed a real bug**:
+  Rare Clackula's data only listed the Sanctum-side Triples
+  (Larvaluss/Mushaboom/G'day) and was completely missing its own Bone
+  Island combo (Withur/Uuduk/Banjaw) — the other 3 Singles had both
+  listed correctly, only Clackula was missing half. Also fixed Rare
+  Clackula's blank breeding times (now 8h/6h, matching the other 3 and
+  confirmed directly on its wiki page). Converted all 4 from a flat
+  description to the proper multi-island `combos` format, and added the
+  Magical Nexus Transpose path (5 Diamonds, 1d 2h) that was missing.
+- **Epic is bred, with a real combo — this was the biggest gap.** All 12
+  Epic entries (4 monsters × islands) were sitting at `breeding: null`
+  with a fabricated-sounding "Obtained via Epic Chest or Epic Item"
+  line that no source supports. Replaced with confirmed combos:
+
+  | Monster | Home-island combo | Time | Sanctum combo |
+  |---|---|---|---|
+  | Epic Theremind (Psychic) | Gloptic + Yuggler | 1d 12m | Enchantling + Déjà-Jin |
+  | Epic Floot Fly (Faerie) | Pladdie + Squot | 19h 56m | Enchantling + Knucklehead |
+  | Epic Fluoress (Light) | Blow't + Gob | 19h 16m | Enchantling + Cahoot |
+  | Epic Clackula (Bone) | Plinkajou + Denchuhs | 20h 6m | Enchantling + Osstax |
+
+  Sanctum combo breeding times weren't found and are left blank/flagged
+  rather than guessed. Added the confirmed Magical Nexus Transpose path
+  for Epic (10 Diamonds; times 1d 18h 12m / 1d 13h 56m / 1d 13h 16m /
+  1d 14h 6m respectively).
+- **Removed a fabricated detail.** All 12 tier-entries previously carried
+  an identical note claiming Nexus copies "appear at Level 1 size" and
+  feed into a "shared Nexus Nucleus structure." No primary or fan wiki
+  source supports this — it doesn't match how Magical Nexus actually
+  works (Transposing, described above) and looks like a stray
+  fabrication from an earlier pass. Removed everywhere it appeared.
+
+**Not independently confirmed, flagged rather than guessed:** Sanctum-side
+Epic breeding times (all 4); Common-tier Magical Nexus Transpose time for
+Floot Fly and Clackula specifically (Theremind ~21h and Fluoress ~20h are
+sourced, but only from a secondary fan wiki, not the primary one).
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Phase 3 — Batch 4: remaining Fire class (13 monsters)
+
+Closes out the Fire class, minus Kayna (already reviewed, no changes
+needed) and the batch-3/triple monsters. Covers: PongPing, Krillby,
+Tuskski (Faerie Island trio); Edamimi, Bisonorus, Bowhead (Psychic Island
+trio); Tiawa, Yelmut, Drummidary (Light Island trio); Flum Ox, Incisaur,
+Gnarls (Bone Island trio); and Candelavra (Fire Haven, not a Magical
+Island monster at all — see below).
+
+**Major finding, different from every earlier Fire batch:** these 13
+belong to a distinct real mechanic called **Fire Expansion** (added in
+v4.1.1) — they're not bred like the Doubles/Triples/other hybrids handled
+in Batches 3. Per the wiki's own Fire Monsters and Epic Monsters pages:
+
+- **Common and Rare cannot be bred at all.** Common is purchased in the
+  Market for Relics (300 for the 8 Quads, 250–500 for the 4 Quints,
+  depending on the monster); Rare is purchased from the StarShop instead
+  (confirmed 15,000 for the Quints checked). The existing data already had
+  this right for Common in most cases — this batch's main job was Epic.
+- **Epic is bred, but with a real per-island combo** confirmed against the
+  wiki (previous data had all 12 magical-island Epics as `breeding: null`
+  with a note saying Crucible-evolution "isn't confirmed yet" — that's now
+  resolved):
+
+  | Monster | Epic combo | Time |
+  |---|---|---|
+  | Epic PongPing (Faerie) | Pladdie + Floot Fly | 1d 23h |
+  | Epic Krillby (Faerie) | Pladdie + Kayna | 1d 19h |
+  | Epic Tuskski (Faerie) | Pladdie + Wimmzies | 2d 7h |
+  | Epic Edamimi (Psychic) | Gloptic + Potbelly | 1d 21h |
+  | Epic Bisonorus (Psychic) | Gloptic + Kayna | 2d 3h |
+  | Epic Bowhead (Psychic) | Gloptic + Poppette | 2d 3h |
+  | Epic Tiawa (Light) | Blow't + Potbelly | 2d 1h |
+  | Epic Yelmut (Light) | Blow't + Kayna | 1d 15h |
+  | Epic Drummidary (Light) | Blow't + Pluckbill | 2d 1h |
+  | Epic Flum Ox (Bone) | Plinkajou + Kayna | 1d 13h |
+  | Epic Incisaur (Bone) | Plinkajou + Clackula | 1d 17h |
+  | Epic Gnarl (Bone, *singular name*) | Plinkajou + Peckidna | 1d 23h |
+  | Epic Candelavra (Fire Haven) | Repatillo + Dandidoo | 2d 5h |
+
+  Each is only breedable during its own limited "Fire with Fire"
+  promotional window, and can *also* be reached year-round via enhanced
+  Crucible evolution on Amber Island (confirmed same duration as the
+  breeding combo, for every one of the 13). `timeEnhanced` is the standard
+  25% reduction. Rare's on-island StarShop path was also missing from the
+  data entirely (only the Amber evolution path was listed) — added.
+- **Candelavra is not one of the 12 Magical-Island Fire Expansion
+  monsters** — it's native to **Fire Haven**, not a Magical Island, and
+  wasn't part of the 2023 rollout. Its `islands` list was previously just
+  `["Amber Island"]`, missing Fire Haven entirely — fixed. It was also
+  completely missing Rare and Epic variants (only Common existed) — added
+  both, following the same Market → StarShop → Crucible pattern.
+- **Gnarls was completely missing its Epic tier** (Common/Rare only) —
+  added. Note the real in-game name for this tier is singular, **"Epic
+  Gnarl"**, not "Epic Gnarls."
+- **Resolved a previously-hedged note**: earlier passes flagged Tuskski's,
+  Bowhead's, Gnarls's, and Drummidary's exact 5-element makeup as
+  "genuinely unclear from available sources." The wiki's own Quint
+  comparison actually states this plainly: Tuskski's elements match Air
+  Island's (despite living on Faerie Island), Bowhead's match Cold
+  Island's (despite living on Psychic Island), and Gnarls/Drummidary are
+  the only two Quints whose elements match their own home island. Updated
+  the notes to state this as confirmed rather than hedged.
+
+**Not independently confirmed this batch, flagged rather than guessed:**
+Tiawa's and Flum Ox's exact Common Market price/incubation time (assumed
+300 Relics / 1d 16h by strong pattern-match with the other 6 confirmed
+Quads, but not individually re-verified on their own wiki pages);
+Candelavra's Fire Haven Common Market price (no confirmed figure found —
+only its Amber Vessel price of 40 Relics was).
+
+**Follow-up (post-Batch 4):** the person submitted outside research
+claiming to verify these two flagged items. Checked it directly rather
+than taking it at face value — it had real problems (an internal math
+error stating "1 day, 16 hours" equals "38 hours" when it's 40; citation
+links that were just Google Image-search redirects, not evidence the
+page content was actually read; and a "Faerie Island Epics" list that
+mixed in Natural-class Noggin/Mammott/Drumpler and already-handled
+Fire-class Stogg/Boskus as if they were new Magical-class corrections
+for this project's Faerie batch, alongside several combos that just
+restated this project's own already-correct data back to it). So: only
+independently re-verified the two genuinely checkable claims rather than
+importing the document wholesale.
+- **Candelavra: confirmed** directly on the primary wiki — 500 Relics,
+  matching the submitted claim. Filled in (was previously left blank).
+- **Tiawa/Flum Ox:** 300 Relics / 1d 16h corroborated by a second,
+  independent source (not the one cited in the submission). Upgraded
+  from "pattern-matched" to "confirmed" with reasonable confidence, though
+  still not the primary wiki's own page directly.
+- **Not acted on:** the claimed release dates for Rare Poppette/Tapricorn/
+  Periscorp (Jan 8 2025 / May 2025 / Aug 2025) — suspiciously precise
+  given everything else in the document, and not independently checked.
+  The underlying conclusion (their Epics are unreleased) already matched
+  this project's own Batch 5b finding, so no data changed either way.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
 ## Pre-Batch-4 fix pass (items a–e from the Phase 4 plan)
 
 Five fixes requested before starting Batch 4 (remaining Fire class):
@@ -650,3 +1402,243 @@ we'll walk through it together.
 3. Drop the matching image(s) into `assets/monsters/`.
 
 No JavaScript changes are required for any of the above.
+
+## Fire Oasis was missing from all 3 Wubbox tiers
+
+Checking the person's Wublin-Island exception (Epic Wubbox correctly
+excludes it, confirmed) surfaced a broader bug: **Fire Oasis was missing
+from Common, Rare, and Epic Wubbox's `islands` lists**, even though the
+person had directly supplied the Fire Oasis Epic Wubbox artwork. Confirmed
+on the primary wiki that Common and Rare both belong on "both Fire
+Islands" (Haven and Oasis) same as Epic. Fixed all three `islands` arrays
+and added the matching Fire Oasis entry to Common/Rare's `islandDetails`
+(Epic's already had it, from the artwork). Cross-checked afterward that
+every tier's `islands` list and `islandDetails` list now contain exactly
+the same islands, with Wublin Island correctly present only for
+Common/Rare and absent for Epic.
+
+## Two more Wubbox corrections: Rare Wublin Island, Epic Gold Island
+
+**Rare Wubbox on Wublin Island reverted to 10 of 19** (not all 19). The
+"mirror Common exactly" correction from two turns ago was right for every
+other island, but the primary wiki's own "Activating" mechanics page
+states this one exception explicitly — confirmed by two independent
+sources (the primary wiki and, separately, a link the person sent from
+the fan "ideas" wiki, which happened to agree). Only Wublin Island's Rare
+entry changed; the rest of Rare's mirrored structure stands.
+
+**Epic Wubbox on Gold Island is structurally different, confirmed via
+its own dedicated wiki page** — not just a bigger version of the normal
+rule, as the person suspected. It boxes in 5 strict-order phases (Plant →
+Cold → Air → Water → Earth), 6 Epic Monsters per phase (1 Single + 1 Quad
++ 2 Doubles + 2 Triples of that element, 30 total), and visually/musically
+resembles that element's own island's Epic Wubbox during each phase —
+matching the person's own recollection that "it cycles through other
+Epic Wubbox designs in itself." Rewrote Gold Island's Epic entry to
+describe this instead of the flat "30 instead of 15" rule that's correct
+for Common/Rare but wrong for Epic.
+
+**Still open, not resolved this pass:** the wiki describes every other
+island's Epic requirement as "all 15 Natural Epics" (or "15 Ethereal
+Epics" / "15 Natural and Fire Epics" on the Fire islands) — a definite,
+complete set, not "any 15" as currently modeled. The actual named list of
+which 15 Epic Monsters this refers to per island hasn't been tracked down
+yet.
+
+## Complete Epic Wubbox requirement list found for Gold Island
+
+Chased down the "for accuracy" follow-up. Found the actual complete
+named list via a Steam guide's Gold Island checklist — cross-checked
+against this project's own 30 non-Mimic Natural species and it's an
+exact match, no typos, nothing missing:
+- **Plant Phase:** Potbelly, Oaktopus, Furcorn, Reedling, Spunge, Entbrat
+- **Cold Phase:** Mammott, Pango, Maw, Thumpies, Clamble, Deedge
+- **Air Phase:** Tweedle, Dandidoo, Cybop, PomPom, Scups, Riff
+- **Water Phase:** Toe Jammer, Quibble, Fwog, Congle, Bowgart, Shellbeat
+- **Earth Phase:** Noggin, Shrubb, Drumpler, Pummel, T-Rox, Quarrister
+
+Replaced Gold Island's generic phase description with this full list.
+
+**Also corrected a framing error while researching this.** The wiki
+states individual Natural Islands need "all 15 Natural Epics," and
+Fire/Ethereal islands need their own fixed 15 — a definite, complete
+set, not "any 15 Epic Monsters" as every non-Gold island was phrased
+before. Fifteen is also notably *half* of the 30-monster set Gold Island
+needs across all 5 phases, suggesting each individual Natural Island's
+own Epic Wubbox needs a specific subset, not a free choice. Updated the
+wording on Plant/Cold/Air/Water/Earth/Fire Haven/Fire Oasis/Ethereal to
+say "a fixed fifteen-Monster set... not any 15 of the player's choosing,"
+**but the exact 15 assigned to each individual island isn't confirmed**
+from available sources — flagged rather than guessed, since nothing
+found this pass named which half of the 30 applies to, say, Plant
+Island's own Epic Wubbox specifically (as opposed to Gold Island's
+combined version).
+
+## Batch 8: Legendary class (19 monsters)
+
+Covers the Shugafam (8), bb$quad (4), Werdos (5: Tawkerr, Parlsona,
+Maggpi, Stoowarb, Charrkoll), plus Alcordion and T-Pirainha. Legendary
+Monsters only have a Common tier — no Rare/Epic exists for this class
+(the wiki notes Shugafam specifically won't get one "due to copyright
+issues," since these are real-musician collabs).
+
+**Shugafam — filled in real combos + times, confirmed by 5 independent
+sources.** Shugabush itself: Bowgart + Clamble on Plant Island, 1d 11h
+(was missing entirely). The other 7 are each Shugabush + one specific
+Natural Monster, bred **on Shugabush Island itself** (not their own home
+island, which the previous vague "bred using Shugabush plus a specific
+Natural Monster" phrasing left ambiguous) — Shugarock/Mammott,
+Shugabass/Potbelly, Shugajo/Oaktopus, Shugabeats/Furcorn,
+Shugabuzz/Quibble, Shugitar/PomPom, Shugavox/Deedge. All 8 share the
+exact same time, 1d 11h/26h 15m — confirmed directly, not assumed.
+
+**bb$quad — found a real naming bug, not a fabrication.** The three
+newest members were stored as "Bbenior," "Bbinistr," and "Bbkinbash" —
+missing the "$" that bbli$zard and the rest of the "bb$quad" family
+actually use in their names. Initially suspected these might be
+hallucinated from an earlier pass, since bbli$zard Island is brand new
+(released September 2, 2026 — this pass is happening barely two weeks
+later) and the general wiki page still describes future members as
+"unknown." But all three have their own dedicated, dated wiki pages
+confirming them as real, released Sept 2, 2026: **bb$enior** (bbli$zard +
+Mammott), **bb$inistr** (bbli$zard + Spunge), **bb$kinbash** (bbli$zard +
+Fwog), all 1d 11h/26h 15m. Fixed the name field on all three (both the
+monster-level and variant-level `name`). bbli$zard itself: Thumpies +
+Congle on Cold Island, 1d 11h (was also missing a time) — note it's
+explicitly the one bb$quad member that can't result from a breeding
+failure on its own island, unlike Shugabush.
+
+**Werdos (Tawkerr, Parlsona, Maggpi, Stoowarb, Charrkoll): confirmed
+un-breedable**, Market purchase for 100 Relics, 8h incubation — this
+matches what Tawkerr's entry already had; added the same to the other 4,
+which were missing acquisition info entirely.
+
+**Alcordion:** combo (Scups + PomPom on Air Island) was already correct;
+filled in the blank enhanced time (2d 2h → 1d 13h 30m).
+
+**T-Pirainha:** already accurate (Clubbox Waveform Act reward) — no
+changes needed.
+
+**Worth a future look, not chased down this pass:** a YouTube short
+mentions a monster called "bbdek$tr" appearing alongside bb$inistr on
+bbli$zard Island — may be a newer bb$quad member not yet in this data,
+but only a single casual source mentioned it, so it wasn't added without
+better confirmation.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Four newly-released monsters added (Sept 16, 2026 / v5.7.0)
+
+The person supplied direct wiki content for a batch of brand-new
+releases. Unlike the last couple of submitted documents, this one held
+up — real wiki URLs, internally consistent, no arithmetic errors found.
+Added:
+
+- **bbdek$tr** — the 5th bb$quad member (Legendary), resolving the
+  "worth a future look" item flagged at the end of Batch 8. Bred on
+  bbli$zard Island from bbli$zard + Drumpler, 1d 11h/26h 15m — same
+  timing as every other bb$quad/Shugafam member.
+- **Epic Cataliszt** (Mythical) — new tier on an existing monster.
+  Notably unusual: it's the only Epic Monster that breeds using its own
+  Common form as a parent (Cataliszt is required in every Mythical
+  Island combination to begin with), the only one with more than one
+  combination on a single island, and the only one whose combos are
+  identical across Common/Rare/Epic. Modeled the two explicitly-called-
+  out best combinations (Cataliszt + G'joob, Cataliszt + Cherubble) in
+  the description rather than all 7 cascading combos with their
+  fallback chances, which would be excessive detail for this schema.
+- **Vawk** (Paironormal, new species) — a Ruin/Depths Double bred from
+  Arcorina + Shhimmer, 1d 21h, Carnival-exclusive (no home Magical/
+  Natural island, matching every other Paironormal Double/Triple already
+  in this data). Modeled with the standard `major`/`minor` tiers this
+  class uses.
+- **Rare Pentumbra** — already had solid data from an earlier pass;
+  added the specific element list (Plasma, Shadow, Crystal, Poison) the
+  new source confirmed for its Attunement requirement, since the
+  existing text only said "all of its Elements."
+
+No Rare/Epic added for bbdek$tr (Legendary never gets them) or for Vawk
+(not mentioned as existing yet in the source) — left absent rather than
+assumed.
+
+**No art changes — `CACHE_VERSION` not bumped** (no new image assets
+were provided for these 3 new monster entries; placeholder image paths
+were set following this project's naming convention but the actual PNG
+files don't exist yet).
+
+## Images added for the 4 new monsters + Vawk verification + a bonus fix
+
+**Images:** processed all 5 uploaded images (Vawk Major/Minor, Rare
+Pentumbra, Epic Cataliszt, bbdek$tr) to match the project's standard —
+400px-long-side cap, palette mode with transparency, optimized. Epic
+Cataliszt came out larger than most (60KB) due to its detailed
+white-fur shading and fine linework; checked it visually for banding —
+clean. All 5 copied into `assets/monsters/`, filling the placeholder
+paths set when these monsters were first added.
+
+**Vawk verified directly on the wiki** — everything from the submitted
+document held up (Arcorina + Shhimmer, 1d 21h, Sept 16 2026/v5.7.0).
+Added a few more confirmed details: its mezzo-soprano "oooooooohhh"
+vocal contribution, the 15-Diamond first-placement reward, and that it's
+the *penultimate* Paironormal Monster overall — only the still-unnamed
+Paironormal Quad remains unreleased.
+
+**Bonus find while verifying Vawk:** the wiki mentioned Unklaw releasing
+in the same wave ("Anniversary Month"), which was already correctly
+dated in this data (Sept 2, 2026) but had a blank breeding time. Filled
+it in: 2d 8h/1d 18h, confirmed directly. Not something the person asked
+about — just sitting right next to what they did ask about.
+
+**Noted but not chased down:** one source mentioned two more names —
+"Waxen La" and "Queen Re" — released alongside Unklaw and the bb$quad
+on Sept 2, 2026. Unclear what class these belong to or whether they're
+already in this dataset under different names. Flagging for a possible
+future check rather than guessing.
+
+## Batch 9a: Seasonal class — the 5 Core Seasonals (of 15 total)
+
+Started Batch 9 (Seasonal class, 15 monsters). This class turned out to
+have exactly the structure the pre-Batch-4 Blabbit/Ffidyll fix already
+uncovered, now confirmed as the general rule for the whole class:
+**5 "Core" Seasonals** (Punkleton, Yool, Schmoochle, Blabbit, Hoola) each
+have one unique home-island combo and cannot be freshly bred on Seasonal
+Shanty at all; **9 "Aux" Seasonals plus Jam Boree** each have their own
+home-island combo *and* a Shanty-specific combo built from two Core
+Seasonals. Splitting the batch along this line — Core Seasonals first,
+since the Aux group's Shanty combos are built out of them.
+
+**All 5 Core Seasonals are now complete and cross-validated:**
+- **Punkleton** (Spooktacle): Bowgart + T-Rox on Plant Island, 18h.
+  Islands list was missing Plant Island and Gold Island entirely — fixed.
+- **Yool** (Festival of Yay): Thumpies + Congle on Cold Island, 1d 12h.
+  Rare confirmed 1d 7h 45m.
+- **Schmoochle** (Season of Love): Riff + Tweedle on Air Island,
+  1d 7h 6m (exact figure directly confirmed, not a round number).
+- **Hoola** (SummerSong): PomPom + Pango, notably on *both* Air and
+  Earth Island with the identical combo, 1d 1h. Rare confirmed 1d 7h 45m.
+  Epic has 3 real combos (Air: Riff+Fwog, Earth: Quarrister+Dandidoo,
+  Shanty: Schmoochle+Yool), all sharing one confirmed time, 21h 20m.
+- **Blabbit**: already solid from the pre-Batch-4 fix; just filled in
+  the one missing enhanced time (19h → 14h 15m).
+
+**Found and verified the exact rule behind every Epic Core Seasonal's
+Shanty combo**, confirmed on the wiki's own Epic Monsters page: it's
+always the two Core Seasonals whose real-world seasonal events fall
+**farthest apart** on the yearly cycle from the Epic's own event
+(Eggs-Travaganza → SummerSong → Spooktacle → Festival of Yay → Season of
+Love → back to Eggs-Travaganza). Checked this against all 5 independently
+and every single one matched exactly: Epic Punkleton = Blabbit+Schmoochle,
+Epic Yool = Blabbit+Hoola, Epic Schmoochle = Punkleton+Hoola, Epic Hoola =
+Schmoochle+Yool, Epic Blabbit = Punkleton+Yool (already had this one).
+
+**Not resolved this pass:** Epic Punkleton's and Epic Schmoochle's
+home-island timings, and Epic Schmoochle's exact per-island combo — the
+wiki confirms these exist and differ by island but didn't surface the
+specifics in this pass's searches. Flagged in the data rather than
+guessed.
+
+**Next up: the 9 Aux Seasonals + Jam Boree.** Unlike the Core group,
+the wiki explicitly states their Shanty combos follow "no discernible
+pattern" — each one needs individual research rather than a shared rule.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
