@@ -1642,3 +1642,319 @@ the wiki explicitly states their Shanty combos follow "no discernible
 pattern" — each one needs individual research rather than a shared rule.
 
 **No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Batch 9b: the 9 Aux Seasonals + Jam Boree — closes Batch 9
+
+Completes the Seasonal class (15 monsters total). Despite the wiki's own
+warning that these "follow no discernible pattern," a Steam breeding
+guide had nearly the complete cross-reference table in one place, cross-
+checked against individual wiki pages for times and confirmation.
+
+**All 9 Aux Seasonals + Jam Boree now have real home-island and Shanty
+combos:**
+- **Gobbleygourd** (Feast-Ember): Kayna + Glowl on Fire Haven *and* Fire
+  Oasis (identical combo, 21h); Shanty: Jam Boree + Clavavera.
+- **Clavavera** (Beat Hereafter): Withur + Clackula on Bone Island;
+  Shanty: Punkleton + Schmoochle. Islands list was missing Bone Island
+  entirely — fixed.
+- **Viveine** (Echoes of Eco): Shugabush + Oaktopus, 1d 2h 5m 20s; Shanty:
+  Punkleton + Blabbit. Added the missing Rare and Epic tiers from
+  scratch — Rare notably sells for the same 12 Relics as Common on Amber
+  Island (a stated exception to the usual Rare-costs-more pattern), and
+  Epic is one of only two Epic Seasonals *not* time-limited on its Amber
+  Island form, alongside Epic Monculus on Wublin Island.
+- **Carillong** (Crescendo Moon): Roarick + Mushaboom on **Magical
+  Sanctum**, 1d 3h 9m 32s — islands list only had Seasonal Shanty before,
+  completely missing its actual home island. Shanty: Yool + Schmoochle.
+- **Whiz-bang** (SkyPainting): Blow't + Spytrap on Light Island, 1d 4h 6m;
+  Shanty: Spurrit + Boo'qwurm.
+- **Boo'qwurm** (MindBoggle): fixed the missing apostrophe in its name
+  (was "Booqwurm"). Periscorp + Bonkers on Psychic Island, 1d 6m 24s;
+  Shanty: Gobbleygourd + Clavavera.
+- **Spurrit** (Perplexplore): Wynq + Maw on Fire Oasis, 20h 18m; Shanty:
+  Blabbit + Hoola.
+- **Jam Boree**: the one exception with no home island at all — bred only
+  on Seasonal Shanty, Punkleton + Hoola, 1d 16h 24m. Its Rare tier also
+  breaks the class-wide pattern: **2d 2h**, not the uniform 1d 7h 45m
+  every other Rare Seasonal shares (confirmed on two independent pages).
+
+**Confirmed a uniform rule for Rare Seasonals**: every Rare Seasonal
+except Rare Jam Boree breeds in exactly 1d 7h 45m, regardless of which
+monster or island. Applied this across the board — and caught one
+oversight from earlier in the pass where Rare Schmoochle's time got left
+blank despite the rule already being established; fixed on a follow-up
+sweep.
+
+**Monculus enriched with its Wublin Island mechanic**, which had real
+gaps: Rare Monculus was missing its Wublin evolution path entirely (12
+Keys, capped at 3 at a time — unlike Common's market-purchase and Epic's
+already-documented evolution). Epic's Ethereal Island enhanced time was
+also filled in.
+
+**Not resolved this pass** (flagged in the data rather than guessed):
+Epic combos for Clavavera (both islands) and Carillong (both islands);
+Ffidyll's and Monculus's exact Seasonal Shanty breeding *time* specifically
+(the combo itself is confirmed for both, just not a distinct timing figure
+separate from their home-island combo).
+
+**This closes Batch 9 (Seasonal class, 15 monsters) entirely.**
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Major cross-dataset cleanup pass
+
+A large batch of fixes spanning formatting, a systematic data-integrity
+sweep, images, and UI — requested as a full review of everything done so
+far before continuing to new batches.
+
+### Breeding-text formatting (dataset-wide)
+- **"Best: X. Also: Y, Z" cramped text → structured `also` field.** The
+  UI already supported rendering "Best" and "Also" as separate lines; the
+  data just wasn't using that field. Converted 38 combos across Natural
+  Doubles/Triples/Quads (both Common and their Rare counterparts, which
+  in 5 cases just said "see Common's list" — copied that list over
+  instead of leaving a cross-reference the UI can't resolve).
+- **Redundant "Bred on [Island] from X + Y" stripped** wherever the
+  combo's own island label already shows that same island (in the
+  `combos` array format, each combo already renders its own island
+  heading above the description — restating it in the text was pure
+  duplication). Left alone where the phrasing was actually load-bearing
+  (a few flat-description entries listing multiple real islands, where
+  it disambiguates which one the text refers to).
+- **Trailing "(Element+Element)" suffixes removed** from 6 Magical
+  Sanctum cross-monster combos (Cahoot, Déjà-Jin, Knucklehead, Roarick,
+  Xyster, Osstax) — redundant with the element chips already shown
+  elsewhere on the profile.
+
+### The big one: teleport/transpose/vessel/purchase islands wrongly mixed into breeding scope
+This was the core, dataset-wide version of the Arackulele/Banjaw bug
+pattern flagged directly. The underlying issue: a monster's `islands`
+list (a complete, correct residency list) was being reused as the
+*breeding combo's* island label too — so "Ethereal Island, The
+Colossingum" looked like the same combo works on both, when only one is
+real and the other is teleport/transpose/vessel/purchase-only. Verified
+Arcorina's specific case directly on the wiki (confirmed: Transposed to
+Paironormal Carnival for 100,000 Coins, not bred there) before applying
+the same pattern everywhere else.
+
+Systematically found and fixed **139 affected variant entries** across
+every non-Wubbox batch done so far:
+- **13 Fire hybrids** (Glowl, Flowah, Stogg, Barrb, Floogull, Repatillo,
+  Tring, Phangler, Boskus, Whaddle, Woolabee, Wynq, Sneyser) — Amber
+  Island removed from breeding scope; its Vessel explanation was also
+  sitting in Notes instead of Alternative Acquisition, so moved that too.
+- **60 per-island Magical/Fire-Triple hybrids** — Magical Nexus or Amber
+  Island removed from breeding scope (Bonkers, Poppette, Yuggler,
+  Rootitoot, Tapricorn, Rooba, Periscorp, Gloptic, Hippityhop, Squot,
+  Wimmzies, Ziggurab, Cantorell, Bridg-it, Clavi-gnat, Pladdie, Gob,
+  Bulbo, Pluckbill, Sooza, Spytrap, TooToo, Fiddlement, Blow't, Peckidna,
+  Denchuhs, Hawlo, Thrumble, Withur, Uuduk, Banjaw, Plinkajou, and more).
+- **All 30 Natural Doubles/Triples/Quads' Rare tiers**, plus several
+  Common tiers — Gold Island, The Colossingum, Shugabush Island, and
+  bbli$zard Island removed from breeding scope.
+- **5 Ethereal Singles** (Jeeode, Reebro, Ghazt, Humbug, Grumpyre) and
+  **10 Ethereal Doubles** — The Colossingum removed.
+- **Seasonal class** — Seasonal Shanty removed from the Core Seasonals'
+  and several Aux Seasonals' breeding scope (Gobbleygourd, Boo'qwurm,
+  Whiz-bang, Clavavera, Spurrit, Punkleton, Yool, Schmoochle, Hoola).
+- **3 Paironormal Singles' Major tier** (Owlesque, Arcorina, Shhimmer) —
+  Paironormal Carnival removed, confirmed via Arcorina's own wiki page.
+
+Final sweep confirms **zero remaining mixed-island cases** anywhere in
+the dataset.
+
+### Bisonorus — stale hedge notes from before it was actually confirmed
+Bisonorus still carried two "not independently confirmed, lower
+confidence" notes left over from *before* the Fire Expansion batch
+actually researched and confirmed it (300 Relics, Gloptic + Kayna — both
+directly sourced at the time). These should have been cleaned up then
+and weren't. Removed. Checked the rest of the dataset for the same
+stale-note pattern — Bisonorus was the only one affected.
+
+### Images: fixed a black-fringing bug affecting 14 files
+Discovered that all 5 newly-uploaded monster images (bbdek$tr, Vawk
+Major/Minor, Epic Cataliszt, Rare Pentumbra) had a dark/black border
+where the color fill should meet transparency. Root cause: the palette-
+conversion step composited semi-transparent edge pixels against black by
+default before quantizing. **The same bug affected all 9 Epic Wubbox
+images from the earlier batch**, which nobody had flagged yet — caught
+it proactively while fixing the reported ones. Reprocessed all 14 using
+direct RGBA quantization (preserving true alpha instead of flattening to
+RGB first), confirmed visually clean on the two most detail-heavy images
+(Epic Cataliszt, Ethereal Wubbox), and file sizes landed back in the
+project's normal 22–38KB range.
+
+### UI: A–Z jump sidebar no longer hides under the header
+It was vertically centered at `50%`, which could place its top edge
+(the "A") underneath the sticky header on shorter viewports, since the
+full 26-letter list runs tall. Changed to `top: max(150px, 50%)` — a
+fixed clearance floor below the header, while still centering normally
+on taller screens.
+
+### Dipster Fa's erroneous Celestial Island tier
+Fa had a 4th "astral" tier ("Superno-Fa") tagged to Celestial Island —
+an island that isn't even built yet (Phase 5, not in `islands.json`).
+None of Fa's 6 siblings have an astral tier at all. Removed it rather
+than guess at a replacement island, since the ambiguity was real: unclear
+whether this was misplaced content that belongs elsewhere, or content
+that shouldn't exist yet at all.
+
+### Clarified, not changed: "How to Obtain" vs "Alternative Acquisition"
+These are the same section with a dynamic label, by design — the code
+already shows "Alternative Acquisition" when a monster is bred (since
+that path is the primary one and this section covers *other* ways to
+get it) and "How To Obtain" when it can't be bred at all (since this
+section is then the *only* way). No bug here.
+
+### Checked, not fixed: Rare Clavavera's "tiny image" report
+All three Clavavera images (Common, Rare, and Epic) turned out to be
+completely missing from the asset folder — not a sizing mismatch between
+them, since there's nothing there to compare. Flagging in case the art
+exists and just needs uploading.
+
+### Not attempted this pass: the missing Interesting Fact / Notes audit
+Quantified rather than guessed at: **294 of 591 variant entries are
+missing both fields entirely**, plus 133 missing just Interesting Fact
+and 99 missing just Notes. Filling these properly means real per-monster
+research, not filler text — at this scale, that's a bigger undertaking
+than any single batch completed so far in this project. Flagging for a
+deliberate decision on how to approach it (e.g., its own dedicated
+batch(es)) rather than rushing shallow content into it now.
+
+**No `CACHE_VERSION` bump beyond what the 14 reprocessed images require**
+— since actual pixel content changed for those 14 files, a cache-version
+bump IS warranted for this pass, unlike the pure-data batches before it.
+
+## Clavavera images, remaining Best/Also cleanup, and label consistency
+
+**Clavavera's 3 images added** (Common, Rare, Epic) — the images were
+never actually missing due to a sizing bug as first suspected; they were
+just entirely absent. Processed with the corrected (non-fringing) method
+from the start.
+
+**4 more Best/Also inconsistencies found and fixed**, beyond the 38
+already converted: Cantorell, Spytrap, and Fiddlement's Rare combos had
+an inline "(also: X, Y)" parenthetical instead of the structured field,
+and Enchantling's Common combo used "Other working combinations:" prose
+instead. All four now use the same `also` array the UI already renders
+consistently. Left Epic Cataliszt's combo as prose rather than forcing
+it into Best/Also — it genuinely isn't a "best vs. also-works" situation
+(each of its 7 pairings has its own distinct fallback mechanic), so
+restructuring it would lose real information rather than just reformat it.
+
+**"Alternative Acquisition" is now the permanent section title** on
+every profile, replacing the old conditional "How To Obtain" label for
+un-bred monsters. This was intentional behavior, not a bug, but
+consistency across every profile was specifically requested over the
+dynamic labeling — done.
+
+**Parked for later** (added to the running flagged-items list): the
+Interesting Fact / Notes audit (294 of 591 variant entries missing both
+fields — see the cleanup-pass entry above for the full breakdown).
+
+## Batch 10 (in progress): Mythical class — formatting sweep surfaces more bugs
+
+Started Batch 10 (Mythical class, 15 monsters: 7 Core Mythicals, Cataliszt,
+7 Dreamythicals). This class was already well-researched, but applying
+the same island-scoping and Best/Also normalization surfaced real bugs.
+
+**5 Core Mythicals converted to properly-scoped combos** (Cherubble,
+Hyehehe, G'joob, Strombonin, Yawstrich): Common/Rare had "Bred on X
+Island" / "(same as Common...)" text redundant with their combo's own
+label; Epic had the same "Best (X): A+B. Alternative (Mythical Island):
+C+D" cramming already fixed for Buzzinga/Anglow in Batch 4. **Caught and
+fixed my own regex bug mid-fix**: a non-greedy match collapsed 5 of the
+new Mythical Island combo descriptions down to a single stray letter
+("C") with the rest of the real text dumped into the note field. Caught
+on verification before shipping, not after.
+
+**Normalized Best/Also formatting further, dataset-wide**, following up
+on the cleanup pass from before this batch:
+- **12 instances** of inline "(use at least one Rare parent)" moved to
+  the `note` field (Buzzinga, Ffidyll ×2, Anglow, Cataliszt, and all 7
+  Dreamythicals' Rare tiers). **Caught a real data-loss bug of my own**:
+  the first pass overwrote Ffidyll's existing notes ("Cloverspell
+  seasonal event only", etc.) instead of merging with them — restored
+  before moving on.
+- **35 instances** of "Same as Common, use at least one Rare parent" (no
+  combo restated) normalized by looking up the actual Common combo and
+  copying it in, rather than leaving a cross-reference the UI can't
+  resolve — covers most of the Natural Doubles' Rare tier and most of
+  the per-island Magical/Seasonal Rare tiers.
+- **10 instances** of inline "(also: X, Y)" converted to the structured
+  `also` field (Cantorell, Sooza, Spytrap, TooToo ×2, Fiddlement, Blow't
+  ×2, Withur ×2).
+
+**Found a real, older timing bug in the process**: Punkleton's Rare
+breeding time was set to 18h — identical to its Common time — instead of
+the confirmed uniform 1d 7h 45m every other Rare Seasonal uses (including
+its own siblings Yool, Schmoochle, and Hoola, which were already
+correct). Traces back to a copy-paste slip in the original Batch 9a work.
+Fixed.
+
+**Batch 10 not yet complete** — the 7 Dreamythicals and Cataliszt itself
+still need a proper accuracy review; this pass only touched their
+formatting, not whether the underlying combos/times are correct.
+
+## Batch 10 complete: Cataliszt and the 7 Dreamythicals verified
+
+Finished Batch 10 (Mythical class, 15 monsters). Unlike most classes so
+far, this one turned into pure verification rather than data repair —
+everything checked out.
+
+**All 7 Epic Dreamythical combos cross-validated** against the detailed
+Epic Cataliszt cascade info received earlier in this conversation (each
+of Cataliszt's 7 possible pairings has a primary result plus fallback
+results including specific Epic Dreamythicals) — every single one of the
+7 Epic combos already in the data matched exactly as a confirmed fallback
+result of its stated pairing.
+
+**Found and independently verified a genuine "pyramid" pattern** on the
+primary wiki: the 7 Core Mythicals' own breeding times rise 5h per
+island from Plant Island (18h) up to a peak at Water Island's Anglow
+(1d 9h), then fall by 5h again through Earth Island and both Fire Islands
+back down to 18h at Cherubble. Checked this programmatically against
+every value already in the data — holds exactly, no exceptions, for both
+Common (5h steps) and Rare (6.25h steps) tiers. Added as a note on
+Cataliszt, since it's the throughline connecting all 7.
+
+**Programmatically confirmed the +9h Common / +11.25h Rare offset rule**
+(each Dreamythical's breeding time is its Core Mythical's time plus a
+fixed offset, because Cataliszt's own incubation is 9h Common / 11.25h
+Rare) across all 7 Dreamythicals with zero exceptions.
+
+**One real fix**: Cataliszt's own purchase price was missing — confirmed
+directly on the primary wiki (100,000 Coins) and added.
+
+**This closes Batch 10 (Mythical class, 15 monsters) entirely.**
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Batch 11 complete: Paironormal class (14 monsters)
+
+This class was already in excellent shape — only one real gap and a
+handful of formatting inconsistencies matching the same pattern fixed
+across the rest of the dataset.
+
+**Scallyrags' breeding time was the one real gap** (both Major and
+Minor) — confirmed directly on the primary wiki: Hairionette + Owlesque,
+1d 21h/1d 9h 45m.
+
+**Formatting normalized to match the rest of the dataset**: the Minor
+tiers of the 3 Paironormal Singles (Owlesque, Arcorina, Shhimmer) had
+"Bred on Mirror [Island] the same way as the Major form, but at night..."
+— redundant with the single-island scope already shown. Stripped it,
+then caught and fixed an awkward "But at night..." sentence fragment
+left over from the first pass before finalizing.
+
+Confirmed no island-mixing issues in this class: the Carnival-exclusive
+Doubles/Triples (Scallyrags, Dakktyl, Jerm, Erma-Gurdy, Illoost, Galymph,
+Raqsoun, The Inflatterer, Unklaw, Vawk) are genuinely single-island —
+unlike the 4 Singles, they have no separate home Natural/Fire island to
+conflict with.
+
+**This closes Batch 11 (Paironormal class, 14 monsters) entirely** —
+only the still-unreleased Paironormal Quad remains outside this dataset,
+consistent with what the wiki itself confirms.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped.**

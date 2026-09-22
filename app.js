@@ -773,11 +773,9 @@ function renderProfile() {
   renderBreedsInto(monster);
   renderEggRequirements(variant);
 
-  // If this variant isn't bred at all, "Alternative Acquisition" reads oddly
-  // (alternative to what?) — relabel it as the primary way to get it.
-  const isBred = !document.getElementById("section-breeding").hidden;
-  document.getElementById("section-acquisition-title").textContent =
-    isBred ? "Alternative Acquisition" : "How To Obtain";
+  // Always "Alternative Acquisition" for consistency across every profile,
+  // whether or not the variant can be bred.
+  document.getElementById("section-acquisition-title").textContent = "Alternative Acquisition";
 
   renderAcquisitionSection("section-acquisition", "profile-acquisition", variant.alternativeAcquisition || []);
 
