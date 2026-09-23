@@ -264,14 +264,14 @@ input:focus-visible {
 .az-jump {
   position: fixed;
   right: 2px;
-  /* Anchored so it never rides up under the sticky header: on short
-     viewports, "50%" alone can place the list's top edge above the
-     header's bottom edge, since the list is vertically centered and can
-     run tall (26 letters). Using max() keeps a fixed floor of clearance
-     below the header while still centering normally once the viewport is
-     tall enough for that not to matter. */
-  top: max(150px, 50%);
-  transform: translateY(-50%);
+  /* Fixed offset from the top, no vertical centering — centering with a
+     translateY(-50%) only pins the element's CENTER, not its top edge, so
+     a tall 26-letter list could still push "A" back up under the sticky
+     header even with a floor on the center point. Anchoring the top edge
+     directly guarantees real clearance below the header on every
+     viewport, at the cost of the list not being perfectly vertically
+     centered on very tall screens (an acceptable trade). */
+  top: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;

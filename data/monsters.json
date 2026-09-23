@@ -3362,7 +3362,8 @@
         "breeding": null,
         "alternativeAcquisition": [
           "Purchased from the Market",
-          "Can also result from a breeding failure using other monsters"
+          "Can result from a breeding failure using a Double- or Triple-Element Monster (a chance, not guaranteed)",
+          "Breeding with a Quad-Element Monster, or with a Rare Kayna, gives a 100% chance of another Kayna"
         ],
         "notes": [
           "On Amber Island specifically, this isn't bred \u2014 it's bought as a Vessel in the Market for 5 Relics (available only during select periods, except Kayna's which is always available) and revitalized by zapping in the required eggs. Every Vessel except Kayna's requires 2 Kayna eggs (Viveine's requires 4); no Vessel requires eggs of single-element Natural Monsters."
@@ -3400,8 +3401,8 @@
               ],
               "description": "Any two Triple-Element Monsters that include the Fire Element",
               "timeNormal": "8h",
-              "timeEnhanced": "",
-              "note": "Breeds fastest when both parents are native to that specific Magical Island \u2014 off-island pairings work but take longer (exact off-island time not confirmed)"
+              "timeEnhanced": "6h",
+              "note": "Confirmed as a flat, uniform rate on the primary wiki (not a faster on-island / slower off-island split as previously noted here) \u2014 matches the same 8h/6h every Rare Single-Element Monster shares, Natural and Magical alike."
             }
           ]
         },
@@ -3447,7 +3448,7 @@
               ],
               "description": "One of: Tring + Stogg, Sneyser + Phangler, Blow't + Furcorn, Gloptic + Oaktopus, Pladdie + Drumpler, or Plinkajou + Fwog",
               "timeNormal": "15h",
-              "timeEnhanced": "",
+              "timeEnhanced": "11h 15m",
               "note": "The combination is different per Magical Island, but which of these six pairs belongs to which specific island isn't confirmed from available sources"
             }
           ]
@@ -16987,6 +16988,22 @@
           "Up to 10 can be placed per island."
         ],
         "interestingFact": ""
+      },
+      "astral": {
+        "name": "Superno-Fa",
+        "image": "assets/monsters/dipster-fa-astral.png",
+        "islands": [
+          "Celestial Island"
+        ],
+        "breeding": null,
+        "alternativeAcquisition": [
+          "Obtained only from the Dipster Digs mini-game (guaranteed by completing level 15 or 20)"
+        ],
+        "notes": [
+          "Exclusive to Celestial Island, limited to 1 per type, taking a 3x3 grid space. Produces Coins, Diamonds, Treats, Shards, and Keys like an Adult Celestial.",
+          "Confirmed real and correctly tagged to Celestial Island \u2014 added August 5, 2026 (v5.6.0) alongside King Do, Vitreous Ti, Rare X'rt, Alcordion, Epic Theremind, and Epic Astropod. This entry was mistakenly removed earlier in this project on the assumption it was erroneous, since no sibling Dipster had an astral tier and Celestial Island isn't yet built out in this app's own island data (still Phase 5). Restored after direct wiki re-verification confirmed it's accurate; the Celestial Island build-out gap is a separate, still-open issue, not a reason to delete correct monster data."
+        ],
+        "interestingFact": ""
       }
     }
   },
@@ -17891,7 +17908,8 @@
         ],
         "notes": [
           "Also has distinct 'Flower' and 'Monster' visual sub-states during activation, beyond simple Active/Inactive \u2014 not modeled as separate variants here.",
-          "Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently."
+          "Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently.",
+          "Confirmed incubation time: 12 hours. Placing it rewards 1,000 Shards; linking a Monster to it rewards 500 Shards."
         ],
         "interestingFact": "Added October 9, 2024. The game's own help text jokes about selling one: \u201cselling a soul can have grave consequences!\u201d",
         "specialMechanics": [
@@ -17922,7 +17940,8 @@
           "Purchased from the Market for 10,000,000 Coins as an inactive flower \u2014 only unlocked after completing the Earth Island Colossal Conundrum quest"
         ],
         "notes": [
-          "Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently."
+          "Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently.",
+          "Confirmed incubation time: 12 hours. Placing it rewards 1,000 Shards; linking a Monster to it rewards 500 Shards."
         ],
         "interestingFact": "Added May 14, 2025. The game's own help text jokes about selling one: \u201cselling a soul can have grave consequences!\u201d",
         "specialMechanics": [
@@ -17953,7 +17972,8 @@
           "Purchased from the Market for 10,000,000 Coins as an inactive flower \u2014 only unlocked after completing the Earth Island Colossal Conundrum quest"
         ],
         "notes": [
-          "Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently."
+          "Cannot be bred, sold once placed, or obtained any other way. Has no Rare/Epic tiers \u2014 confirmed as Common-only permanently.",
+          "Confirmed incubation time: 12 hours. Placing it rewards 1,000 Shards; linking a Monster to it rewards 500 Shards."
         ],
         "interestingFact": "Added March 11, 2026. The game's own help text jokes about selling one: \u201cselling a soul can have grave consequences!\u201d",
         "specialMechanics": [
@@ -18959,9 +18979,10 @@
           "Or purchased directly from the Shop for 5,000 Shards at any time"
         ],
         "notes": [
-          "Only one can be placed. Acts as a Unity Tree, but only for Common-rarity monsters on its Islet \u2014 Rare/Epic Ethereals there still need Likes placed nearby for full happiness."
+          "Only one can be placed. Acts as a Unity Tree, but only for Common-rarity monsters on its Islet \u2014 Rare/Epic Ethereals there still need Likes placed nearby for full happiness.",
+          "Dish-Harmonizing incubation time: 2 days, 2 hours."
         ],
-        "interestingFact": "Added unknown (2026). A 5th Primordial (Tunefor, for the Poison Element) is confirmed to be coming to Poison Islet in a future update \u2014 not yet released, so not included here."
+        "interestingFact": "Added May 27, 2026 (v5.4.2), alongside Rare Flasque. A 5th Primordial (Tunefor, for the Poison Element) is confirmed to be coming to Poison Islet in a future update \u2014 not yet released, so not included here."
       }
     }
   },

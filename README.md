@@ -1958,3 +1958,68 @@ only the still-unreleased Paironormal Quad remains outside this dataset,
 consistent with what the wiki itself confirms.
 
 **No art changes in this batch — `CACHE_VERSION` not bumped.**
+
+## Corrections from the person + Batch 12 complete: Dipster/Primordial/Titansoul (14 monsters)
+
+### Superno-Fa restored
+The person confirmed directly: Superno-Fa (Dipster Fa's Astral tier) is
+indeed only found on Celestial Island, and my earlier deletion was a
+mistake. Independent wiki re-verification agreed before the person even
+weighed in — multiple sources confirm it as a real monster added
+August 5, 2026 (v5.6.0) alongside King Do and Vitreous Ti, with the
+"guaranteed at level 15 or 20" detail in the original entry matching
+exactly what the wiki says about Astral Dipster rewards. Restored in
+full, with a note explaining the back-and-forth so it doesn't happen
+again — the actual open issue (Celestial Island not being built out in
+this app yet) is separate from whether the monster data itself is
+correct, and shouldn't have been a reason to delete correct data.
+
+### A–Z jump sidebar, properly fixed this time
+The previous fix (`top: max(150px, 50%)`) only anchored the element's
+*center* point with a floor — it didn't account for the list's own
+height, so on a tall list (26 letters) the actual top edge (the "A") could
+still land under the header even with that floor in place. Removed the
+centering entirely in favor of a fixed `top: 170px` with no transform,
+guaranteeing real clearance below the header on every viewport.
+
+### Kayna enriched
+Common Kayna genuinely cannot be bred at all (Market purchase, or a
+chance from a breeding failure) — confirmed, not a gap, so the profile
+stays as is for that tier. Rare and Epic, however, **are** bred via
+specific Magical-Island combos, and this was already correctly modeled
+with proper multi-island layout. Fixed a misleading note that framed
+Rare Kayna's 8h/6h time as a special "faster when on-island" rate with
+an unconfirmed slower off-island rate — the wiki confirms 8h/6h is
+simply the flat, uniform rate for every Rare Single-Element Monster,
+Natural and Magical alike, not a differential. Filled in Epic Kayna's
+blank enhanced time and added the precise breeding-failure mechanic
+(Double/Triple gives a chance, Quad or a Rare parent gives a 100% chance).
+
+### Batch 12: Dipster / Primordial / Titansoul (14 monsters)
+This batch was almost entirely verification, not repair — all three
+sub-classes were already thoroughly researched.
+
+- **Dipster (7):** confirmed via the wiki's own upcoming-features list
+  that Mi, Fa, and Sol genuinely don't have Elemental/Royal tiers yet —
+  not a data gap, they simply haven't been released. Confirmed Waxen La
+  (Dipster La's Elemental tier) and Queen Re (Dipster Re's Royal tier)
+  were already correctly present, matching what the person flagged
+  they'd encounter here. Verified the per-island placement caps (5 for
+  Elemental, 2 for Royal) were already accurate.
+- **Primordial (4):** Droah's release date was the one gap ("unknown
+  (2026)") — confirmed directly: May 27, 2026 (v5.4.2), alongside Rare
+  Flasque. Added its confirmed Dish-Harmonizing time (2d 2h) too.
+- **Titansoul (3):** confirmed the 4th Titansoul (Bone Island's Necrull)
+  is still unreleased — this class's data is already complete as-is, not
+  missing an entry. Verified the Earth Island Colossal Conundrum unlock
+  requirement is genuinely correct despite looking like a mismatch (a
+  Faerie Island monster requiring an Earth Island quest) — it's a real,
+  confirmed global unlock gate for the whole class. Added the confirmed
+  12h incubation time and Shard rewards (1,000 for placing, 500 for
+  linking) to all 3.
+
+**This closes Batch 12 and completes every batch in the original Phase 4
+plan.** Celestial (12) remains explicitly deferred to Phase 5.
+
+**No art changes in this batch — `CACHE_VERSION` not bumped**, except
+where noted for the CSS-only A–Z jump fix (no image changes).
