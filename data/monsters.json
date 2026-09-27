@@ -7311,7 +7311,7 @@
               "description": "TooToo + Mammott",
               "timeNormal": "1d 18h 30m",
               "timeEnhanced": "1d 7h 52m 30s",
-              "note": "confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance",
+              "note": "Confirmed \u2014 Rare uses the identical combination, just with Rare availability/chance.",
               "also": [
                 "Fiddlement + Potbelly",
                 "Spytrap + Kayna",
@@ -14551,7 +14551,7 @@
           "Purchased from the Market for 20,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Bona-Petite (boosts up to 25%), negative pole is Brump (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -14602,7 +14602,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Bona-Petite (boosts up to 25%), negative pole is Rare Brump (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -14652,7 +14652,7 @@
           "Purchased from the Market for 5,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Screemu (boosts up to 25%), negative pole is Tympa (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -14664,7 +14664,7 @@
           {
             "monster": "Toe Jammer",
             "count": 4,
-            "hatchTime": "1m"
+            "hatchTime": "1min"
           },
           {
             "monster": "PomPom",
@@ -14698,7 +14698,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Screemu (boosts up to 25%), negative pole is Rare Tympa (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -14718,7 +14718,7 @@
           "Evolved from an awakened Rare (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Epic Screemu (boosts up to 25%) \u2014 confirmed on the primary wiki as the one exception to the usual \"positive pole is a different grid size\" pattern, since Blipsqueak and Screemu are both 2x2. Negative pole not independently confirmed this pass. The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -14748,7 +14748,7 @@
           "Purchased from the Market for 20,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Zuuker (boosts up to 25%), negative pole is Creepuscule (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -14795,7 +14795,7 @@
           {
             "monster": "Mammott",
             "count": 10,
-            "hatchTime": "2m"
+            "hatchTime": "2min"
           }
         ],
         "specialMechanics": [
@@ -14814,7 +14814,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Zuuker (boosts up to 25%), negative pole is Rare Creepuscule (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -14864,7 +14864,7 @@
           "Purchased from the Market for 2,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is affected by Polarity: positive pole is Fleechwurm (boosts up to 25%), negative pole is Blipsqueak (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance. As a general (not universal) pattern, a Wublin's positive pole tends to be a Wublin of a different grid size (2x2 vs 3x3), while its negative pole tends to share its own grid size \u2014 believed to discourage single-size 'farms'; Blipsqueak (whose positive pole is Screemu, also 2x2) is a known exception."
+          "Currency production is affected by Polarity: positive pole is Fleechwurm (boosts up to 25%), negative pole is Blipsqueak (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -14895,7 +14895,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Confirmed to have the same Polarity pairing as its Common form (Rare/Epic Wublins inherit the same poles, only taking effect once that specific tier of both monsters exists): positive pole is Rare Fleechwurm (boosts up to 25%), negative pole is Rare Blipsqueak (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Fleechwurm (boosts up to 25%), negative pole is Rare Blipsqueak (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -14945,7 +14945,7 @@
           "Purchased from the Market for 17,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Whajje (boosts up to 25%), negative pole is Gheegur (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15001,7 +15001,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Whajje (boosts up to 25%), negative pole is Rare Gheegur (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15032,7 +15032,7 @@
           "Purchased from the Market for 17,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Zynth (boosts up to 25%), negative pole is Scargo (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15078,7 +15078,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Zynth (boosts up to 25%), negative pole is Rare Scargo (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15128,7 +15128,7 @@
           "Purchased from the Market for 34,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is affected by Polarity: positive pole is Astropod (boosts up to 25%), negative pole is Fleechwurm (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance. As a general (not universal) pattern, a Wublin's positive pole tends to be a Wublin of a different grid size (2x2 vs 3x3), while its negative pole tends to share its own grid size \u2014 believed to discourage single-size 'farms'; Blipsqueak (whose positive pole is Screemu, also 2x2) is a known exception."
+          "Currency production is affected by Polarity: positive pole is Astropod (boosts up to 25%), negative pole is Fleechwurm (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15200,12 +15200,12 @@
           {
             "monster": "Toe Jammer",
             "count": 8,
-            "hatchTime": "1m"
+            "hatchTime": "1min"
           },
           {
             "monster": "Mammott",
             "count": 8,
-            "hatchTime": "2m"
+            "hatchTime": "2min"
           },
           {
             "monster": "Potbelly",
@@ -15234,7 +15234,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Confirmed to have the same Polarity pairing as its Common form (Rare/Epic Wublins inherit the same poles, only taking effect once that specific tier of both monsters exists): positive pole is Rare Astropod (boosts up to 25%), negative pole is Rare Fleechwurm (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Astropod (boosts up to 25%), negative pole is Rare Fleechwurm (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15284,7 +15284,7 @@
           "Purchased from the Market for 5,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is affected by Polarity: positive pole is Pixolotl (boosts up to 25%). Negative pole is Dwumrohl (the only mutually-negative pair on Wublin Island \u2014 Dwumrohl and Fleechwurm each reduce the other's production). Negative pole otherwise not independently confirmed this pass. The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance. As a general (not universal) pattern, a Wublin's positive pole tends to be a Wublin of a different grid size (2x2 vs 3x3), while its negative pole tends to share its own grid size \u2014 believed to discourage single-size 'farms'; Blipsqueak (whose positive pole is Screemu, also 2x2) is a known exception."
+          "Currency production is affected by Polarity: positive pole is Pixolotl (boosts up to 25%), negative pole is Dwumrohl (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15340,7 +15340,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Confirmed to have the same Polarity pairing as its Common form (Rare/Epic Wublins inherit the same poles, only taking effect once that specific tier of both monsters exists): positive pole is Rare Pixolotl (boosts up to 25%), negative pole is Rare Dwumrohl (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Pixolotl (boosts up to 25%), negative pole is Rare Dwumrohl (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15390,7 +15390,7 @@
           "Purchased from the Market for 3,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Tympa (boosts up to 25%), negative pole is Dermit (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15436,7 +15436,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Tympa (boosts up to 25%), negative pole is Rare Dermit (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15486,7 +15486,7 @@
           "Purchased from the Market for 17,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Thwok (boosts up to 25%), negative pole is Poewk (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15542,7 +15542,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Thwok (boosts up to 25%), negative pole is Rare Poewk (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15573,7 +15573,7 @@
           "Purchased from the Market for 34,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is affected by Polarity: positive pole is Scargo (boosts up to 25%). Negative pole otherwise not independently confirmed this pass. The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance. As a general (not universal) pattern, a Wublin's positive pole tends to be a Wublin of a different grid size (2x2 vs 3x3), while its negative pole tends to share its own grid size \u2014 believed to discourage single-size 'farms'; Blipsqueak (whose positive pole is Screemu, also 2x2) is a known exception."
+          "Currency production is affected by Polarity: positive pole is Scargo (boosts up to 25%), negative pole is Whajje (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15629,7 +15629,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Confirmed to have the same Polarity pairing as its Common form (Rare/Epic Wublins inherit the same poles, only taking effect once that specific tier of both monsters exists): positive pole is Rare Scargo (boosts up to 25%) \u2014 negative pole not independently confirmed this pass. The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Scargo (boosts up to 25%), negative pole is Rare Whajje (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15660,7 +15660,7 @@
           "Purchased from the Market for 5,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is affected by Polarity: positive pole is Brump (boosts up to 25%). Negative pole otherwise not independently confirmed this pass. The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance. As a general (not universal) pattern, a Wublin's positive pole tends to be a Wublin of a different grid size (2x2 vs 3x3), while its negative pole tends to share its own grid size \u2014 believed to discourage single-size 'farms'; Blipsqueak (whose positive pole is Screemu, also 2x2) is a known exception."
+          "Currency production is affected by Polarity: positive pole is Brump (boosts up to 25%), negative pole is Bona-Petite (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15726,7 +15726,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Confirmed to have the same Polarity pairing as its Common form (Rare/Epic Wublins inherit the same poles, only taking effect once that specific tier of both monsters exists): positive pole is Rare Brump (boosts up to 25%) \u2014 negative pole not independently confirmed this pass. The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Brump (boosts up to 25%), negative pole is Rare Bona-Petite (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15776,7 +15776,7 @@
           "Purchased from the Market for 3,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Blipsqueak (boosts up to 25%), negative pole is Maulch (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15827,7 +15827,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Blipsqueak (boosts up to 25%), negative pole is Rare Maulch (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15858,7 +15858,7 @@
           "Purchased from the Market for 5,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Creepuscule (boosts up to 25%), negative pole is Pixolotl (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15899,7 +15899,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Creepuscule (boosts up to 25%), negative pole is Rare Pixolotl (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -15930,7 +15930,7 @@
           "Purchased from the Market for 17,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Dermit (boosts up to 25%), negative pole is Zuuker (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -15996,7 +15996,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Dermit (boosts up to 25%), negative pole is Rare Zuuker (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -16046,7 +16046,7 @@
           "Purchased from the Market for 34,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Poewk (boosts up to 25%), negative pole is Thwok (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -16092,7 +16092,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Poewk (boosts up to 25%), negative pole is Rare Thwok (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -16188,7 +16188,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is affected by Polarity: positive pole is Dwumrohl (boosts up to 25%), negative pole is Zynth (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Dwumrohl (boosts up to 25%), negative pole is Rare Zynth (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -16219,7 +16219,7 @@
           "Purchased from the Market for 20,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Maulch (boosts up to 25%), negative pole is Screemu (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
@@ -16275,7 +16275,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Maulch (boosts up to 25%), negative pole is Rare Screemu (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [
@@ -16325,39 +16325,34 @@
           "Purchased from the Market for 3,000 Coins as a dormant statue, then woken up by zapping in the required eggs within a time limit"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Gheegur (boosts up to 25%), negative pole is Astropod (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "eggRequirements": [
           {
-            "monster": "T-Rox",
-            "count": 1,
-            "hatchTime": ""
-          },
-          {
             "monster": "Congle",
             "count": 1,
-            "hatchTime": ""
+            "hatchTime": "12h"
           },
           {
-            "monster": "Pango",
+            "monster": "T-Rox",
             "count": 1,
-            "hatchTime": ""
+            "hatchTime": "8h"
           },
           {
             "monster": "Oaktopus",
             "count": 1,
-            "hatchTime": ""
-          },
-          {
-            "monster": "Drumpler",
-            "count": 1,
-            "hatchTime": ""
+            "hatchTime": "8h"
           },
           {
             "monster": "Maw",
             "count": 1,
-            "hatchTime": ""
+            "hatchTime": "30m"
+          },
+          {
+            "monster": "Drumpler",
+            "count": 1,
+            "hatchTime": "30m"
           }
         ],
         "specialMechanics": [
@@ -16376,7 +16371,7 @@
           "Evolved from an awakened Common (see Special Mechanics)"
         ],
         "notes": [
-          "Currency production is also affected by Polarity: being placed near its positive-pole Wublin boosts production up to 25%, while its negative-pole Wublin reduces it up to 25%. Exact pairings aren't itemized here \u2014 only Whajje's are confirmed (positive: Dwumrohl, negative: Zynth). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
+          "Currency production is affected by Polarity: positive pole is Rare Gheegur (boosts up to 25%), negative pole is Rare Astropod (reduces up to 25%). The Polarity Amplifier (unlocked by collecting more unique monsters on Wublin Island) extends positive-pole range and shrinks negative-pole range over time. Also, a Wublin only gets the full effect from another Wublin of equal or higher rarity \u2014 an Epic Wublin gets no benefit from a Common one, for instance."
         ],
         "interestingFact": "",
         "specialMechanics": [

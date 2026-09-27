@@ -2023,3 +2023,29 @@ plan.** Celestial (12) remains explicitly deferred to Phase 5.
 
 **No art changes in this batch — `CACHE_VERSION` not bumped**, except
 where noted for the CSS-only A–Z jump fix (no image changes).
+
+## Batch 7 fully closed: complete polarity table for all 19 Wublins
+
+The person supplied a PDF capture of the wiki's Polarity page with the
+"[Expand]" sections actually expanded this time — the earlier PDF and
+web fetch had both hit the same wall (collapsed/stripped table content),
+but this one had the full data.
+
+Extracted all 19 Common Wublins' complete positive/negative pairs, plus
+confirmation that Rare mirrors Common exactly (already known, now
+re-confirmed against the PDF's own separate Rare table). Before applying
+anything, ran a rigorous cross-check: for every monster whose row claims
+"positively affected by X," verified X's own row independently claims
+"will positively affect" this monster back — 38 directional checks (19
+monsters × positive + negative) across the whole table, zero
+inconsistencies. Also re-confirmed both previously-known facts fell out
+of this same table automatically: Dwumrohl/Fleechwurm as the sole mutual
+negative pair, and Blipsqueak/Screemu as the sole same-size exception.
+
+Every one of the 7 partial pairs from earlier passes (Brump, Dwumrohl,
+Fleechwurm, Pixolotl, Poewk, Whajje, Blipsqueak) matched this table
+exactly — no corrections needed, just completion. Applied the full table
+to all 19 Wublins' Common and Rare tiers.
+
+**This closes every item parked from Batch 7**: prices (19/19), egg
+requirements (19/19), and polarity (19/19) are all complete.
