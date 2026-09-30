@@ -481,9 +481,10 @@ input:focus-visible {
 }
 
 .profile-sheet__image {
-  width: 55%;
-  max-width: 220px;
-  aspect-ratio: 1;
+  width: auto;
+  height: 220px;
+  max-width: 85%;
+  max-height: 220px;
   object-fit: contain;
   background: var(--class-accent, var(--surface-raised));
   border-radius: 20px;
